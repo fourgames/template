@@ -43,10 +43,22 @@ config/icon="res://icon.svg"
 ControllerIcons="*uid://bbr0y7cmquuy6"
 Shaker="*uid://c4u0vo5fh7asu"
 SimpleGrass="*uid://bfq0snth8sj3h"
+ControlManager="*uid://c1bgdvrlmjwpk"
+DataManager="*uid://big0hyuv70jxs"
+GameManager="*uid://d07rtwy8ry14o"
+NodeManager="*uid://bi1cxrxhj70n3"
+PathManager="*uid://cwiwhdgjmooc7"
+SignalManager="*uid://djm5fbcusol8f"
 
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/DualEditor/plugin.cfg", "res://addons/GDQuest_GDScript_formatter/plugin.cfg", "res://addons/GPUTrail-main/plugin.cfg", "res://addons/Todo_Manager/plugin.cfg", "res://addons/controller_icons/plugin.cfg", "res://addons/ridiculous_coding/plugin.cfg", "res://addons/script-ide/plugin.cfg", "res://addons/shaker/plugin.cfg", "res://addons/simplegrasstextured/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://globals/": "orange"
+}
 
 [input]
 
