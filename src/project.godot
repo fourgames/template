@@ -36,7 +36,7 @@ Shortcuts/density_decrement=Object(Shortcut,"resource_local_to_scene":false,"res
 
 config/name="The Library of Four Games"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://coikkwbskeq31"
 
 [autoload]
 
