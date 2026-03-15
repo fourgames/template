@@ -1,0 +1,764 @@
+[gd_scene load_steps=94 format=3 uid="uid://db7fq3ohpetjb"]
+
+[ext_resource type="Script" uid="uid://c717rg5ad83t8" path="res://scripts/Characters/enemy_spawner.gd" id="1_ewhtn"]
+[ext_resource type="Script" uid="uid://dbi57cojoortx" path="res://scripts/Characters/enemy_spawn_data.gd" id="2_63vqd"]
+[ext_resource type="PackedScene" uid="uid://bhcntwf3ek61i" path="res://scenes/Characters/Enemies/enemy_crawler.tscn" id="3_ih16b"]
+[ext_resource type="PackedScene" uid="uid://v4xd3axg4gdy" path="res://scenes/Characters/Enemies/enemy_walker.tscn" id="4_31irv"]
+[ext_resource type="PackedScene" uid="uid://ohvxu2yo072j" path="res://scenes/Characters/Enemies/enemy_tanker.tscn" id="5_sukom"]
+[ext_resource type="PackedScene" uid="uid://bideiyt5bwfbq" path="res://scenes/Characters/Enemies/enemy_bomber.tscn" id="6_tovkt"]
+[ext_resource type="PackedScene" uid="uid://cawkkfpqwcprw" path="res://scenes/Characters/Enemies/enemy_spitter.tscn" id="7_e1hw7"]
+[ext_resource type="PackedScene" uid="uid://dk5ux14ab8eun" path="res://scenes/Characters/Enemies/enemy_spitter_boss.tscn" id="8_tovkt"]
+
+[sub_resource type="Resource" id="Resource_ih16b"]
+script = ExtResource("2_63vqd")
+time_end = 60
+enemy_scene = ExtResource("3_ih16b")
+total_enemies = 60
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_31irv"]
+script = ExtResource("2_63vqd")
+time_end = 60
+enemy_scene = ExtResource("4_31irv")
+total_enemies = 12
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_txvhj"]
+script = ExtResource("2_63vqd")
+time_start = 60
+time_end = 120
+enemy_scene = ExtResource("3_ih16b")
+total_enemies = 50
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_22nel"]
+script = ExtResource("2_63vqd")
+time_start = 60
+time_end = 120
+enemy_scene = ExtResource("4_31irv")
+total_enemies = 23
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_c01tg"]
+script = ExtResource("2_63vqd")
+time_start = 60
+time_end = 120
+enemy_scene = ExtResource("5_sukom")
+total_enemies = 4
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_md2sj"]
+script = ExtResource("2_63vqd")
+time_start = 60
+time_end = 120
+enemy_scene = ExtResource("6_tovkt")
+total_enemies = 2
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_5g07m"]
+script = ExtResource("2_63vqd")
+time_start = 60
+time_end = 120
+enemy_scene = ExtResource("7_e1hw7")
+total_enemies = 1
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_e1hw7"]
+script = ExtResource("2_63vqd")
+time_start = 120
+time_end = 180
+enemy_scene = ExtResource("3_ih16b")
+total_enemies = 40
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_fxy1y"]
+script = ExtResource("2_63vqd")
+time_start = 120
+time_end = 180
+enemy_scene = ExtResource("4_31irv")
+total_enemies = 34
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_1x7gh"]
+script = ExtResource("2_63vqd")
+time_start = 120
+time_end = 180
+enemy_scene = ExtResource("5_sukom")
+total_enemies = 7
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_87vjv"]
+script = ExtResource("2_63vqd")
+time_start = 120
+time_end = 180
+enemy_scene = ExtResource("6_tovkt")
+total_enemies = 4
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_y5v0o"]
+script = ExtResource("2_63vqd")
+time_start = 120
+time_end = 180
+enemy_scene = ExtResource("7_e1hw7")
+total_enemies = 3
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_dk6ib"]
+script = ExtResource("2_63vqd")
+time_start = 180
+time_end = 240
+enemy_scene = ExtResource("3_ih16b")
+total_enemies = 30
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_wl0om"]
+script = ExtResource("2_63vqd")
+time_start = 180
+time_end = 240
+enemy_scene = ExtResource("4_31irv")
+total_enemies = 45
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_44w4t"]
+script = ExtResource("2_63vqd")
+time_start = 180
+time_end = 240
+enemy_scene = ExtResource("5_sukom")
+total_enemies = 11
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_s5vy6"]
+script = ExtResource("2_63vqd")
+time_start = 180
+time_end = 240
+enemy_scene = ExtResource("6_tovkt")
+total_enemies = 6
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_flr7w"]
+script = ExtResource("2_63vqd")
+time_start = 180
+time_end = 240
+enemy_scene = ExtResource("7_e1hw7")
+total_enemies = 4
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_w04m4"]
+script = ExtResource("2_63vqd")
+time_start = 240
+time_end = 300
+enemy_scene = ExtResource("3_ih16b")
+total_enemies = 20
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_xtavd"]
+script = ExtResource("2_63vqd")
+time_start = 240
+time_end = 300
+enemy_scene = ExtResource("4_31irv")
+total_enemies = 56
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_2yhp7"]
+script = ExtResource("2_63vqd")
+time_start = 240
+time_end = 300
+enemy_scene = ExtResource("5_sukom")
+total_enemies = 15
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_43vfj"]
+script = ExtResource("2_63vqd")
+time_start = 240
+time_end = 300
+enemy_scene = ExtResource("6_tovkt")
+total_enemies = 8
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_8s15x"]
+script = ExtResource("2_63vqd")
+time_start = 240
+time_end = 300
+enemy_scene = ExtResource("7_e1hw7")
+total_enemies = 6
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_8vmqk"]
+script = ExtResource("2_63vqd")
+time_start = 300
+time_end = 360
+enemy_scene = ExtResource("3_ih16b")
+total_enemies = 10
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_febt7"]
+script = ExtResource("2_63vqd")
+time_start = 300
+time_end = 360
+enemy_scene = ExtResource("4_31irv")
+total_enemies = 67
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_b1qh4"]
+script = ExtResource("2_63vqd")
+time_start = 300
+time_end = 360
+enemy_scene = ExtResource("5_sukom")
+total_enemies = 18
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_vb0fx"]
+script = ExtResource("2_63vqd")
+time_start = 300
+time_end = 360
+enemy_scene = ExtResource("6_tovkt")
+total_enemies = 11
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_jit2a"]
+script = ExtResource("2_63vqd")
+time_start = 300
+time_end = 360
+enemy_scene = ExtResource("7_e1hw7")
+total_enemies = 8
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_j0rer"]
+script = ExtResource("2_63vqd")
+time_start = 360
+time_end = 420
+enemy_scene = ExtResource("4_31irv")
+total_enemies = 78
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_us15b"]
+script = ExtResource("2_63vqd")
+time_start = 360
+time_end = 420
+enemy_scene = ExtResource("5_sukom")
+total_enemies = 22
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_4x864"]
+script = ExtResource("2_63vqd")
+time_start = 360
+time_end = 420
+enemy_scene = ExtResource("6_tovkt")
+total_enemies = 13
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_4cw10"]
+script = ExtResource("2_63vqd")
+time_start = 360
+time_end = 420
+enemy_scene = ExtResource("7_e1hw7")
+total_enemies = 10
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_ud1uh"]
+script = ExtResource("2_63vqd")
+time_start = 420
+time_end = 480
+enemy_scene = ExtResource("4_31irv")
+total_enemies = 89
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_1ihs3"]
+script = ExtResource("2_63vqd")
+time_start = 420
+time_end = 480
+enemy_scene = ExtResource("5_sukom")
+total_enemies = 26
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_x6tdw"]
+script = ExtResource("2_63vqd")
+time_start = 420
+time_end = 480
+enemy_scene = ExtResource("6_tovkt")
+total_enemies = 15
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_5dt0i"]
+script = ExtResource("2_63vqd")
+time_start = 420
+time_end = 480
+enemy_scene = ExtResource("7_e1hw7")
+total_enemies = 12
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_8xm16"]
+script = ExtResource("2_63vqd")
+time_start = 480
+time_end = 540
+enemy_scene = ExtResource("4_31irv")
+total_enemies = 100
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_f7t3h"]
+script = ExtResource("2_63vqd")
+time_start = 480
+time_end = 540
+enemy_scene = ExtResource("5_sukom")
+total_enemies = 29
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_8ctuh"]
+script = ExtResource("2_63vqd")
+time_start = 480
+time_end = 540
+enemy_scene = ExtResource("6_tovkt")
+total_enemies = 17
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_7vsc0"]
+script = ExtResource("2_63vqd")
+time_start = 480
+time_end = 540
+enemy_scene = ExtResource("7_e1hw7")
+total_enemies = 14
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_5wolu"]
+script = ExtResource("2_63vqd")
+time_start = 540
+time_end = 600
+enemy_scene = ExtResource("4_31irv")
+total_enemies = 111
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_7rl04"]
+script = ExtResource("2_63vqd")
+time_start = 540
+time_end = 600
+enemy_scene = ExtResource("5_sukom")
+total_enemies = 33
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_e1f3m"]
+script = ExtResource("2_63vqd")
+time_start = 540
+time_end = 600
+enemy_scene = ExtResource("6_tovkt")
+total_enemies = 19
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_oypry"]
+script = ExtResource("2_63vqd")
+time_start = 540
+time_end = 600
+enemy_scene = ExtResource("7_e1hw7")
+total_enemies = 16
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_i6r0d"]
+script = ExtResource("2_63vqd")
+time_start = 600
+time_end = 660
+enemy_scene = ExtResource("4_31irv")
+total_enemies = 121
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_xmeu7"]
+script = ExtResource("2_63vqd")
+time_start = 600
+time_end = 660
+enemy_scene = ExtResource("5_sukom")
+total_enemies = 37
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_df5hu"]
+script = ExtResource("2_63vqd")
+time_start = 600
+time_end = 660
+enemy_scene = ExtResource("6_tovkt")
+total_enemies = 21
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_h4rgb"]
+script = ExtResource("2_63vqd")
+time_start = 600
+time_end = 660
+enemy_scene = ExtResource("7_e1hw7")
+total_enemies = 19
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_q15vp"]
+script = ExtResource("2_63vqd")
+time_start = 660
+time_end = 720
+enemy_scene = ExtResource("4_31irv")
+total_enemies = 132
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_rxtpb"]
+script = ExtResource("2_63vqd")
+time_start = 660
+time_end = 720
+enemy_scene = ExtResource("5_sukom")
+total_enemies = 41
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_65tir"]
+script = ExtResource("2_63vqd")
+time_start = 660
+time_end = 720
+enemy_scene = ExtResource("6_tovkt")
+total_enemies = 23
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_gwu02"]
+script = ExtResource("2_63vqd")
+time_start = 660
+time_end = 720
+enemy_scene = ExtResource("7_e1hw7")
+total_enemies = 21
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_wkfv7"]
+script = ExtResource("2_63vqd")
+time_start = 720
+time_end = 780
+enemy_scene = ExtResource("4_31irv")
+total_enemies = 143
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_26sc3"]
+script = ExtResource("2_63vqd")
+time_start = 720
+time_end = 780
+enemy_scene = ExtResource("5_sukom")
+total_enemies = 44
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_8j6pu"]
+script = ExtResource("2_63vqd")
+time_start = 720
+time_end = 780
+enemy_scene = ExtResource("6_tovkt")
+total_enemies = 25
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_j2ypp"]
+script = ExtResource("2_63vqd")
+time_start = 720
+time_end = 780
+enemy_scene = ExtResource("7_e1hw7")
+total_enemies = 23
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_dhog4"]
+script = ExtResource("2_63vqd")
+time_start = 780
+time_end = 840
+enemy_scene = ExtResource("4_31irv")
+total_enemies = 154
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_qb72l"]
+script = ExtResource("2_63vqd")
+time_start = 780
+time_end = 840
+enemy_scene = ExtResource("5_sukom")
+total_enemies = 48
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_rmul3"]
+script = ExtResource("2_63vqd")
+time_start = 780
+time_end = 840
+enemy_scene = ExtResource("6_tovkt")
+total_enemies = 27
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_s4p7e"]
+script = ExtResource("2_63vqd")
+time_start = 780
+time_end = 840
+enemy_scene = ExtResource("7_e1hw7")
+total_enemies = 25
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_lwkgq"]
+script = ExtResource("2_63vqd")
+time_start = 840
+time_end = 900
+enemy_scene = ExtResource("4_31irv")
+total_enemies = 165
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_oej8s"]
+script = ExtResource("2_63vqd")
+time_start = 840
+time_end = 900
+enemy_scene = ExtResource("5_sukom")
+total_enemies = 52
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_og8x7"]
+script = ExtResource("2_63vqd")
+time_start = 840
+time_end = 900
+enemy_scene = ExtResource("6_tovkt")
+total_enemies = 29
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_oo28n"]
+script = ExtResource("2_63vqd")
+time_start = 840
+time_end = 900
+enemy_scene = ExtResource("7_e1hw7")
+total_enemies = 28
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_u0ps7"]
+script = ExtResource("2_63vqd")
+time_start = 900
+time_end = 960
+enemy_scene = ExtResource("4_31irv")
+total_enemies = 176
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_lmsh5"]
+script = ExtResource("2_63vqd")
+time_start = 900
+time_end = 960
+enemy_scene = ExtResource("5_sukom")
+total_enemies = 55
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_5wnvf"]
+script = ExtResource("2_63vqd")
+time_start = 900
+time_end = 960
+enemy_scene = ExtResource("6_tovkt")
+total_enemies = 32
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_iekfp"]
+script = ExtResource("2_63vqd")
+time_start = 900
+time_end = 960
+enemy_scene = ExtResource("7_e1hw7")
+total_enemies = 30
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_egh77"]
+script = ExtResource("2_63vqd")
+time_start = 960
+time_end = 1020
+enemy_scene = ExtResource("4_31irv")
+total_enemies = 187
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_4yxl7"]
+script = ExtResource("2_63vqd")
+time_start = 960
+time_end = 1020
+enemy_scene = ExtResource("5_sukom")
+total_enemies = 59
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_3a61r"]
+script = ExtResource("2_63vqd")
+time_start = 960
+time_end = 1020
+enemy_scene = ExtResource("6_tovkt")
+total_enemies = 34
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_5nno0"]
+script = ExtResource("2_63vqd")
+time_start = 960
+time_end = 1020
+enemy_scene = ExtResource("7_e1hw7")
+total_enemies = 33
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_4itfa"]
+script = ExtResource("2_63vqd")
+time_start = 1020
+time_end = 1080
+enemy_scene = ExtResource("4_31irv")
+total_enemies = 198
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_xsp5q"]
+script = ExtResource("2_63vqd")
+time_start = 1020
+time_end = 1080
+enemy_scene = ExtResource("5_sukom")
+total_enemies = 63
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_fyi5p"]
+script = ExtResource("2_63vqd")
+time_start = 1020
+time_end = 1080
+enemy_scene = ExtResource("6_tovkt")
+total_enemies = 36
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_0p57t"]
+script = ExtResource("2_63vqd")
+time_start = 1020
+time_end = 1080
+enemy_scene = ExtResource("7_e1hw7")
+total_enemies = 35
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_jghog"]
+script = ExtResource("2_63vqd")
+time_start = 1080
+time_end = 1140
+enemy_scene = ExtResource("4_31irv")
+total_enemies = 209
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_f3mjh"]
+script = ExtResource("2_63vqd")
+time_start = 1080
+time_end = 1140
+enemy_scene = ExtResource("5_sukom")
+total_enemies = 66
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_tmdc3"]
+script = ExtResource("2_63vqd")
+time_start = 1080
+time_end = 1140
+enemy_scene = ExtResource("6_tovkt")
+total_enemies = 38
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_gpu3e"]
+script = ExtResource("2_63vqd")
+time_start = 1080
+time_end = 1140
+enemy_scene = ExtResource("7_e1hw7")
+total_enemies = 37
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_yoe36"]
+script = ExtResource("2_63vqd")
+time_start = 1140
+time_end = 1200
+enemy_scene = ExtResource("4_31irv")
+total_enemies = 220
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_lbtkn"]
+script = ExtResource("2_63vqd")
+time_start = 1140
+time_end = 1200
+enemy_scene = ExtResource("5_sukom")
+total_enemies = 70
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_fqwi5"]
+script = ExtResource("2_63vqd")
+time_start = 1140
+time_end = 1200
+enemy_scene = ExtResource("6_tovkt")
+total_enemies = 40
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_3tw7m"]
+script = ExtResource("2_63vqd")
+time_start = 1140
+time_end = 1200
+enemy_scene = ExtResource("7_e1hw7")
+total_enemies = 40
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="Resource" id="Resource_xullt"]
+script = ExtResource("2_63vqd")
+time_start = 1140
+time_end = 1200
+enemy_scene = ExtResource("8_tovkt")
+total_enemies = 1
+metadata/_custom_type_script = "uid://dbi57cojoortx"
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ih16b"]
+radius = 50.0
+
+[node name="EnemySpawner" type="Node3D"]
+script = ExtResource("1_ewhtn")
+spawn_data_list = Array[ExtResource("2_63vqd")]([SubResource("Resource_ih16b"), SubResource("Resource_31irv"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_txvhj"), SubResource("Resource_22nel"), SubResource("Resource_c01tg"), SubResource("Resource_md2sj"), SubResource("Resource_5g07m"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_e1hw7"), SubResource("Resource_fxy1y"), SubResource("Resource_1x7gh"), SubResource("Resource_87vjv"), SubResource("Resource_y5v0o"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_dk6ib"), SubResource("Resource_wl0om"), SubResource("Resource_44w4t"), SubResource("Resource_s5vy6"), SubResource("Resource_flr7w"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_w04m4"), SubResource("Resource_xtavd"), SubResource("Resource_2yhp7"), SubResource("Resource_43vfj"), SubResource("Resource_8s15x"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_8vmqk"), SubResource("Resource_febt7"), SubResource("Resource_b1qh4"), SubResource("Resource_vb0fx"), SubResource("Resource_jit2a"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_j0rer"), SubResource("Resource_us15b"), SubResource("Resource_4x864"), SubResource("Resource_4cw10"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_ud1uh"), SubResource("Resource_1ihs3"), SubResource("Resource_x6tdw"), SubResource("Resource_5dt0i"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_8xm16"), SubResource("Resource_f7t3h"), SubResource("Resource_8ctuh"), SubResource("Resource_7vsc0"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_5wolu"), SubResource("Resource_7rl04"), SubResource("Resource_e1f3m"), SubResource("Resource_oypry"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_i6r0d"), SubResource("Resource_xmeu7"), SubResource("Resource_df5hu"), SubResource("Resource_h4rgb"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_q15vp"), SubResource("Resource_rxtpb"), SubResource("Resource_65tir"), SubResource("Resource_gwu02"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_wkfv7"), SubResource("Resource_26sc3"), SubResource("Resource_8j6pu"), SubResource("Resource_j2ypp"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_dhog4"), SubResource("Resource_qb72l"), SubResource("Resource_rmul3"), SubResource("Resource_s4p7e"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_lwkgq"), SubResource("Resource_oej8s"), SubResource("Resource_og8x7"), SubResource("Resource_oo28n"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_u0ps7"), SubResource("Resource_lmsh5"), SubResource("Resource_5wnvf"), SubResource("Resource_iekfp"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_egh77"), SubResource("Resource_4yxl7"), SubResource("Resource_3a61r"), SubResource("Resource_5nno0"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_4itfa"), SubResource("Resource_xsp5q"), SubResource("Resource_fyi5p"), SubResource("Resource_0p57t"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_jghog"), SubResource("Resource_f3mjh"), SubResource("Resource_tmdc3"), SubResource("Resource_gpu3e"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_yoe36"), SubResource("Resource_lbtkn"), SubResource("Resource_fqwi5"), SubResource("Resource_3tw7m"), SubResource("Resource_xullt"), null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+
+[node name="SpawnTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_mask = 7
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_ih16b")
+debug_color = Color(0, 0.667188, 0.7, 0.42)
+
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -25)
+gizmo_extents = 1.0
+
+[node name="Marker3D2" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -18)
+gizmo_extents = 1.0
+
+[node name="Marker3D3" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0, 0)
+gizmo_extents = 1.0
+
+[node name="Marker3D4" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 18)
+gizmo_extents = 1.0
+
+[node name="Marker3D5" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25)
+gizmo_extents = 1.0
+
+[node name="Marker3D6" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 18)
+gizmo_extents = 1.0
+
+[node name="Marker3D7" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 0)
+gizmo_extents = 1.0
+
+[node name="Marker3D8" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -18)
+gizmo_extents = 1.0
+
+[node name="Marker3D9" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -24)
+gizmo_extents = 1.0
+
+[node name="Marker3D10" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -24)
+gizmo_extents = 1.0
+
+[node name="Marker3D11" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -8)
+gizmo_extents = 1.0
+
+[node name="Marker3D12" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 8)
+gizmo_extents = 1.0
+
+[node name="Marker3D13" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 24)
+gizmo_extents = 1.0
+
+[node name="Marker3D14" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 24)
+gizmo_extents = 1.0
+
+[node name="Marker3D15" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 8)
+gizmo_extents = 1.0
+
+[node name="Marker3D16" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, -8)
+gizmo_extents = 1.0
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

@@ -35,6 +35,7 @@ Shortcuts/density_decrement=Object(Shortcut,"resource_local_to_scene":false,"res
 [application]
 
 config/name="The Library of Four Games"
+run/main_scene="uid://by15nmr6r3qg0"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="uid://coikkwbskeq31"
 
@@ -52,7 +53,7 @@ SignalManager="*uid://djm5fbcusol8f"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/DualEditor/plugin.cfg", "res://addons/GDQuest_GDScript_formatter/plugin.cfg", "res://addons/GPUTrail-main/plugin.cfg", "res://addons/Todo_Manager/plugin.cfg", "res://addons/controller_icons/plugin.cfg", "res://addons/ridiculous_coding/plugin.cfg", "res://addons/script-ide/plugin.cfg", "res://addons/shaker/plugin.cfg", "res://addons/simplegrasstextured/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
+enabled=PackedStringArray("res://addons/DualEditor/plugin.cfg", "res://addons/GPUTrail-main/plugin.cfg", "res://addons/Todo_Manager/plugin.cfg", "res://addons/controller_icons/plugin.cfg", "res://addons/ridiculous_coding/plugin.cfg", "res://addons/script-ide/plugin.cfg", "res://addons/shaker/plugin.cfg", "res://addons/simplegrasstextured/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
 
 [file_customization]
 
@@ -68,6 +69,13 @@ move_forward={
 , Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":1,"axis_value":-1.0,"script":null)
 ]
 }
+
+[layer_names]
+
+3d_physics/layer_1="Static"
+3d_physics/layer_2="Player Hurtbox"
+3d_physics/layer_3="Target Hurtbox"
+3d_physics/layer_4="Loot"
 
 [physics]
 

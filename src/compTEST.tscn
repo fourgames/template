@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://by15nmr6r3qg0"]
+
+[ext_resource type="PackedScene" uid="uid://8veaxrlv0egr" path="res://components/hurtbox_component/hurtbox_component.tscn" id="1_w26il"]
+[ext_resource type="PackedScene" uid="uid://juuvvol6wwhe" path="res://components/hitbox_component/hitbox_component.tscn" id="2_fhxqu"]
+[ext_resource type="PackedScene" uid="uid://d07cmkdpirmw6" path="res://components/health_component/health_component.tscn" id="2_jpmyy"]
+[ext_resource type="PackedScene" uid="uid://brh1hxjs4kurc" path="res://components/health_bar_component/health_bar_component.tscn" id="3_gb1x4"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_fhxqu"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="Animation" id="Animation_8jo76"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HitboxComponent:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qyqut"]
+resource_name = "new_animation"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HitboxComponent:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666666, 0.5, 0.8699999),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 4.42, 0), Vector3(0, -4.73, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p2kva"]
+_data = {
+&"RESET": SubResource("Animation_8jo76"),
+&"new_animation": SubResource("Animation_qyqut")
+}
+
+[sub_resource type="Environment" id="Environment_q0jtp"]
+
+[node name="Node3D" type="Node3D" unique_id=424336021]
+
+[node name="HealthComponent" parent="." unique_id=2086384134 node_paths=PackedStringArray("parent") instance=ExtResource("2_jpmyy")]
+parent = NodePath("../CSGBox3D")
+
+[node name="HitboxComponent" parent="." unique_id=817385232 instance=ExtResource("2_fhxqu")]
+collision_mask = 2
+damage = -10
+
+[node name="HurtboxComponent" parent="." unique_id=1950115901 node_paths=PackedStringArray("health_component", "health_bar_component") instance=ExtResource("1_w26il")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.432754, 0)
+collision_layer = 2
+health_component = NodePath("../HealthComponent")
+health_bar_component = NodePath("../HealthBarComponent")
+
+[node name="HealthBarComponent" parent="." unique_id=864028086 instance=ExtResource("3_gb1x4")]
+texture = SubResource("ViewportTexture_fhxqu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1715271807]
+libraries/ = SubResource("AnimationLibrary_p2kva")
+autoplay = &"new_animation"
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=989375861]
+transform = Transform3D(0.47174904, 0.53856874, -0.69813794, 0, 0.7917794, 0.6108072, 0.8817329, -0.28814766, 0.37352118, -8.378861, 7.330741, 4.4828997)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2065706941]
+environment = SubResource("Environment_q0jtp")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=771901489]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=202247525]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3508105, 0.4276576, 2.6569405)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1755499516]
+transform = Transform3D(2.194302, 0, 0, 0, 2.194302, 0, 0, 0, 2.194302, 3.939931, -1.470072, -1.2372618)
