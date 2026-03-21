@@ -33,3 +33,24 @@ cohesive art style for all assets most important
 - [Blender](https://store.steampowered.com/app/365670/Blender/)
 - [MagicaVoxel](https://ephtracy.github.io)
   - Like blender more and blender has ways to turn mesh into voxel but less precision
+
+## 2D, Icons & Fonts
+
+### 📚 Resources
+- [game-icons.net](https://game-icons.net)
+- [google icons](https://fonts.google.com/icons)
+- [google fonts](https://fonts.google.com)
+- [fontawesome](https://fontawesome.com/icons)
+### 🎯 Strategy
+```swift
+love game icons try to use as much as possible
+```
+
+## Audio, Sfx & Music
+
+### 📚 Resources
+- [freesound](https://freesound.org)
+- [zapsplat](https://www.zapsplat.com)
+- [sfxr](https://sfxr.me)
+### 🛠 Tools
+- [Logic Pro](https://www.apple.com/logic-pro/)
