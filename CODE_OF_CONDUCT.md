@@ -19,9 +19,9 @@ success = (core * polish) * (genre * trend) * (art * social)
   - Co-op Local: The most attainable for beginners, though not applicable to all genres.
   - Online: The biggest success multiplier, but the highest difficulty (adds 2x development time or more).
 
-<img width="400" alt="jonastyrollerquote" src="https://github.com/user-attachments/assets/3d2bfe75-caba-4130-8a7f-c8436aeab390" /> - Jonas Tyroller
+<img width="400" alt="jonastyrollerquote" src="https://github.com/user-attachments/assets/3d2bfe75-caba-4130-8a7f-c8436aeab390" /> - `Jonas Tyroller`
 
-<img width="400" alt="steamgurulist" src="https://github.com/user-attachments/assets/a19d7168-de59-4035-aac8-4f6a6be2162b" /> - Chris Zukowski
+<img width="400" alt="steamgurulist" src="https://github.com/user-attachments/assets/a19d7168-de59-4035-aac8-4f6a6be2162b" /> - `Chris Zukowski`
 
 
 ## 🍀 Marketing resources
