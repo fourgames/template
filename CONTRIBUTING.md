@@ -8,7 +8,7 @@ You are welcome to open [Issues](https://github.com/FourGames/the-library-of-fou
 2. **Submit a [Pull Request](https://github.com/FourGames/the-library-of-four-games/pulls).** Please ensure your PR does not change too much at once. Large changes must be broken down into several smaller, manageable pull requests.
 
 ### ⚖️ Terms
-By contributing, you agree abide by the [**MIT License**](./LICENSE).
+By contributing, you agree to abide by the [**MIT License**](./LICENSE).
 
 ### 🎨 Style
 We aim for high-quality, high-effort documentation and code. Please try to maintain a style similar to, or better than, what already exists in the library.
