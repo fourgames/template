@@ -1,6 +1,8 @@
 # 🤝 Contributing
 
-You are welcome to open [Issues](https://github.com/FourGames/the-library-of-four-games/issues) for anything relevant to this repository, including improvements to the `README.md` or the Godot template source code.
+You are welcome to open [Issues](https://github.com/FourGames/the-library-of-four-games/issues) for any issues relevant to this repository, including improvements to the `README.md` or the Godot template source code.
+> [!NOTE]
+> Please use the Issues tab for bug reports and feature proposals only. For general game development questions, please refer to the Godot documentation or community forums.
 
 ## 🚀 Pull Requests
 ### If you wish to contribute directly
