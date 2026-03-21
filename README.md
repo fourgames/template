@@ -1,6 +1,6 @@
 # 🍀 The Library of Four Games
 > [!NOTE]
-> Official library for `Four Games`. A collection of Godot tools, assets, and frameworks designed to make game development faster—inspired by the archives of Ohara and Alexandria.
+> This README is a collection of the formula and resources we find most helpful for making games. While the strategy applies to anyone, the source code in this repository is specific for Godot Engine as it is the template that we use for all our games to move faster and stay organized.
 
 <p align="center">
   <img src="src/clover.svg" width="100">
