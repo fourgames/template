@@ -50,8 +50,8 @@ success = (core * polish) * (genre * trend) * (art * social)
 
 ### 📜 Steam page
 - [Steam capsule](https://www.steamcapsule.com/)
-- [Steam Tag Helper](https://steamtaghelper.com/) - BiteMe Games
-- [Explainer style trailer](https://www.youtube.com/watch?v=_49UfBt0pqc)
+- [Steam Tag Helper](https://steamtaghelper.com/) - `BiteMe Games`
+- [Explainer style trailer](https://www.youtube.com/watch?v=_49UfBt0pqc) - `Jonas Tyroller`
 - [Discord bot for Steam Reviews](https://www.codecks.io/steam-bot/)
 ### 🧅 Localization
 - [localizedirect](https://www.localizedirect.com/)
@@ -59,7 +59,7 @@ success = (core * polish) * (genre * trend) * (art * social)
 ### 🎟️ Marketing
 - [Influencer outreach who plays games](https://whoplays.games/)
 - [Twitch analytics](https://sullygnome.com/)
-- [Get more wishists](https://youtu.be/VHDfuDVsZvs?si=nS4C5eiV2AePVU2y) - BiteMe Games
+- [Get more wishists](https://youtu.be/VHDfuDVsZvs?si=nS4C5eiV2AePVU2y) - `BiteMe Games`
 - [Marketing advice creator of Choo-Choo Charles](https://www.youtube.com/@ScientiaLudos/videos)
 
 
