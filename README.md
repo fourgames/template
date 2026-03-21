@@ -1,17 +1,15 @@
 # 🍀 The Library of Four Games
 Official library for `Four Games`. A collection of Godot tools, assets, and frameworks designed to make game development faster—inspired by the archives of Ohara and Alexandria.
-## 📑 Quick Navigation
-* [The Game Success Formula](#-the-game-success-formula)
-* [🍀 Marketing resources](#-marketing-resources)
-* [🎨 Color, Palettes & Pixel Art](#-color-palettes--pixel-art)
-* [🧊 3D, 2.5D & Voxel](#-3d-25d--voxel)
-* [🖼 2D, Icons & Fonts](#-2d-icons--fonts)
-* [🎵 Audio, Sfx & Music](#-audio-sfx--music)
-
----
 
 <p align="center">
   <img src="src/clover.svg" width="100">
+</p>
+<p align="center">
+  <a href="#-marketing-resources">🍀 Marketing resources</a> | 
+  <a href="#-color-palettes--pixel-art">🎨 Color, Palettes & Pixel Art</a> | 
+  <a href="#-3d-25d--voxel">🧊 3D, 2.5D & Voxel</a> | 
+  <a href="#-2d-icons--fonts">🖼 2D, Icons & Fonts</a> | 
+  <a href="#-audio-sfx--music">🔊 Audio, Sfx & Music</a>
 </p>
 
 ## The Game Success Formula
@@ -113,7 +111,7 @@ cohesive art style for all assets most important
 love game icons try to use as much as possible
 ```
 
-## 🎵 Audio, Sfx & Music
+## 🔊 Audio, Sfx & Music
 
 ### 📚 Resources
 - [freesound](https://freesound.org)
