@@ -1,9 +1,11 @@
 # 🍀 The Library of Four Games
-Official library for `Four Games`. A collection of Godot tools, assets, and frameworks designed to make game development faster—inspired by the archives of Ohara and Alexandria.
+> [!NOTE]
+> Official library for `Four Games`. A collection of Godot tools, assets, and frameworks designed to make game development faster—inspired by the archives of Ohara and Alexandria.
 
 <p align="center">
   <img src="src/clover.svg" width="100">
 </p>
+
 <p align="center">
   <a href="#-marketing-resources">🍀 Marketing resources</a> | 
   <a href="#-color-palettes--pixel-art">🎨 Color, Palettes & Pixel Art</a> | 
@@ -18,18 +20,22 @@ Official library for `Four Games`. A collection of Godot tools, assets, and fram
 success = (core * polish) * (genre * trend) * (art * social)
 ```
 ### 1. Execution (core * polish)
-- `Core` if the core game isn't fun nothing else matters.
-- `Polish` how good it feels to do things.
-- [Polish & Game Feel Demo.](https://deepnight.net/games/game-feel/)
+- `Core`
+  - if the core game isn't fun nothing else matters.
+- `Polish`
+  - how good it feels to do things.
+  - [Polish & Game Feel Demo.](https://deepnight.net/games/game-feel/)
 ### 2. Market Fit (genre * trend)
-- `Genre` the "audience ceiling." Statistically, 3D games have the highest reach.
+- `Genre`
+  - the "audience ceiling." Statistically, 3D games have the highest reach.
 - `Trend`
-  - Port successful formulas (Minecraft, Roblox, Fortnite) to Steam.
+  - Port successful formulas from User-Generated Content (Minecraft, Roblox, Fortnite) to Steam.
   - Combine proven media and concepts (e.g., Breaking Bad / Schedule I)
   - Replicate new trends fast before they are saturated
 ### 3. Appeal (art * social)
-- `Art` just like the woman in the red dress, art gets your attention and stops the scroll.
-- `Social`.
+- `Art`
+  - just like the woman in the red dress, art gets your attention and stops the scroll.
+- `Social`
   - Co-op Local: The most attainable for beginners, though not applicable to all genres.
   - Online: The biggest success multiplier, but the highest difficulty (adds 2x development time or more).
 
@@ -37,6 +43,8 @@ success = (core * polish) * (genre * trend) * (art * social)
 
 <img width="400" alt="steamgurulist" src="https://github.com/user-attachments/assets/a19d7168-de59-4035-aac8-4f6a6be2162b" /> - `Chris Zukowski`
 
+> [!IMPORTANT]
+> These are guidelines, not absolutes. Hit as many as you can, but understand that game development is unpredictable. Use this formula as a strategic compass to guide your decisions, not as rigid requirements. Making something you enjoy working on is going to give you higher life enjoyment & satisfaction.
 
 ## 🍀 Marketing resources
 
