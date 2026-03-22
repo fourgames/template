@@ -6,40 +6,38 @@ class_name HealthBarComponent
 
 # TODO if negative damage then change first but if positive change oposite
 
-
 @onready var health_progress_bar: ProgressBar = %HealthProgressBar
 @onready var under_progress_bar: ProgressBar = %UnderProgressBar
 @onready var wait_timer: Timer = %WaitTimer
 
 func _ready() -> void:
-	health_progress_bar.value = health_progress_bar.max_value
-	under_progress_bar.value = health_progress_bar.max_value
-	
+	pass
 	#health_progress_bar.add_theme_stylebox_override("background", load("uid://kuw0m6acholl"))
 	#health_progress_bar.add_theme_stylebox_override("fill", load("uid://cljc642ndq70v"))
 	#
 	#under_progress_bar.add_theme_stylebox_override("background", load("uid://xafwcgqcyvwy"))
 	#under_progress_bar.add_theme_stylebox_override("fill", load("uid://cxc3y1u6v10h"))
 
-# NEXT taking damage works perfectly but heeling its bugged only under part moves maybe check other scripts
+
+# OPT i tried to write more optimized but idk weird results so this will do for now cant spend to much time here now
+var heal : bool
 func apply_health_bar(amount: int, health_component: HealthComponent) -> void:
-	health_progress_bar.max_value = health_component.max_health
-	under_progress_bar.max_value = health_progress_bar.max_value
-	## Damage is -amount
-	if amount < 0: 
-		health_progress_bar.value = health_component.health
-		
-	## Healing is amount
-	elif amount > 0:
-		under_progress_bar.value = health_component.health
-		
-	wait_timer.start()
+	var max_health_value = health_component.max_health
+	%HealthProgressBar.max_value = max_health_value
+	%UnderProgressBar.max_value = max_health_value
+	
+	if amount > 0: # Heal
+		%UnderProgressBar.value = clamp(%UnderProgressBar.value + amount, 0, max_health_value)
+		heal = true
+	elif amount < 0: # Hurt
+		%HealthProgressBar.value = clamp(%HealthProgressBar.value + amount, 0, max_health_value)
+		heal = false
+	
+	%WaitTimer.start()
 
 
 func _on_wait_timer_timeout() -> void:
-	# If its more then that means it healed
-	if health_progress_bar.value > under_progress_bar.value:
-		health_progress_bar.value = under_progress_bar.value
-	# If its less that means it took damage
-	elif health_progress_bar.value < under_progress_bar.value:
-		under_progress_bar.value = health_progress_bar.value
+	if heal == true:
+		%HealthProgressBar.value = %UnderProgressBar.value
+	elif heal == false:
+		%UnderProgressBar.value = %HealthProgressBar.value

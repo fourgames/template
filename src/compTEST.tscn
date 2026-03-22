@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://juuvvol6wwhe" path="res://components/hitbox_component/hitbox_component.tscn" id="2_fhxqu"]
 [ext_resource type="PackedScene" uid="uid://d07cmkdpirmw6" path="res://components/health_component/health_component.tscn" id="2_jpmyy"]
 [ext_resource type="PackedScene" uid="uid://brh1hxjs4kurc" path="res://components/health_bar_component/health_bar_component.tscn" id="3_gb1x4"]
+[ext_resource type="PackedScene" uid="uid://bmkr84x33203k" path="res://components/hit_flash_component/hit_flash_component.tscn" id="5_q0jtp"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_fhxqu"]
 viewport_path = NodePath("SubViewport")
@@ -20,23 +21,24 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 0, 0)]
+"values": [Vector3(0, -1.6033878, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_qyqut"]
 resource_name = "new_animation"
+length = 10.0
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("HitboxComponent:position")
-tracks/0/interp = 2
+tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.0666666, 0.5, 0.8699999),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 4.42, 0), Vector3(0, -4.73, 0)]
+"values": [Vector3(0, -1.6033878, 0), Vector3(0, 1.7197585, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_p2kva"]
@@ -51,18 +53,20 @@ _data = {
 
 [node name="HealthComponent" parent="." unique_id=2086384134 node_paths=PackedStringArray("parent") instance=ExtResource("2_jpmyy")]
 parent = NodePath("../CSGBox3D")
+health = 10
 
 [node name="HitboxComponent" parent="." unique_id=817385232 instance=ExtResource("2_fhxqu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6033878, 0)
 collision_mask = 2
-damage = -10
+damage = 10
 
 [node name="HurtboxComponent" parent="." unique_id=1950115901 node_paths=PackedStringArray("health_component", "health_bar_component") instance=ExtResource("1_w26il")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.432754, 0)
 collision_layer = 2
 health_component = NodePath("../HealthComponent")
 health_bar_component = NodePath("../HealthBarComponent")
 
 [node name="HealthBarComponent" parent="." unique_id=864028086 instance=ExtResource("3_gb1x4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2994671, 4.4570656, 0.3770988)
 texture = SubResource("ViewportTexture_fhxqu")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1715271807]
@@ -82,3 +86,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3508105, 0.4276576, 2.6569
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1755499516]
 transform = Transform3D(2.194302, 0, 0, 0, 2.194302, 0, 0, 0, 2.194302, 3.939931, -1.470072, -1.2372618)
+
+[node name="HitFlashComponent" parent="." unique_id=2031041721 instance=ExtResource("5_q0jtp")]
+script = null
+
+[editable path="HealthComponent"]
+[editable path="HitboxComponent"]
+[editable path="HurtboxComponent"]

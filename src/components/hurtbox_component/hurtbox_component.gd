@@ -1,4 +1,3 @@
-@tool
 @icon("uid://bw5fsmat1gbkh")
 extends Area3D
 class_name HurtboxComponent

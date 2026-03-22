@@ -1,4 +1,3 @@
-@tool
 @icon("uid://yb2irimddrdm")
 extends Node
 class_name HealthComponent
@@ -8,12 +7,9 @@ class_name HealthComponent
 @export var health : int = 100
 
 func change_health(amount : int):
-	health += amount
-	
-	if health > max_health:
-		health = max_health
+	health = clamp(health + amount, 0, max_health)
+	#print(health)
 	
 	if health <= 0:
-		if parent:
 		# reparent() particles/sfx
-			parent.queue_free()
+		parent.queue_free()
