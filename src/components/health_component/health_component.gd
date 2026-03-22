@@ -2,7 +2,7 @@
 extends Node
 class_name HealthComponent
 
-@export var parent : Node
+#@export var parent : Node
 @export var max_health : int = 100
 @export var health : int = 100
 
@@ -12,4 +12,4 @@ func change_health(amount : int):
 	
 	if health <= 0:
 		# reparent() particles/sfx
-		parent.queue_free()
+		get_parent().queue_free()

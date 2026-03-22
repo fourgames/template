@@ -11,7 +11,8 @@ class_name HealthBarComponent
 @onready var wait_timer: Timer = %WaitTimer
 
 func _ready() -> void:
-	pass
+	%HealthProgressBar.value = %HealthProgressBar.max_value
+	%UnderProgressBar.value = %UnderProgressBar.max_value
 	#health_progress_bar.add_theme_stylebox_override("background", load("uid://kuw0m6acholl"))
 	#health_progress_bar.add_theme_stylebox_override("fill", load("uid://cljc642ndq70v"))
 	#
@@ -24,6 +25,8 @@ var heal : bool
 func apply_health_bar(amount: int, health_component: HealthComponent) -> void:
 	var max_health_value = health_component.max_health
 	%HealthProgressBar.max_value = max_health_value
+	#print(%HealthProgressBar.max_value)
+	#print(%HealthProgressBar.value) # this is before change is applied so yes
 	%UnderProgressBar.max_value = max_health_value
 	
 	if amount > 0: # Heal

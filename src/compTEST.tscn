@@ -331,14 +331,12 @@ shadow_enabled = true
 [node name="HitFlashComponent" parent="." unique_id=480447811 node_paths=PackedStringArray("root_node") instance=ExtResource("5_q0jtp")]
 root_node = NodePath("../furnaces_v1")
 
-[node name="HealthComponent" parent="." unique_id=2086384134 node_paths=PackedStringArray("parent") instance=ExtResource("2_jpmyy")]
-parent = NodePath("../CSGBox3D")
-health = 10
+[node name="HealthComponent" parent="." unique_id=2086384134 instance=ExtResource("2_jpmyy")]
 
 [node name="HitboxComponent" parent="." unique_id=817385232 instance=ExtResource("2_fhxqu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6033878, 0)
 collision_mask = 2
-damage = 10
+damage = -10
 
 [node name="HurtboxComponent" parent="." unique_id=1950115901 node_paths=PackedStringArray("health_component", "health_bar_component", "hit_flash_component") instance=ExtResource("1_w26il")]
 collision_layer = 2
