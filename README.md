@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="#-marketing-resources">🍀 Marketing resources</a> | 
+  <a href="#-marketing">🍀 Marketing</a> | 
   <a href="#-color-palettes--pixel-art">🎨 Color, Palettes & Pixel Art</a> | 
   <a href="#-3d-25d--voxel">🧊 3D, 2.5D & Voxel</a> | 
   <a href="#-2d-icons--fonts">🖼 2D, Icons & Fonts</a> | 
@@ -46,7 +46,7 @@ success = (core * polish) * (genre * trend) * (art * social)
 > [!IMPORTANT]
 > These are guidelines, not absolutes. Hit as many as you can, but understand that game development is unpredictable. Use this formula as a strategic compass to guide your decisions, not as rigid requirements. Making something you enjoy working on is going to give you higher life enjoyment & satisfaction.
 
-## 🍀 Marketing resources
+## 🍀 Marketing
 
 ### 📜 Steam page
 - [Steam capsule](https://www.steamcapsule.com/)
