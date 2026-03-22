@@ -4,6 +4,7 @@ class_name HurtboxComponent
 
 @export var health_component: HealthComponent
 @export var health_bar_component: HealthBarComponent
+@export var hit_flash_component : HitFlashComponent
 
 
 func _get_configuration_warnings() -> PackedStringArray:
@@ -32,3 +33,7 @@ func apply_health_change(amount: int):
 		health_component.change_health(amount)
 		if health_bar_component:
 			health_bar_component.apply_health_bar(amount, health_component)
+	
+	# Maybe warnings for this but its kinda optinal maybe more safty checks if its not added
+	if hit_flash_component:
+		hit_flash_component.hit_flash()

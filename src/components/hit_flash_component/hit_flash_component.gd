@@ -1,4 +1,4 @@
-@icon("res://assets/textures/icon/zap.png")
+@icon("uid://6acok6fga2ud")
 @tool
 extends Node
 class_name HitFlashComponent
@@ -10,21 +10,22 @@ class_name HitFlashComponent
 @export var duration: float = 0.2:
 	set(value):
 		duration = max(value, 0.1)
-@export var meshes: Array[MeshInstance3D]
+@export var root_node: Node3D
 
 func _ready() -> void:
 	hit_flash()
 
+# Dont fully comprehend but it works
 func hit_flash():
-	for mesh_instance in meshes:
-		var mesh_resource = mesh_instance.mesh
-		if mesh_resource:
-			for surface_index in range(mesh_resource.get_surface_count()):
-				var material = mesh_instance.get_active_material(surface_index)
-				if material is StandardMaterial3D:
-					mesh_instance.mesh.resource_local_to_scene = true
-					material.resource_local_to_scene = true
-					material.emission_enabled = true
-					var tween = get_tree().create_tween()
-					tween.tween_property(material, "emission", Color(1, 1, 1), duration / 2)
-					tween.tween_property(material, "emission", Color(0, 0, 0), duration / 2)
+	if not root_node: return
+	
+	for node in [root_node] + root_node.find_children("*", "GeometryInstance3D"):
+		if node is GeometryInstance3D:
+			var material = node.material if "material" in node else node.get_active_material(0)
+			
+			if material is StandardMaterial3D:
+				material.resource_local_to_scene = true
+				material.emission_enabled = true
+				var tween = get_tree().create_tween()
+				tween.tween_property(material, "emission", Color(1, 1, 1), duration / 2)
+				tween.tween_property(material, "emission", Color(0, 0, 0), duration / 2)
