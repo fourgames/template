@@ -5,7 +5,8 @@ class_name HurtboxComponent
 @export var health_component: HealthComponent
 @export var health_bar_component: HealthBarComponent
 @export var hit_flash_component : HitFlashComponent
-
+@export var numbers_component : NumbersComponent
+var numbers_scene = preload("uid://bgaxsmyoyxbpa")
 
 func _get_configuration_warnings() -> PackedStringArray:
 	var warnings: PackedStringArray = []
@@ -37,3 +38,9 @@ func apply_health_change(amount: int):
 	# Maybe warnings for this but its kinda optinal maybe more safty checks if its not added
 	if hit_flash_component:
 		hit_flash_component.hit_flash()
+		
+	#if numbers_component: # OPT Bad example since it removes after this but still
+	var numbers_instance = numbers_scene.instantiate()
+	get_parent().add_child(numbers_instance)
+	numbers_instance.global_position = get_parent().position
+	numbers_instance.set_and_play(amount)

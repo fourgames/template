@@ -29,31 +29,56 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("HitboxComponent:position")
+tracks/0/path = NodePath("ComponentExample/HurtboxComponent/HitboxComponent:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, -1.6033878, 0)]
+"values": [Vector3(0, 0, 3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ComponentExample/HurtboxComponent/HitboxComponent:damage")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [-10]
 }
 
 [sub_resource type="Animation" id="Animation_qyqut"]
 resource_name = "new_animation"
-length = 10.0
+length = 6.0
 loop_mode = 1
+step = 1.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("HitboxComponent:position")
+tracks/0/path = NodePath("ComponentExample/HurtboxComponent/HitboxComponent:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0, -1.6033878, 0), Vector3(0, 1.7197585, 0)]
+"values": [Vector3(0, 0, 3), Vector3(0, 0, -3), Vector3(0, 0, 3), Vector3(0, 0, -3), Vector3(0, 0, 3), Vector3(0, 0, -3), Vector3(0, 0, 3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ComponentExample/HurtboxComponent/HitboxComponent:damage")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [-10, 10]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_p2kva"]
@@ -61,11 +86,6 @@ _data = {
 &"RESET": SubResource("Animation_8jo76"),
 &"new_animation": SubResource("Animation_qyqut")
 }
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7jk5m"]
-resource_local_to_scene = true
-albedo_color = Color(1, 0, 0, 1)
-emission_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p2kva"]
 resource_local_to_scene = true
@@ -351,16 +371,6 @@ texture = SubResource("ViewportTexture_qyqut")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1715271807]
 libraries/ = SubResource("AnimationLibrary_p2kva")
 autoplay = &"new_animation"
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=989375861]
-transform = Transform3D(0.47174904, 0.53856874, -0.69813794, 0, 0.7917794, 0.6108072, 0.8817329, -0.28814766, 0.37352118, -8.378861, 7.330741, 4.4828997)
-
-[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=202247525]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3508105, 0.4276576, 2.6569405)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1755499516]
-transform = Transform3D(2.194302, 0, 0, 0, 2.194302, 0, 0, 0, 2.194302, 3.939931, -1.470072, -1.2372618)
-material = SubResource("StandardMaterial3D_7jk5m")
 
 [node name="furnaces_v1" parent="." unique_id=717266143 instance=ExtResource("6_8jo76")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8456821, 0, -1.6682453)

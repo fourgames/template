@@ -1,6 +1,7 @@
 @icon("uid://deb6kvmuw5vgc")
 extends Node3D
 
+class_name NumbersComponent
 
 func set_and_play(value):
 	var text = abs(int(value))

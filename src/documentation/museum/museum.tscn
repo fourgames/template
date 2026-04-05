@@ -1,3 +1,15 @@
 [gd_scene format=3 uid="uid://c0abhddk437qq"]
 
-[node name="Museum" type="Node2D" unique_id=1160771889]
+[ext_resource type="Script" uid="uid://vtfpiy8pr7v6" path="res://documentation/museum/museum.gd" id="1_vadmq"]
+[ext_resource type="PackedScene" uid="uid://n4y2s8gdj1cu" path="res://documentation/gym/gym.tscn" id="2_cmvwu"]
+
+[node name="Museum" type="Node3D" unique_id=405539038]
+script = ExtResource("1_vadmq")
+
+[node name="MuseumLabel3D" type="Label3D" parent="." unique_id=198476612]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 3)
+billboard = 1
+text = "Museum: An interactive showcase of technical systems and physics (like cloth or destruction) that demonstrates how complex features work through live examples."
+autowrap_mode = 3
+
+[node name="Gym" parent="." unique_id=1944218977 instance=ExtResource("2_cmvwu")]
