@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c0w0o0laooyhw"]
 
 [ext_resource type="Script" uid="uid://bred06ld0l4mj" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="PackedScene" uid="uid://dvnkbmlwfveol" path="res://components/interactor_component/interactor_component.tscn" id="2_onrkg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
 
@@ -26,6 +27,8 @@ mesh = SubResource("CapsuleMesh_4flbx")
 [node name="CSGBox3D" type="CSGBox3D" parent="MeshInstance3D" unique_id=1412767484]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 material = SubResource("StandardMaterial3D_onrkg")
+
+[node name="InteractorComponent" parent="MeshInstance3D" unique_id=1962311501 instance=ExtResource("2_onrkg")]
 
 [node name="OrthogonalCamera3D" type="Camera3D" parent="." unique_id=310094325]
 transform = Transform3D(0.7071068, -0.579228, 0.4055798, 0, 0.57357645, 0.81915206, -0.7071068, -0.579228, 0.4055798, 33.6, 72, 33.8)

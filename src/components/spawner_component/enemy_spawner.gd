@@ -77,7 +77,7 @@ func _process(delta: float) -> void:
 					#await get_tree().create_timer(randf_range(0.0, 0.0667)).timeout # 15TPS is every 0.0667s
 
 func get_next_position():
-	var map_rid = get_node("/root/Game/NavigationRegion3D2").get_navigation_map()
+	var map_rid = get_tree().get_first_node_in_group("Navigation").get_navigation_map()
 
 	for i in range(spawn_points.size()):
 		var area = spawn_points[current_spawn]
