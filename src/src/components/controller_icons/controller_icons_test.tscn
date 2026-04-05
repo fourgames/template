@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://2jd4rljsg1t3"]
+
+[ext_resource type="Texture2D" uid="uid://blrql60mgwx2k" path="res://src/components/controller_icons/move_forward.tres" id="1_hcpvo"]
+
+[node name="Control" type="Control" unique_id=1261464756]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1529545079]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer" unique_id=40311512]
+layout_mode = 2
+theme_override_constants/separation = 101
+
+[node name="Button" type="Button" parent="CenterContainer/HBoxContainer" unique_id=1030315042]
+layout_mode = 2
+text = "Button test"
+icon = ExtResource("1_hcpvo")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/HBoxContainer" unique_id=345724358]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 4
+bbcode_enabled = true
+text = "[img=32]uid://blrql60mgwx2k[/img] RichTextLabel test"
+fit_content = true

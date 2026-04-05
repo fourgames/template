@@ -35,7 +35,6 @@ Shortcuts/density_decrement=Object(Shortcut,"resource_local_to_scene":false,"res
 [application]
 
 config/name="Template Four Games"
-run/main_scene="uid://by15nmr6r3qg0"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="uid://brjow5a5u36de"
 
@@ -62,7 +61,14 @@ enabled=PackedStringArray("res://addons/DualEditor/plugin.cfg", "res://addons/GP
 [file_customization]
 
 folder_colors={
-"res://globals/": "orange"
+"res://addons/": "gray",
+"res://assets/": "yellow",
+"res://src/": "blue",
+"res://src/app/": "red",
+"res://src/app/globals/": "orange",
+"res://src/components/": "green",
+"res://src/features/": "purple",
+"res://src/routes/": "teal"
 }
 
 [global_group]
