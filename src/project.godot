@@ -65,7 +65,6 @@ folder_colors={
 "res://assets/": "yellow",
 "res://src/": "blue",
 "res://src/app/": "red",
-"res://src/app/globals/": "orange",
 "res://src/components/": "green",
 "res://src/features/": "purple",
 "res://src/routes/": "teal"
