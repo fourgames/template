@@ -9,11 +9,6 @@ extends Node
 var _active_tweens: Dictionary = {}
 
 
-## Audio player for hover sounds. Pre-configured with max polyphony.
-@onready var hover_node := _setup_audio_node(PathManager.UI_HOVER_SOUND)
-## Audio player for press sounds. Pre-configured with max polyphony.
-@onready var press_node := _setup_audio_node(PathManager.UI_PRESS_SOUND)
-
 
 	## Listens to everything being added
 	## Uncomment if it misses nodes 
@@ -47,31 +42,11 @@ func _on_node_manager_received(node: Node) -> void:
 
 func _handle_ui_event(node: Control, type: String) -> void:
 	if type == "hover":
-		_play_audio(hover_node)
+		AudioManager.play_sound(PathManager.UI_HOVER_SOUND)
 	elif type == "press":
-		_play_audio(press_node)
+		AudioManager.play_sound(PathManager.UI_PRESS_SOUND)
 	
 	_animate_button(node, type)
-
-
-## Creates and configures an AudioStreamPlayer. 
-## [br]Note: Requires an audio bus named "Sfx" to exist in the project.
-func _setup_audio_node(stream: AudioStream) -> AudioStreamPlayer:
-	var audio_node = AudioStreamPlayer.new()
-	
-	audio_node.stream = stream
-	audio_node.max_polyphony = 8
-	audio_node.bus = &"Sfx"
-	
-	add_child(audio_node)
-	return audio_node
-	
-## Subtle randomization for a more natural, "premium" feel.
-func _play_audio(audio_node: AudioStreamPlayer) -> void:
-	audio_node.pitch_scale = randf_range(0.98, 1.02)
-	audio_node.volume_db = randf_range(-2.0, 0.0)
-	
-	audio_node.play()
 
 
 

@@ -1,5 +1,8 @@
 extends CharacterBody3D
 
+# OPT Maybe break this down into multiple components and also try making a state machine
+# TODO for camera maybe multiple cameras in this scene and set current or other solution
+# For camera kinda intrested in trying and learning how to make a minimap aswell efficient
 signal step
 
 func _emit_steps_with_anim():

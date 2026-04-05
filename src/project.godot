@@ -50,6 +50,7 @@ GameManager="*uid://d07rtwy8ry14o"
 NodeManager="*uid://bi1cxrxhj70n3"
 PathManager="*uid://cwiwhdgjmooc7"
 SignalManager="*uid://djm5fbcusol8f"
+AudioManager="*uid://im0jy8db1q6"
 
 [display]
 
