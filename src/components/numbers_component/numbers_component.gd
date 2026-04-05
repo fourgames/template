@@ -1,3 +1,4 @@
+@icon("uid://deb6kvmuw5vgc")
 extends Node3D
 
 

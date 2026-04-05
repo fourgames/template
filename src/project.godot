@@ -65,6 +65,12 @@ folder_colors={
 "res://globals/": "orange"
 }
 
+[global_group]
+
+Player="Player is in this group used for fidning it efficiently"
+Target="Target group to find targets the player can target"
+Loot="if loot is in group"
+
 [gui]
 
 theme/custom="uid://b56qgya4xh3s2"

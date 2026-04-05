@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bgaxsmyoyxbpa"]
 
-[ext_resource type="Script" uid="uid://388hiheoy3if" path="res://components/numbers_component/Damage_Numbers.gd" id="1_cr5em"]
+[ext_resource type="Script" uid="uid://388hiheoy3if" path="res://components/numbers_component/numbers_component.gd" id="1_r07ws"]
 
 [sub_resource type="Animation" id="Animation_xp1fi"]
 length = 0.001
@@ -105,16 +105,16 @@ _data = {
 [sub_resource type="ViewportTexture" id="ViewportTexture_wte3l"]
 viewport_path = NodePath("Anchor/Sprite3D/SubViewport")
 
-[node name="DamageNumbers" type="Node3D" unique_id=1106775333]
-script = ExtResource("1_cr5em")
+[node name="NumbersComponent" type="Node3D" unique_id=333203928]
+script = ExtResource("1_r07ws")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1772340656]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1995431235]
 unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_i377k")
 
-[node name="Anchor" type="Node3D" parent="." unique_id=1813237826]
+[node name="Anchor" type="Node3D" parent="." unique_id=1558062560]
 
-[node name="Sprite3D" type="Sprite3D" parent="Anchor" unique_id=1690186827]
+[node name="Sprite3D" type="Sprite3D" parent="Anchor" unique_id=1429513150]
 unique_name_in_owner = true
 transform = Transform3D(0.349, 0, 0, 0, 0.349, 0, 0, 0, 0.349, 0, 0, 0)
 billboard = 1
@@ -122,10 +122,10 @@ no_depth_test = true
 render_priority = 2
 texture = SubResource("ViewportTexture_wte3l")
 
-[node name="SubViewport" type="SubViewport" parent="Anchor/Sprite3D" unique_id=1207378415]
+[node name="SubViewport" type="SubViewport" parent="Anchor/Sprite3D" unique_id=1691849173]
 transparent_bg = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Anchor/Sprite3D/SubViewport" unique_id=1204359070]
+[node name="RichTextLabel" type="RichTextLabel" parent="Anchor/Sprite3D/SubViewport" unique_id=1275719154]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 15

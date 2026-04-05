@@ -1,4 +1,7 @@
+@icon("uid://5qj5fd1fkas2")
 extends Node3D
+
+# TODO this works well but maybe make it more simple starting with 1 spawn point that you use this to spawn even player at start 
 
 @export var spawn_data_list: Array[EnemySpawnData] = []
 

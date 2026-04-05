@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://n4y2s8gdj1cu"]
+
+[ext_resource type="Texture2D" uid="uid://bsdt8sm1fm154" path="res://icon.svg" id="1_gpafp"]
+[ext_resource type="PackedScene" uid="uid://c0w0o0laooyhw" path="res://player.tscn" id="1_lpwyr"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gpafp"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_cqvke"]
+sky_material = SubResource("ProceduralSkyMaterial_gpafp")
+
+[sub_resource type="Environment" id="Environment_vtdpf"]
+background_mode = 2
+sky = SubResource("Sky_cqvke")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cqvke"]
+albedo_texture = ExtResource("1_gpafp")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[node name="Gym" type="Node3D" unique_id=1944218977]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1740513674]
+environment = SubResource("Environment_vtdpf")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1006154017]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=1435336902]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1192112121]
+size = Vector3(100, 1, 100)
+material = SubResource("StandardMaterial3D_cqvke")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=394485176]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.5, -0.5)
+size = Vector3(1, 4, 6)
+material = SubResource("StandardMaterial3D_cqvke")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D" unique_id=1059481124]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -5)
+radius = 2.0
+height = 5.0
+material = SubResource("StandardMaterial3D_cqvke")
+
+[node name="Player" parent="." unique_id=598808722 instance=ExtResource("1_lpwyr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)

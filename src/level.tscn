@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://co1dg2qeh6u5i"]
 
 [ext_resource type="PackedScene" uid="uid://c0w0o0laooyhw" path="res://player.tscn" id="1_u52ul"]
+[ext_resource type="PackedScene" uid="uid://cfkbyu0hhuoxu" path="res://components/radar_component/radar_component.tscn" id="2_vonw3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vonw3"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -32,3 +33,5 @@ size = Vector3(20, 1, 20)
 
 [node name="Player" parent="." unique_id=598808722 instance=ExtResource("1_u52ul")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3155425, 0)
+
+[node name="RadarComponent" parent="." unique_id=1982901923 instance=ExtResource("2_vonw3")]
