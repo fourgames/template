@@ -365,18 +365,18 @@ material = SubResource("StandardMaterial3D_7jk5m")
 [node name="furnaces_v1" parent="." unique_id=717266143 instance=ExtResource("6_8jo76")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8456821, 0, -1.6682453)
 
-[node name="Furnace_1" parent="furnaces_v1" index="0" unique_id=436176922]
+[node name="Furnace_1" parent="furnaces_v1" index="0" unique_id=1321198568]
 mesh = SubResource("ArrayMesh_srm85")
 
-[node name="Furnace_2" parent="furnaces_v1" index="1" unique_id=73095176]
+[node name="Furnace_2" parent="furnaces_v1" index="1" unique_id=948368203]
 visible = false
 mesh = SubResource("ArrayMesh_5h3ra")
 
-[node name="Furnace_3" parent="furnaces_v1" index="2" unique_id=948006047]
+[node name="Furnace_3" parent="furnaces_v1" index="2" unique_id=103532473]
 visible = false
 mesh = SubResource("ArrayMesh_hql0q")
 
-[node name="Furnace_4" parent="furnaces_v1" index="3" unique_id=499740474]
+[node name="Furnace_4" parent="furnaces_v1" index="3" unique_id=380550917]
 visible = false
 mesh = SubResource("ArrayMesh_lqki1")
 

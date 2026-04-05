@@ -1,4 +1,5 @@
 @tool
+@icon("uid://bfsqfyyvlkehn")
 extends Node
 
 signal input_type_changed(input_type: InputType, controller: int)

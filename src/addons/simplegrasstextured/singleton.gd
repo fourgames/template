@@ -22,6 +22,7 @@
 # SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 @tool
+@icon("uid://bfsqfyyvlkehn")
 extends Node3D
 
 var wind_direction := Vector3(1, 0, 0) : set = set_wind_direction

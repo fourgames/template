@@ -50,6 +50,11 @@ GameManager="*uid://d07rtwy8ry14o"
 NodeManager="*uid://bi1cxrxhj70n3"
 PathManager="*uid://cwiwhdgjmooc7"
 SignalManager="*uid://djm5fbcusol8f"
+DemoManager="*uid://yuweybb57rjy"
+
+[display]
+
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
@@ -60,6 +65,10 @@ enabled=PackedStringArray("res://addons/DualEditor/plugin.cfg", "res://addons/GP
 folder_colors={
 "res://globals/": "orange"
 }
+
+[gui]
+
+theme/custom="uid://b56qgya4xh3s2"
 
 [input]
 
