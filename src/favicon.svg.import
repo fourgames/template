@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rpvmnuvx5qov"
-path="res://.godot/imported/clover.svg-8087db959a71edcaf3233872beb13982.ctex"
+uid="uid://brjow5a5u36de"
+path="res://.godot/imported/favicon.svg-a165518550174d7996e87d364e3b1023.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://clover.svg"
-dest_files=["res://.godot/imported/clover.svg-8087db959a71edcaf3233872beb13982.ctex"]
+source_file="res://favicon.svg"
+dest_files=["res://.godot/imported/favicon.svg-a165518550174d7996e87d364e3b1023.ctex"]
 
 [params]
 
