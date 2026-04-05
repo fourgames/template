@@ -35,6 +35,7 @@ Shortcuts/density_decrement=Object(Shortcut,"resource_local_to_scene":false,"res
 [application]
 
 config/name="Template Four Games"
+run/main_scene="uid://n4y2s8gdj1cu"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="uid://brjow5a5u36de"
 

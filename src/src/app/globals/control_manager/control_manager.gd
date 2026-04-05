@@ -8,33 +8,23 @@ extends Node
 ## Tracks active animations to prevent "tween fighting" when moving mouse quickly.
 var _active_tweens: Dictionary = {}
 
-## Audio Resources. Replace these UIDs with your own sound files.
-const UI_PRESS_SOUND := preload("uid://bcb5yvaaabo3x")
-const UI_HOVER_SOUND := preload("uid://cvb1ywtd23rgw")
 
 ## Audio player for hover sounds. Pre-configured with max polyphony.
-@onready var hover_node := _setup_audio_node(UI_HOVER_SOUND)
+@onready var hover_node := _setup_audio_node(PathManager.UI_HOVER_SOUND)
 ## Audio player for press sounds. Pre-configured with max polyphony.
-@onready var press_node := _setup_audio_node(UI_PRESS_SOUND)
+@onready var press_node := _setup_audio_node(PathManager.UI_PRESS_SOUND)
 
 
 	## Listens to everything being added
 	## Uncomment if it misses nodes 
 func _enter_tree() -> void:
-	get_tree().node_added.connect(_on_node_added)
+	SignalManager.control_node_added.connect(_on_node_manager_received)
 	
 	#for node in get_tree().root.find_children("*", "Control", true, false):
 		#_on_node_added(node)
 
 ## Filters added nodes and applies UI management logic to [Control] types.
-func _on_node_added(node: Node) -> void:
-	if not node is Control:
-		return
-	
-	if node.has_meta(&"ui_managed"): 
-		return
-	node.set_meta(&"ui_managed", true)
-	
+func _on_node_manager_received(node: Node) -> void:
 	if node is BaseButton:
 		node.pivot_offset_ratio = Vector2(0.5, 0.5)
 		

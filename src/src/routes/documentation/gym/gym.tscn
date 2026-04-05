@@ -575,6 +575,20 @@ transform = Transform3D(0.19999999, 0, 0, 0, 0.19999999, 0, 0, 0, 0.19999999, 0,
 libraries/ = SubResource("AnimationLibrary_11d6r")
 autoplay = &"new_animation"
 
+[node name="Button" type="Button" parent="." unique_id=863593862]
+offset_left = 139.0
+offset_top = 122.0
+offset_right = 320.0
+offset_bottom = 236.0
+text = "Hello"
+
+[node name="Button2" type="Button" parent="." unique_id=2123052907]
+offset_left = 365.0
+offset_top = 140.0
+offset_right = 546.0
+offset_bottom = 254.0
+text = "Hello"
+
 [editable path="FurnanceExample/furnaces_v1"]
 [editable path="FurnanceExample/HurtboxComponent"]
 [editable path="FurnanceExample/HurtboxComponent/HitboxComponent"]
