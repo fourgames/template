@@ -1,6 +1,6 @@
-# 🍀 The Library of Four Games
+# 🍀 Resources Four Games
 > [!NOTE]
-> This README is a collection of the formula and resources we find most helpful for making games. While the strategy applies to anyone, the source code in this repository is specific for Godot Engine as it is the template that we use for all our games to move faster and stay organized.
+> A collection of a formula and resources we find helpful for making games. 
 
 <p align="center">
   <img src="src/favicon.svg" width="100">
@@ -14,10 +14,11 @@
 
 <p align="center">
   <a href="#-marketing">🍀 Marketing</a> | 
-  <a href="#-color-palettes--pixel-art">🎨 Color, Palettes & Pixel Art</a> | 
-  <a href="#-3d-25d--voxel">🧊 3D, 2.5D & Voxel</a> | 
-  <a href="#-2d-icons--fonts">🖼 2D, Icons & Fonts</a> | 
-  <a href="#-audio-sfx--music">🔊 Audio, Sfx & Music</a>
+  <a href="#-color-palettes--pixel-art">🎨 Pixel Art & Color</a> | 
+  <a href="#-3d-25d--voxel">🧊 3D & Voxel</a> | 
+  <a href="#-2d-icons--fonts">🖼 Icons & Fonts</a> | 
+  <a href="#-audio-sfx--music">🔊 Audio</a> | 
+  <a href="#-audio-sfx--music">📼 Video</a>
 </p>
 
 ## The Game Success Formula
@@ -69,7 +70,7 @@ success = (core * polish) * (genre * trend) * (art * social)
 - [Marketing advice creator of Choo-Choo Charles](https://www.youtube.com/@ScientiaLudos/videos)
 
 
-## 🎨 Color, Palettes & Pixel Art
+## 🎨 Pixel Art & Color
 
 ### 📚 Resources
 - [Lospec Palette List](https://lospec.com/palette-list)
@@ -90,7 +91,7 @@ sum 16x16 and 2-8 colors half for UI
   <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/431730/ss_46a7e00325c8e3b8cea2cfecc414a4b777827d8e.1920x1080.jpg?t=1749680273" width="400">
 </p>
 
-## 🧊 3D, 2.5D & Voxel
+## 🧊 3D & Voxel
 
 ### 📚 Resources
 - [Godot Asset Store](https://store-beta.godotengine.org)
@@ -113,7 +114,7 @@ cohesive art style for all assets most important
 
 
 
-## 🖼 2D, Icons & Fonts
+## 🖼 Icons & Fonts
 
 ### 📚 Resources
 - [game-icons.net](https://game-icons.net)
@@ -125,14 +126,26 @@ cohesive art style for all assets most important
 love game icons try to use as much as possible
 ```
 
-## 🔊 Audio, Sfx & Music
+## 🔊 Audio
 
 ### 📚 Resources
 - [freesound](https://freesound.org)
 - [zapsplat](https://www.zapsplat.com)
 - [sfxr](https://sfxr.me)
 ### 🛠 Tools
-- [Logic Pro](https://www.apple.com/logic-pro/)
+- [REAPER](https://www.reaper.fm)
+  - Popular and free trial and affordable but not free and open source
 <p align="left">
-  <img src="https://www.macworld.se/wp-content/uploads/2023/04/3199670276.jpg?quality=50&strip=all" width="400">
+  <img src="https://www.reaper.fm/v7img/ss_persp_v7.jpg" width="400">
 </p>
+
+
+## 📼 Video
+
+### 📚 Resources
+- [Obs Studio](https://github.com/obsproject/obs-studio)
+  - Open source recording software available on Steam for in-game recording i recommend the engines Movie Recorder to get a stable recording.
+- [Davinci Resolve](https://www.blackmagicdesign.com/se/products/davinciresolve)
+  - Pros good free version, cons not fully free and open source
+- [Blender](https://store.steampowered.com/app/365670/Blender/)
+  - Has a video editor thats getting better
