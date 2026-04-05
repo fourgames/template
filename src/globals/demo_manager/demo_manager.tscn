@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://yuweybb57rjy"]
 
 [ext_resource type="Theme" uid="uid://b56qgya4xh3s2" path="res://theme.tres" id="1_6sh7m"]
-[ext_resource type="Script" uid="uid://cwu0n13e0icn" path="res://components/demo_component/demo_manager.gd" id="1_vahwi"]
+[ext_resource type="Script" uid="uid://cwu0n13e0icn" path="res://globals/demo_manager/demo_manager.gd" id="1_vahwi"]
 
 [sub_resource type="Animation" id="Animation_g4dmw"]
 length = 0.001
