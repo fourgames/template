@@ -4,6 +4,12 @@
 
 <p align="center">
   <img src="src/clover.svg" width="100">
+
+</p>
+<p align="center">
+  <img src="https://img.shields.io/github/stars/fourgames/template?style=for-the-badge&color=gold" alt="Stars">
+  <img src="https://img.shields.io/github/forks/fourgames/template?style=for-the-badge&color=blue" alt="Forks">
+  <img src="https://img.shields.io/github/license/fourgames/template?style=for-the-badge" alt="License">
 </p>
 
 <p align="center">
