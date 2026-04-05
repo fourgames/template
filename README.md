@@ -14,11 +14,11 @@
 
 <p align="center">
   <a href="#-marketing">🍀 Marketing</a> | 
-  <a href="#-color-palettes--pixel-art">🎨 Pixel Art & Color</a> | 
-  <a href="#-3d-25d--voxel">🧊 3D & Voxel</a> | 
-  <a href="#-2d-icons--fonts">🖼 Icons & Fonts</a> | 
-  <a href="#-audio-sfx--music">🔊 Audio</a> | 
-  <a href="#-audio-sfx--music">📼 Video</a>
+  <a href="#-pixel-art--color">🎨 Pixel Art & Color</a> | 
+  <a href="#-3d--voxel">🧊 3D & Voxel</a> | 
+  <a href="#-icons--fonts">🖼 Icons & Fonts</a> | 
+  <a href="#-audio">🔊 Audio</a> | 
+  <a href="#-video">📼 Video</a>
 </p>
 
 ## The Game Success Formula
