@@ -6,6 +6,8 @@ func _ready() -> void:
 	%ContinueButton.pressed.connect(_on_continue_button_pressed)
 	%OptionsButton.pressed.connect(_on_options_button_pressed)
 	%QuitButton.pressed.connect(_on_quit_button_pressed)
+	
+	%ContinueButton.grab_focus()
 
 func _on_paused_button_pressed() -> void:
 	GameManager.change_state(GameManager.GameState.PLAYING)

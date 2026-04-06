@@ -7,6 +7,8 @@ func _ready() -> void:
 	%PlayButton.pressed.connect(_on_play_button_pressed)
 	%OptionsButton.pressed.connect(_on_settings_button_pressed)
 	%QuitButton.pressed.connect(_on_quit_button_pressed)
+	
+	%PlayButton.grab_focus()
 
 func _on_website_texture_button_pressed() -> void:
 	OS.shell_open("https://fourgames.se")

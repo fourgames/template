@@ -59,7 +59,6 @@ RemoveMeLater="*uid://crsafe53nr0gk"
 
 [display]
 
-window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
