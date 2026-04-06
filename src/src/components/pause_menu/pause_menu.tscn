@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cvb3uocxvde1x"]
 
-[ext_resource type="Script" uid="uid://bnjpj08gnooep" path="res://src/components/menues/pause_menu/pause_menu.gd" id="1_hdmo1"]
+[ext_resource type="Script" uid="uid://bnjpj08gnooep" path="res://src/components/pause_menu/pause_menu.gd" id="1_hdmo1"]
 
 [sub_resource type="Gradient" id="Gradient_hdmo1"]
 offsets = PackedFloat32Array(0, 0.5, 1)

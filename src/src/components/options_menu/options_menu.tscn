@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://dycmqmsylxp31"]
 
-[ext_resource type="Script" uid="uid://ne1dd2s5bsw5" path="res://src/components/menues/options_menu/options_menu.gd" id="1_lbr8e"]
-[ext_resource type="Script" uid="uid://dpkstn4maht7c" path="res://src/components/menues/options_menu/window_mode.gd" id="2_3g2h0"]
-[ext_resource type="Texture2D" uid="uid://de5wy4embcsab" path="res://src/components/menues/options_menu/anticlockwise-rotation.svg" id="3_8tjq6"]
-[ext_resource type="Script" uid="uid://2rmuxrqsbpfi" path="res://src/components/menues/options_menu/vsync.gd" id="4_3xo44"]
-[ext_resource type="Script" uid="uid://dr8jke8c707oy" path="res://src/components/menues/options_menu/max_fps.gd" id="5_y7dao"]
+[ext_resource type="Script" uid="uid://ne1dd2s5bsw5" path="res://src/components/options_menu/options_menu.gd" id="1_lbr8e"]
+[ext_resource type="Script" uid="uid://dpkstn4maht7c" path="res://src/components/options_menu/window_mode.gd" id="2_3g2h0"]
+[ext_resource type="Texture2D" uid="uid://de5wy4embcsab" path="res://src/components/options_menu/anticlockwise-rotation.svg" id="3_8tjq6"]
+[ext_resource type="Script" uid="uid://2rmuxrqsbpfi" path="res://src/components/options_menu/vsync.gd" id="4_3xo44"]
+[ext_resource type="Script" uid="uid://dr8jke8c707oy" path="res://src/components/options_menu/max_fps.gd" id="5_y7dao"]
+[ext_resource type="Script" uid="uid://bxw1wvx0fir6p" path="res://src/components/options_menu/Upscaling.gd" id="6_edglp"]
 
 [sub_resource type="Gradient" id="Gradient_h5t0r"]
 offsets = PackedFloat32Array(0, 0.5, 1)
@@ -196,16 +197,13 @@ stretch_mode = 5
 [node name="MaxFPSLineEdit" type="LineEdit" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/MaxFPSHSplitContainer" unique_id=19998221]
 unique_name_in_owner = true
 layout_mode = 2
-text = "999"
 placeholder_text = "0"
-max_length = 3
 
 [node name="MaxFPSHSlider" type="HSlider" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/MaxFPSHSplitContainer" unique_id=292672533]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 1
 max_value = 500.0
-step = 5.0
 tick_count = 5
 ticks_position = 3
 
@@ -213,6 +211,7 @@ ticks_position = 3
 layout_mode = 2
 split_offsets = PackedInt32Array(226)
 split_offset = 226
+script = ExtResource("6_edglp")
 
 [node name="UpscalingLabel" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/UpscalingHSplitContainer" unique_id=50363716]
 unique_name_in_owner = true
@@ -254,6 +253,45 @@ popup/item_4/text = "Performance"
 popup/item_4/id = 4
 popup/item_5/text = "Ultra Performance"
 popup/item_5/id = 5
+
+[node name="UpscalingHSplitContainer2" type="HSplitContainer" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO" unique_id=1036622750]
+layout_mode = 2
+split_offsets = PackedInt32Array(226, 306)
+split_offset = 226
+script = ExtResource("6_edglp")
+
+[node name="UpscalingLabel" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/UpscalingHSplitContainer2" unique_id=1886302899]
+layout_mode = 2
+text = "Resolution Scale"
+
+[node name="UpscalingResetButton" type="TextureButton" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/UpscalingHSplitContainer2/UpscalingLabel" unique_id=1362193712]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("3_8tjq6")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MaxFPSLineEdit" type="LineEdit" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/UpscalingHSplitContainer2" unique_id=358548372]
+layout_mode = 2
+placeholder_text = "100"
+max_length = 3
+
+[node name="MaxFPSHSlider" type="HSlider" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/UpscalingHSplitContainer2" unique_id=1880878967]
+layout_mode = 2
+size_flags_vertical = 1
+value = 100.0
+tick_count = 5
+ticks_position = 3
 
 [node name="AUDIO" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer" unique_id=272106833]
 visible = false

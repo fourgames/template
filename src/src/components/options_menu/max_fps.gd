@@ -6,8 +6,12 @@ func _ready() -> void:
 	%MaxFPSLineEdit.text_submitted.connect(_on_max_fps_line_edit_text_submitted)
 	%MaxFPSResetButton.pressed.connect(_on_max_fps_reset_button_pressed)
 	
+# NEW: Connect the sliding window logic
+	%MaxFPSLineEdit.text_changed.connect(_on_max_fps_line_edit_text_changed)
 	# 2. Initialize the UI
 	setup_fps_ui()
+
+
 
 func setup_fps_ui() -> void:
 	var saved_fps = DataManager.payload.video.MaxFPS
@@ -59,3 +63,38 @@ func _on_max_fps_reset_button_pressed() -> void:
 	%MaxFPSHSlider.value = default_fps
 	%MaxFPSLineEdit.text = str(default_fps)
 	apply_fps_limit(default_fps)
+
+
+func _on_max_fps_line_edit_text_changed(new_text: String) -> void:
+	# 1. Store the current caret position before we mess with the text
+	var old_caret_position = %MaxFPSLineEdit.caret_column
+	
+	# 2. Filter: Only allow numbers
+	var filtered_text = ""
+	for character in new_text:
+		if character in "0123456789":
+			filtered_text += character
+	
+	# 3. Sliding Window: Keep only the last 3 digits
+	if filtered_text.length() > 3:
+		filtered_text = filtered_text.right(3)
+	
+	# 4. Only update the LineEdit if the text actually changed
+	# This prevents the "jumping" and infinite signal loops
+	if %MaxFPSLineEdit.text != filtered_text:
+		%MaxFPSLineEdit.text = filtered_text
+		
+		# Set caret to the end (standard for sliding input)
+		# Or use: %MaxFPSLineEdit.caret_column = old_caret_position 
+		# But for "sliding" text, jumping to the end feels more natural
+		%MaxFPSLineEdit.caret_column = filtered_text.length()
+	
+	# 5. Live Apply (Engine and Slider sync)
+	if filtered_text != "":
+		var new_fps = clampi(filtered_text.to_int(), 0, 500)
+		
+		# We use set_value_no_signal so the slider doesn't 
+		# trigger its own 'value_changed' and fight the LineEdit
+		%MaxFPSHSlider.set_value_no_signal(new_fps)
+		
+		apply_fps_limit(new_fps)
