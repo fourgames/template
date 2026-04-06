@@ -8,17 +8,18 @@ script = ExtResource("1_kfi8j")
 
 [node name="Label" type="Label" parent="." unique_id=1490888290]
 unique_name_in_owner = true
-z_index = 4096
-z_as_relative = false
-offset_top = -7.9999995
-offset_right = 1599.9999
-offset_bottom = 604.0
-scale = Vector2(0.05, 0.05)
+z_index = 100
+y_sort_enabled = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -39.5
+offset_right = 39.5
+offset_bottom = 28.0
+grow_horizontal = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 10
-theme_override_constants/shadow_offset_y = 10
 theme_override_constants/shadow_outline_size = 10
-theme_override_font_sizes/font_size = 300
+theme_override_font_sizes/font_size = 20
 text = "FPS: 145"
 horizontal_alignment = 1
 vertical_alignment = 1

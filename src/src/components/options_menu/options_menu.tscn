@@ -204,21 +204,22 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 1
 max_value = 999.0
+step = 30.0
 tick_count = 5
 ticks_position = 3
 
-[node name="UpscalingHSplitContainer" type="HSplitContainer" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO" unique_id=166547103]
+[node name="Scaling3DModeHSplitContainer" type="HSplitContainer" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO" unique_id=166547103]
 layout_mode = 2
 split_offsets = PackedInt32Array(226)
 split_offset = 226
 script = ExtResource("6_edglp")
 
-[node name="UpscalingLabel" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/UpscalingHSplitContainer" unique_id=50363716]
+[node name="Scaling3DModeModeLabel" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/Scaling3DModeHSplitContainer" unique_id=50363716]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Upscaling"
+text = "Scaling 3D Mode"
 
-[node name="UpscalingResetButton" type="TextureButton" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/UpscalingHSplitContainer/UpscalingLabel" unique_id=1494558913]
+[node name="Scaling3DModeResetButton" type="TextureButton" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/Scaling3DModeHSplitContainer/Scaling3DModeModeLabel" unique_id=1494558913]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(20, 0)
 layout_mode = 1
@@ -236,35 +237,22 @@ texture_normal = ExtResource("3_8tjq6")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="UpscalingOptionButton" type="OptionButton" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/UpscalingHSplitContainer" unique_id=1639317854]
+[node name="Scaling3DModeOptionButton" type="OptionButton" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/Scaling3DModeHSplitContainer" unique_id=1639317854]
 unique_name_in_owner = true
 layout_mode = 2
-selected = 0
-item_count = 6
-popup/item_0/text = "Disabled"
-popup/item_0/id = 0
-popup/item_1/text = "Ultra Quality"
-popup/item_1/id = 1
-popup/item_2/text = "Quality"
-popup/item_2/id = 2
-popup/item_3/text = "Balanced"
-popup/item_3/id = 3
-popup/item_4/text = "Performance"
-popup/item_4/id = 4
-popup/item_5/text = "Ultra Performance"
-popup/item_5/id = 5
 
-[node name="UpscalingHSplitContainer2" type="HSplitContainer" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO" unique_id=1036622750]
+[node name="Scaling3DScaleHSplitContainer" type="HSplitContainer" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO" unique_id=1036622750]
 layout_mode = 2
 split_offsets = PackedInt32Array(226, 306)
 split_offset = 226
-script = ExtResource("6_edglp")
 
-[node name="UpscalingLabel" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/UpscalingHSplitContainer2" unique_id=1886302899]
+[node name="Scaling3DScaleLabel" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/Scaling3DScaleHSplitContainer" unique_id=1886302899]
+unique_name_in_owner = true
 layout_mode = 2
-text = "Resolution Scale"
+text = "Scaling 3D Scale"
 
-[node name="UpscalingResetButton" type="TextureButton" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/UpscalingHSplitContainer2/UpscalingLabel" unique_id=1362193712]
+[node name="Scaling3DScaleResetButton" type="TextureButton" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/Scaling3DScaleHSplitContainer/Scaling3DScaleLabel" unique_id=1362193712]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(20, 0)
 layout_mode = 1
 anchors_preset = 6
@@ -281,12 +269,56 @@ texture_normal = ExtResource("3_8tjq6")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="MaxFPSLineEdit" type="LineEdit" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/UpscalingHSplitContainer2" unique_id=358548372]
+[node name="Scaling3DScaleLineEdit" type="LineEdit" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/Scaling3DScaleHSplitContainer" unique_id=358548372]
+unique_name_in_owner = true
 layout_mode = 2
 placeholder_text = "100"
 max_length = 3
 
-[node name="MaxFPSHSlider" type="HSlider" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/UpscalingHSplitContainer2" unique_id=1880878967]
+[node name="Scaling3DScaleHSlider" type="HSlider" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/Scaling3DScaleHSplitContainer" unique_id=1880878967]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+value = 100.0
+tick_count = 5
+ticks_position = 3
+
+[node name="Scaling3DSharpnessHSplitContainer2" type="HSplitContainer" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO" unique_id=899290665]
+layout_mode = 2
+split_offsets = PackedInt32Array(226, 306)
+split_offset = 226
+
+[node name="Scaling3DSharpnessLabel" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/Scaling3DSharpnessHSplitContainer2" unique_id=950091728]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Scaling 3D Sharpness"
+
+[node name="Scaling3DSharpnessResetButton" type="TextureButton" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/Scaling3DSharpnessHSplitContainer2/Scaling3DSharpnessLabel" unique_id=1227578610]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("3_8tjq6")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Scaling3DSharpnessLineEdit" type="LineEdit" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/Scaling3DSharpnessHSplitContainer2" unique_id=2131884941]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "100"
+max_length = 3
+
+[node name="Scaling3DSharpnessHSlider" type="HSlider" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/Scaling3DSharpnessHSplitContainer2" unique_id=1120346326]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 1
 value = 100.0

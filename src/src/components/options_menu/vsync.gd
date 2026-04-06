@@ -47,6 +47,7 @@ func _on_VsyncOptionButton_item_selected(index: int) -> void:
 func _on_VsyncResetButton_pressed() -> void:
 	var default_id = DataManager.payload.video.DefaultVSyncMode
 	
+	%VsyncOptionButton.grab_focus()
 	# Find the index that matches our default ID
 	for i in %VsyncOptionButton.item_count:
 		if %VsyncOptionButton.get_item_id(i) == default_id:
