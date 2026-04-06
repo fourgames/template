@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://crsafe53nr0gk"]
+
+[ext_resource type="Script" uid="uid://k63kbjnxhs7e" path="res://src/components/fps_counter/fps_counter.gd" id="1_kfi8j"]
+
+[node name="FpsCounter" type="CanvasLayer" unique_id=550602975]
+process_mode = 3
+script = ExtResource("1_kfi8j")
+
+[node name="Label" type="Label" parent="." unique_id=1490888290]
+unique_name_in_owner = true
+z_index = 4096
+z_as_relative = false
+offset_top = -7.9999995
+offset_right = 1599.9999
+offset_bottom = 604.0
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 300
+text = "FPS: 145"
+horizontal_alignment = 1
+vertical_alignment = 1

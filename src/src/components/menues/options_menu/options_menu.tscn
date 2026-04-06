@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dpkstn4maht7c" path="res://src/components/menues/options_menu/window_mode.gd" id="2_3g2h0"]
 [ext_resource type="Texture2D" uid="uid://de5wy4embcsab" path="res://src/components/menues/options_menu/anticlockwise-rotation.svg" id="3_8tjq6"]
 [ext_resource type="Script" uid="uid://2rmuxrqsbpfi" path="res://src/components/menues/options_menu/vsync.gd" id="4_3xo44"]
+[ext_resource type="Script" uid="uid://dr8jke8c707oy" path="res://src/components/menues/options_menu/max_fps.gd" id="5_y7dao"]
 
 [sub_resource type="Gradient" id="Gradient_h5t0r"]
 offsets = PackedFloat32Array(0, 0.5, 1)
@@ -163,18 +164,18 @@ stretch_mode = 5
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="FrameRateLimitHSplitContainer" type="HSplitContainer" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO" unique_id=2072599302]
-unique_name_in_owner = true
+[node name="MaxFPSHSplitContainer" type="HSplitContainer" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO" unique_id=2072599302]
 layout_mode = 2
 split_offsets = PackedInt32Array(226, 0)
 split_offset = 226
+script = ExtResource("5_y7dao")
 
-[node name="FrameRateLimitLabel" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/FrameRateLimitHSplitContainer" unique_id=518350119]
+[node name="MaxFPSLabel" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/MaxFPSHSplitContainer" unique_id=518350119]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Frame Rate Limit"
+text = "Max FPS"
 
-[node name="FrameRateLimitResetButton" type="TextureButton" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/FrameRateLimitHSplitContainer/FrameRateLimitLabel" unique_id=785890445]
+[node name="MaxFPSResetButton" type="TextureButton" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/MaxFPSHSplitContainer/MaxFPSLabel" unique_id=785890445]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(20, 0)
 layout_mode = 1
@@ -192,14 +193,14 @@ texture_normal = ExtResource("3_8tjq6")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="FrameRateLimitLineEdit" type="LineEdit" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/FrameRateLimitHSplitContainer" unique_id=19998221]
+[node name="MaxFPSLineEdit" type="LineEdit" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/MaxFPSHSplitContainer" unique_id=19998221]
 unique_name_in_owner = true
 layout_mode = 2
 text = "999"
 placeholder_text = "0"
 max_length = 3
 
-[node name="FrameRateLimitHSlider" type="HSlider" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/FrameRateLimitHSplitContainer" unique_id=292672533]
+[node name="MaxFPSHSlider" type="HSlider" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/MaxFPSHSplitContainer" unique_id=292672533]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 1
