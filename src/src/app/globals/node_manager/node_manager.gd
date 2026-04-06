@@ -5,6 +5,9 @@ extends Node
 func _enter_tree() -> void:
 	get_tree().node_added.connect(_on_node_added)
 
+func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
+
 func _on_node_added(node: Node) -> void:
 	if not node is Control: # Right now only care about control but can change later to include others
 		return

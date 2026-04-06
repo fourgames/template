@@ -6,6 +6,10 @@ const MIN_INTERVAL_MS = 50 # Using milliseconds to match get_ticks_msec
 var _history = {}
 
 
+func _ready():
+	# This ensures the node and its children keep processing during a pause
+	process_mode = Node.PROCESS_MODE_ALWAYS
+
 func play_sound(stream: AudioStream, bus = "Sfx", pos = null):
 	if AudioServer.get_bus_index(bus) == -1:
 		push_warning("AudioManager: bus not found. Sounds will play on Master.")

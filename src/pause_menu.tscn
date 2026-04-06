@@ -1,0 +1,312 @@
+[gd_scene format=3 uid="uid://cvb3uocxvde1x"]
+
+[ext_resource type="Script" uid="uid://eao3n8m6247t" path="res://scripts/UI/pause_menu.gd" id="1_05uyy"]
+[ext_resource type="PackedScene" uid="uid://c8isg1fxjj84g" path="res://scenes/UI/Options.tscn" id="2_ejmia"]
+
+[sub_resource type="Animation" id="Animation_gsvw3"]
+resource_name = "Options_Fade"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GrabFocusAndSmooth/PauseMenu:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GrabFocusAndSmooth/Options:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bi726"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.666667)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GrabFocusAndSmooth/PauseMenu:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GrabFocusAndSmooth/Options:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_37ogg"]
+resource_name = "fade"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.666667)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GrabFocusAndSmooth/PauseMenu:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6ge0k"]
+_data = {
+&"Options_Fade": SubResource("Animation_gsvw3"),
+&"RESET": SubResource("Animation_bi726"),
+&"fade": SubResource("Animation_37ogg")
+}
+
+[node name="PauseMenu" type="ColorRect" unique_id=1298647255]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.666667)
+script = ExtResource("1_05uyy")
+
+[node name="GrabFocusAndSmooth" type="Control" parent="." unique_id=1836110992]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PauseMenu" type="Control" parent="GrabFocusAndSmooth" unique_id=850651309]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="GrabFocusAndSmooth/PauseMenu" unique_id=1620362339]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="GrabFocusAndSmooth/PauseMenu/MarginContainer" unique_id=1998789581]
+custom_minimum_size = Vector2(300, 280)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Panel" type="Panel" parent="GrabFocusAndSmooth/PauseMenu/MarginContainer" unique_id=798197383]
+custom_minimum_size = Vector2(260, 240)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GrabFocusAndSmooth/PauseMenu/MarginContainer" unique_id=2138973225]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="GrabFocusAndSmooth/PauseMenu/MarginContainer/VBoxContainer" unique_id=1763274647]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.9764706, 0.40784314, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 30
+text = "PAUSED"
+
+[node name="MarginContainer" type="MarginContainer" parent="GrabFocusAndSmooth/PauseMenu/MarginContainer/VBoxContainer" unique_id=693599317]
+custom_minimum_size = Vector2(103.005, 19.675)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ContinueBtn" type="Button" parent="GrabFocusAndSmooth/PauseMenu/MarginContainer/VBoxContainer" unique_id=1718905022]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../ExitLevelBtn")
+theme_override_font_sizes/font_size = 20
+text = "CONTINUE"
+
+[node name="MarginContainer2" type="MarginContainer" parent="GrabFocusAndSmooth/PauseMenu/MarginContainer/VBoxContainer" unique_id=1682476961]
+custom_minimum_size = Vector2(103.005, 19.675)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="OptionBtn" type="Button" parent="GrabFocusAndSmooth/PauseMenu/MarginContainer/VBoxContainer" unique_id=1437916111]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "OPTIONS"
+
+[node name="DiscordMarginContainer" type="MarginContainer" parent="GrabFocusAndSmooth/PauseMenu/MarginContainer/VBoxContainer" unique_id=1660961182]
+custom_minimum_size = Vector2(103.005, 19.675)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="DiscordBtn" type="Button" parent="GrabFocusAndSmooth/PauseMenu/MarginContainer/VBoxContainer" unique_id=1011932089]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "DISCORD"
+
+[node name="WishlistMargin" type="MarginContainer" parent="GrabFocusAndSmooth/PauseMenu/MarginContainer/VBoxContainer" unique_id=1208513218]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(103.005, 19.675)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="WishlistBtn" type="Button" parent="GrabFocusAndSmooth/PauseMenu/MarginContainer/VBoxContainer" unique_id=2071695454]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "WISHLIST"
+
+[node name="MarginContainer3" type="MarginContainer" parent="GrabFocusAndSmooth/PauseMenu/MarginContainer/VBoxContainer" unique_id=1005336814]
+custom_minimum_size = Vector2(103.005, 19.675)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ExitLevelBtn" type="Button" parent="GrabFocusAndSmooth/PauseMenu/MarginContainer/VBoxContainer" unique_id=637393618]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_bottom = NodePath("../ContinueBtn")
+theme_override_font_sizes/font_size = 20
+text = "EXIT LEVEL"
+
+[node name="QuitBtn" type="Button" parent="GrabFocusAndSmooth/PauseMenu/MarginContainer/VBoxContainer" unique_id=862104172]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_bottom = NodePath("../ContinueBtn")
+theme_override_font_sizes/font_size = 20
+text = "QUIT"
+
+[node name="UnstuckBtn" type="Button" parent="GrabFocusAndSmooth/PauseMenu" unique_id=918670897]
+auto_translate_mode = 1
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -77.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = 22.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 15
+text = "UNSTUCK"
+
+[node name="Options" parent="GrabFocusAndSmooth" unique_id=1582263372 instance=ExtResource("2_ejmia")]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="BackBtn" type="Button" parent="GrabFocusAndSmooth/Options" unique_id=719546451]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 256.0
+offset_top = 219.0
+offset_right = 405.0
+offset_bottom = 261.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "BACK"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1380166902]
+libraries/ = SubResource("AnimationLibrary_6ge0k")
+
+[node name="choose" type="RichTextLabel" parent="." unique_id=248503734]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 896.0
+offset_top = 552.0
+offset_right = 6016.0
+offset_bottom = 2472.0
+scale = Vector2(0.05, 0.05)
+mouse_filter = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 10
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 400
+bbcode_enabled = true
+text = "[img=800]uid://cmwmsurrhm6se[/img]CHOOSE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="GrabFocusAndSmooth/PauseMenu/MarginContainer/VBoxContainer/ContinueBtn" to="." method="_on_continue_btn_mouse_entered"]
+[connection signal="pressed" from="GrabFocusAndSmooth/PauseMenu/MarginContainer/VBoxContainer/ContinueBtn" to="." method="_on_continue_btn_pressed"]
+[connection signal="pressed" from="GrabFocusAndSmooth/PauseMenu/MarginContainer/VBoxContainer/OptionBtn" to="." method="_on_option_btn_pressed"]
+[connection signal="pressed" from="GrabFocusAndSmooth/PauseMenu/MarginContainer/VBoxContainer/DiscordBtn" to="." method="_on_discord_btn_pressed"]
+[connection signal="pressed" from="GrabFocusAndSmooth/PauseMenu/MarginContainer/VBoxContainer/WishlistBtn" to="." method="_on_wishlist_btn_pressed"]
+[connection signal="pressed" from="GrabFocusAndSmooth/PauseMenu/MarginContainer/VBoxContainer/ExitLevelBtn" to="." method="_on_exit_level_btn_pressed"]
+[connection signal="pressed" from="GrabFocusAndSmooth/PauseMenu/MarginContainer/VBoxContainer/QuitBtn" to="." method="_on_quit_btn_pressed"]
+[connection signal="pressed" from="GrabFocusAndSmooth/PauseMenu/UnstuckBtn" to="." method="_on_unstuck_btn_pressed"]
+[connection signal="pressed" from="GrabFocusAndSmooth/Options/BackBtn" to="." method="_on_back_btn_pressed"]

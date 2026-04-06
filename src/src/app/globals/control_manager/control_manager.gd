@@ -18,8 +18,13 @@ func _enter_tree() -> void:
 	#for node in get_tree().root.find_children("*", "Control", true, false):
 		#_on_node_added(node)
 
+func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
+
 ## Filters added nodes and applies UI management logic to [Control] types.
 func _on_node_manager_received(node: Node) -> void:
+	node.process_mode = PROCESS_MODE_ALWAYS
+	
 	if node is BaseButton:
 		node.pivot_offset_ratio = Vector2(0.5, 0.5)
 		
