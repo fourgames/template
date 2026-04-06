@@ -1,9 +1,6 @@
 extends Node
 
 func _ready() -> void:
-	# 1. Load the data from disk
-	DataManager.load_data()
-	
 	# 2. Connect Signals (No more clicking in the Editor Node tab!)
 	%WindowModeOptionButton.item_selected.connect(_on_window_mode_option_button_item_selected)
 	%WindowModeResetButton.pressed.connect(_on_window_mode_reset_button_pressed)

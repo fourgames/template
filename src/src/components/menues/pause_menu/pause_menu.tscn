@@ -55,22 +55,21 @@ theme_override_constants/separation = 20
 alignment = 1
 
 [node name="PausedButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=128375829]
+unique_name_in_owner = true
 layout_mode = 2
 text = "PAUSED"
 
 [node name="ContinueButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=218595450]
+unique_name_in_owner = true
 layout_mode = 2
 text = "CONTINUE"
 
 [node name="OptionsButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=554802412]
+unique_name_in_owner = true
 layout_mode = 2
 text = "OPTIONS"
 
 [node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1756249679]
+unique_name_in_owner = true
 layout_mode = 2
 text = "QUIT"
-
-[connection signal="pressed" from="CenterContainer/VBoxContainer/PausedButton" to="." method="_on_paused_button_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

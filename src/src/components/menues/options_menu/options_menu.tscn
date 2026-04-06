@@ -129,7 +129,6 @@ stretch_mode = 5
 [node name="WindowModeOptionButton" type="OptionButton" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/WindowModeHSplitContainer" unique_id=1831024721]
 unique_name_in_owner = true
 layout_mode = 2
-alignment = 1
 
 [node name="VsyncHSplitContainer" type="HSplitContainer" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO" unique_id=464607695]
 layout_mode = 2
