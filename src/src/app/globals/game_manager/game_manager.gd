@@ -14,6 +14,7 @@ const OPTIONS_MENU = preload("uid://dycmqmsylxp31")
 var active_menu = null
 
 func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	change_state(GameState.MAIN_MENU)
 
 func _input(event: InputEvent) -> void:
@@ -26,10 +27,13 @@ func _input(event: InputEvent) -> void:
 			GameState.PAUSE_MENU:
 				change_state(GameState.PLAYING)
 			GameState.OPTIONS_MENU:
+				print(previous_state)
 				match previous_state:
 					GameState.MAIN_MENU:
+						print(previous_state)
 						change_state(GameState.MAIN_MENU)
 					GameState.PAUSE_MENU:
+						print(previous_state)
 						change_state(GameState.PAUSE_MENU)
 					
 					
@@ -47,8 +51,12 @@ func change_state(new_state):
 	match current_state:
 		GameState.MAIN_MENU:
 			active_menu = MAIN_MENU.instantiate()
+			get_tree().paused = true
+		GameState.PLAYING:
+			get_tree().paused = false
 		GameState.PAUSE_MENU:
 			active_menu = PAUSE_MENU.instantiate()
+			get_tree().paused = true
 		GameState.OPTIONS_MENU:
 			active_menu = OPTIONS_MENU.instantiate()
 			

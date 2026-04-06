@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://2jd4rljsg1t3"]
 
-[ext_resource type="Texture2D" uid="uid://blrql60mgwx2k" path="res://src/components/controller_icons/move_forward.tres" id="1_hcpvo"]
+[ext_resource type="Texture2D" uid="uid://blrql60mgwx2k" path="res://src/components/controller_icons/resources/move_forward.tres" id="1_hcpvo"]
 
 [node name="Control" type="Control" unique_id=1261464756]
 layout_mode = 3
@@ -32,5 +32,5 @@ custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_vertical = 4
 bbcode_enabled = true
-text = "[img=32]uid://blrql60mgwx2k[/img] RichTextLabel test"
+text = "[img=32]uid://blrql60mgwx2k[/img] RichTextLabel test more control size"
 fit_content = true

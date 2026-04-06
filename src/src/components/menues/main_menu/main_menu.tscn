@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://c3xcgc53ytkha"]
+
+[ext_resource type="Script" uid="uid://b7mvv2vo22wi1" path="res://src/components/menues/main_menu/main_menu.gd" id="1_jxphr"]
+[ext_resource type="Texture2D" uid="uid://brjow5a5u36de" path="res://src/app/favicon.svg" id="2_600wh"]
+
+[sub_resource type="Gradient" id="Gradient_7vrkn"]
+offsets = PackedFloat32Array(0, 0.5, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_sdsv8"]
+gradient = SubResource("Gradient_7vrkn")
+
+[node name="MainMenu" type="CanvasLayer" unique_id=738360581]
+process_mode = 3
+script = ExtResource("1_jxphr")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1271199073]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_sdsv8")
+
+[node name="choose" type="RichTextLabel" parent="." unique_id=1347391701]
+unique_name_in_owner = true
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = -136.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[img=32]uid://d1yjbd6r5wxl8[/img]CHOOSE"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=444874229]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=53441607]
+custom_minimum_size = Vector2(476, 300)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="WebsiteTextureButton" type="TextureButton" parent="CenterContainer/VBoxContainer" unique_id=1404328204]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("2_600wh")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="PlayButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1185640920]
+layout_mode = 2
+text = "PLAY"
+
+[node name="OptionsButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1051642235]
+layout_mode = 2
+text = "OPTIONS"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=86533611]
+layout_mode = 2
+text = "QUIT"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/WebsiteTextureButton" to="." method="_on_website_texture_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/OptionsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
