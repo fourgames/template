@@ -203,7 +203,7 @@ placeholder_text = "0"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 1
-max_value = 500.0
+max_value = 999.0
 tick_count = 5
 ticks_position = 3
 
