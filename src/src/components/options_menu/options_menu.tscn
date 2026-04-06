@@ -272,7 +272,7 @@ stretch_mode = 5
 [node name="Scaling3DScaleLineEdit" type="LineEdit" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/Scaling3DScaleHSplitContainer" unique_id=358548372]
 unique_name_in_owner = true
 layout_mode = 2
-placeholder_text = "100"
+placeholder_text = "0"
 max_length = 3
 
 [node name="Scaling3DScaleHSlider" type="HSlider" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/Scaling3DScaleHSplitContainer" unique_id=1880878967]
@@ -314,7 +314,7 @@ stretch_mode = 5
 [node name="Scaling3DSharpnessLineEdit" type="LineEdit" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/Scaling3DSharpnessHSplitContainer2" unique_id=2131884941]
 unique_name_in_owner = true
 layout_mode = 2
-placeholder_text = "100"
+placeholder_text = "0"
 max_length = 3
 
 [node name="Scaling3DSharpnessHSlider" type="HSlider" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO/Scaling3DSharpnessHSplitContainer2" unique_id=1120346326]

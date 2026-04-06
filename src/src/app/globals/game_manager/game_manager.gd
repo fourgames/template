@@ -20,45 +20,45 @@ func _ready():
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		match current_state:
-			GameState.MAIN_MENU:
-				pass
 			GameState.PLAYING:
 				change_state(GameState.PAUSE_MENU)
 			GameState.PAUSE_MENU:
 				change_state(GameState.PLAYING)
 			GameState.OPTIONS_MENU:
-				print(previous_state)
-				match previous_state:
-					GameState.MAIN_MENU:
-						print(previous_state)
-						change_state(GameState.MAIN_MENU)
-					GameState.PAUSE_MENU:
-						print(previous_state)
-						change_state(GameState.PAUSE_MENU)
-					
-					
+				# We simply tell it to go back to the previous state
+				change_state(previous_state)
 
 func change_state(new_state):
+	# 1. Update History: Only update previous_state if we are actually moving to a NEW state
 	if current_state != new_state:
 		previous_state = current_state
-		
+	
 	current_state = new_state
 	
-	# Clean up the old menu
+	# 2. Cleanup: Remove existing menu
 	if active_menu:
 		active_menu.queue_free()
+		active_menu = null
 	
+	# 3. State Execution
 	match current_state:
 		GameState.MAIN_MENU:
-			active_menu = MAIN_MENU.instantiate()
 			get_tree().paused = true
+			active_menu = MAIN_MENU.instantiate()
+			
 		GameState.PLAYING:
 			get_tree().paused = false
+			# No menu instantiated here
+			
 		GameState.PAUSE_MENU:
-			active_menu = PAUSE_MENU.instantiate()
 			get_tree().paused = true
+			active_menu = PAUSE_MENU.instantiate()
+			
 		GameState.OPTIONS_MENU:
+			# We don't need to change pause logic here; 
+			# it stays paused from whatever opened it
 			active_menu = OPTIONS_MENU.instantiate()
 			
+	# 4. Finalize
 	if active_menu:
 		add_child(active_menu)
