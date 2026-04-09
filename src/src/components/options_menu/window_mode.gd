@@ -1,5 +1,7 @@
 extends Node
 
+# DOCS if project settings window mode isnt set to fullscreen on start as it should be for release window mode setting wont work on macOS during runtime
+# But you cant embed the game starting in fullscreen so keep in windowed while dev
 func _ready() -> void:
 	# 2. Connect Signals (No more clicking in the Editor Node tab!)
 	%WindowModeOptionButton.item_selected.connect(_on_window_mode_option_button_item_selected)

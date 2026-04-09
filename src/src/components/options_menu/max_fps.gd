@@ -36,6 +36,8 @@ func _on_max_fps_h_slider_value_changed(value: float) -> void:
 	%MaxFPSLineEdit.text = str(new_fps)
 	Engine.max_fps = new_fps
 	
+	DataManager.payload.video.MaxFPS = new_fps
+	DataManager.save_data() # Save it so it's there on reboot
 	# ADD THIS LINE: Update the reset button visibility while sliding
 	%MaxFPSResetButton.visible = (new_fps != DataManager.payload.video.DefaultMaxFPS)
 
