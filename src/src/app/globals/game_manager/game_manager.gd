@@ -15,7 +15,9 @@ var active_menu = null
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	await change_state(GameState.OPTIONS_MENU) # Idk if await helps but apply most settings at start
 	change_state(GameState.MAIN_MENU)
+	
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
