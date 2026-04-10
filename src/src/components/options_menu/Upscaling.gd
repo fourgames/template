@@ -24,6 +24,7 @@ func _ready() -> void:
 	_sync_ui_to_data()
 	
 	_finalize_change()
+	%Scaling3DSharpnessHSplitContainer2.visible = (%Scaling3DModeOptionButton.selected == 2 or %Scaling3DModeOptionButton.selected == 4)
 
 # --- POPULATION LOGIC ---
 
