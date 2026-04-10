@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://6ji18qns07g4"]
+
+[ext_resource type="Script" uid="uid://q23w87s6a77h" path="res://src/components/options_menu/credit_container.gd" id="1_y5qrt"]
+
+[node name="CreditHSplitContainer" type="HSplitContainer" unique_id=300071268]
+split_offsets = PackedInt32Array(226)
+split_offset = 226
+script = ExtResource("1_y5qrt")
+
+[node name="CreditNameLabel" type="Label" parent="." unique_id=612521636]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Four Games"
+clip_text = true
+
+[node name="CreditRoleLabel" type="Label" parent="." unique_id=802522285]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Template"
+clip_text = true
