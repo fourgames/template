@@ -36,7 +36,6 @@ func _ready() -> void:
 
 func _on_h_slider_value_changed(new_value: float) -> void:
 	DataManager.payload.audio[bus_data_to_update] = new_value
-	print(new_value)
 	DataManager.save_data()
 	
 	AudioServer.set_bus_volume_db(bus_index, linear_to_db(new_value / 100))
