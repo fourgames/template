@@ -42,6 +42,7 @@ func _populate_upscaling_modes() -> void:
 func _on_mode_selected(index: int) -> void:
 	DataManager.payload.video.Scaling3DMode = %Scaling3DModeOptionButton.get_item_id(index)
 	_finalize_change()
+	%Scaling3DSharpnessHSplitContainer2.visible = (index == 2 or index == 4)
 
 func _on_scale_slider_changed(value: float) -> void:
 	DataManager.payload.video.Scaling3DScale = value / 100.0

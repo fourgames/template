@@ -284,6 +284,7 @@ tick_count = 5
 ticks_position = 3
 
 [node name="Scaling3DSharpnessHSplitContainer2" type="HSplitContainer" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/VIDEO" unique_id=899290665]
+unique_name_in_owner = true
 layout_mode = 2
 split_offsets = PackedInt32Array(226, 306)
 split_offset = 226
