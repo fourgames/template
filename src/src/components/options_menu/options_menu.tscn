@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://2rmuxrqsbpfi" path="res://src/components/options_menu/vsync.gd" id="4_3xo44"]
 [ext_resource type="Script" uid="uid://dr8jke8c707oy" path="res://src/components/options_menu/max_fps.gd" id="5_y7dao"]
 [ext_resource type="Script" uid="uid://bxw1wvx0fir6p" path="res://src/components/options_menu/Upscaling.gd" id="6_edglp"]
+[ext_resource type="Script" uid="uid://d24hjlmu5ksti" path="res://src/components/options_menu/audio_options.gd" id="8_ffeyj"]
 
 [sub_resource type="Gradient" id="Gradient_h5t0r"]
 offsets = PackedFloat32Array(0, 0.5, 1)
@@ -99,10 +100,11 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 tab_alignment = 1
-current_tab = 0
+current_tab = 1
 tabs_visible = false
 
 [node name="VIDEO" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer" unique_id=226762853]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -334,9 +336,128 @@ tick_count = 5
 ticks_position = 3
 
 [node name="AUDIO" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer" unique_id=272106833]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 1
+
+[node name="MasterHSplitContainer" type="HSplitContainer" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/AUDIO" unique_id=1375050576]
+layout_mode = 2
+split_offsets = PackedInt32Array(226, 0)
+split_offset = 226
+
+[node name="MasterLabel" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/AUDIO/MasterHSplitContainer" unique_id=531279107]
+layout_mode = 2
+text = "Master"
+
+[node name="MasterResetButton" type="TextureButton" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/AUDIO/MasterHSplitContainer/MasterLabel" unique_id=1106508071]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("3_8tjq6")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MasterLineEdit" type="LineEdit" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/AUDIO/MasterHSplitContainer" unique_id=1948007782]
+layout_mode = 2
+placeholder_text = "0"
+
+[node name="MasterHSlider" type="HSlider" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/AUDIO/MasterHSplitContainer" unique_id=106456481 node_paths=PackedStringArray("line_edit_sibiling", "reset_button_sibiling")]
+layout_mode = 2
+size_flags_vertical = 1
+tick_count = 5
+ticks_position = 3
+script = ExtResource("8_ffeyj")
+bus_name = "Master"
+line_edit_sibiling = NodePath("../MasterLineEdit")
+reset_button_sibiling = NodePath("../MasterLabel/MasterResetButton")
+
+[node name="MasterHSplitContainer2" type="HSplitContainer" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/AUDIO" unique_id=463151847]
+layout_mode = 2
+split_offsets = PackedInt32Array(226, 0)
+split_offset = 226
+
+[node name="MasterLabel" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/AUDIO/MasterHSplitContainer2" unique_id=1672723882]
+layout_mode = 2
+text = "Sfx"
+
+[node name="MasterResetButton" type="TextureButton" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/AUDIO/MasterHSplitContainer2/MasterLabel" unique_id=971438257]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("3_8tjq6")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MasterLineEdit" type="LineEdit" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/AUDIO/MasterHSplitContainer2" unique_id=767770905]
+layout_mode = 2
+placeholder_text = "0"
+
+[node name="MasterHSlider" type="HSlider" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/AUDIO/MasterHSplitContainer2" unique_id=575628734 node_paths=PackedStringArray("line_edit_sibiling", "reset_button_sibiling")]
+layout_mode = 2
+size_flags_vertical = 1
+tick_count = 5
+ticks_position = 3
+script = ExtResource("8_ffeyj")
+bus_name = "SFX"
+line_edit_sibiling = NodePath("../MasterLineEdit")
+reset_button_sibiling = NodePath("../MasterLabel/MasterResetButton")
+
+[node name="MasterHSplitContainer3" type="HSplitContainer" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/AUDIO" unique_id=324567894]
+layout_mode = 2
+split_offsets = PackedInt32Array(226, 0)
+split_offset = 226
+
+[node name="MasterLabel" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/AUDIO/MasterHSplitContainer3" unique_id=1013782873]
+layout_mode = 2
+text = "Music"
+
+[node name="MasterResetButton" type="TextureButton" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/AUDIO/MasterHSplitContainer3/MasterLabel" unique_id=338171063]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("3_8tjq6")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MasterLineEdit" type="LineEdit" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/AUDIO/MasterHSplitContainer3" unique_id=907189816]
+layout_mode = 2
+placeholder_text = "0"
+
+[node name="MasterHSlider" type="HSlider" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/AUDIO/MasterHSplitContainer3" unique_id=927037990 node_paths=PackedStringArray("line_edit_sibiling", "reset_button_sibiling")]
+layout_mode = 2
+size_flags_vertical = 1
+tick_count = 5
+ticks_position = 3
+script = ExtResource("8_ffeyj")
+bus_name = "Music"
+line_edit_sibiling = NodePath("../MasterLineEdit")
+reset_button_sibiling = NodePath("../MasterLabel/MasterResetButton")
 
 [node name="INPUT" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer" unique_id=1680389465]
 visible = false
