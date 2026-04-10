@@ -1,5 +1,7 @@
 extends HSplitContainer
 
+## DOCS this upscaling part is heavily vibe coded if anyone wants to refactor it they are welcome
+
 func _ready() -> void:
 	_populate_upscaling_modes()
 	
