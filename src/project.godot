@@ -35,8 +35,12 @@ Shortcuts/density_decrement=Object(Shortcut,"resource_local_to_scene":false,"res
 [application]
 
 config/name="Template Four Games"
-run/main_scene="uid://n4y2s8gdj1cu"
+run/main_scene="uid://bytxkqqg13lxf"
 config/features=PackedStringArray("4.6", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
+boot_splash/stretch_mode=0
+boot_splash/use_filter=false
 config/icon="uid://brjow5a5u36de"
 
 [audio]
@@ -48,14 +52,14 @@ buses/default_bus_layout="uid://ci61fr1dqsshd"
 ControllerIcons="*uid://bbr0y7cmquuy6"
 Shaker="*uid://c4u0vo5fh7asu"
 SimpleGrass="*uid://bfq0snth8sj3h"
-DataManager="*uid://big0hyuv70jxs"
-ControlManager="*uid://c1bgdvrlmjwpk"
-GameManager="*uid://d07rtwy8ry14o"
-NodeManager="*uid://bi1cxrxhj70n3"
 PathManager="*uid://cwiwhdgjmooc7"
 SignalManager="*uid://djm5fbcusol8f"
+DataManager="*uid://big0hyuv70jxs"
 AudioManager="*uid://im0jy8db1q6"
-RemoveMeLater="*uid://crsafe53nr0gk"
+NodeManager="*uid://bi1cxrxhj70n3"
+ControlManager="*uid://c1bgdvrlmjwpk"
+GameManager="*uid://d07rtwy8ry14o"
+SceneChanger="*uid://ba3qklkjfvc6o"
 
 [display]
 
