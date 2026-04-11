@@ -51,6 +51,7 @@ func _on_line_edit_text_submitted(new_text: String) -> void:
 	value = new_text.to_float()
 
 func _reset_button_pressed():
+	line_edit_sibiling.grab_focus()
 	var default_data_value = DataManager.payload.audio["Default" + bus_data_to_update]
 	value = default_data_value
 	
