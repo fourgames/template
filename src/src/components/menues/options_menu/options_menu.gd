@@ -6,3 +6,11 @@ func _ready() -> void:
 
 func _on_button_pressed() -> void:
 	GameManager.change_state(GameManager.previous_state)
+
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+
+func play() -> void:
+	$AnimationPlayer.play("fade_animation")
+
+func play_backwards() -> void:
+	$AnimationPlayer.play_backwards("fade_animation")

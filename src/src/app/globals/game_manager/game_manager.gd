@@ -11,6 +11,10 @@ const MAIN_MENU = preload("uid://c3xcgc53ytkha")
 const PAUSE_MENU = preload("uid://cvb3uocxvde1x")
 const OPTIONS_MENU = preload("uid://dycmqmsylxp31")
 
+
+const BACKDROP = preload("uid://y4kvhvl3hkpp")
+var backdrop = null
+
 var active_menu = null
 
 func _ready():
@@ -39,8 +43,21 @@ func change_state(new_state):
 	
 	# 2. Cleanup: Remove existing menu
 	if active_menu:
+		await active_menu.play_backwards()
 		active_menu.queue_free()
 		active_menu = null
+	
+	# Handle Backdrop (On-demand)
+	if current_state == GameState.PLAYING:
+		if backdrop: 
+			await backdrop.play_backwards()
+			backdrop.queue_free()
+			backdrop = null
+	elif !backdrop:
+		backdrop = BACKDROP.instantiate()
+		add_child(backdrop)
+		backdrop.play()
+		move_child(backdrop, 0)
 	
 	# 3. State Execution
 	match current_state:
@@ -64,3 +81,4 @@ func change_state(new_state):
 	# 4. Finalize
 	if active_menu:
 		add_child(active_menu)
+		active_menu.play()

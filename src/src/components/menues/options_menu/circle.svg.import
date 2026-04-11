@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de5wy4embcsab"
-path="res://.godot/imported/anticlockwise-rotation.svg-d47bb2ef97066882ed539e329101f7df.ctex"
+uid="uid://bfbf3wkx5dpne"
+path="res://.godot/imported/circle.svg-c61e2d97d5413fed128805dc6ca3a531.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/components/options_menu/anticlockwise-rotation.svg"
-dest_files=["res://.godot/imported/anticlockwise-rotation.svg-d47bb2ef97066882ed539e329101f7df.ctex"]
+source_file="res://src/components/menues/options_menu/circle.svg"
+dest_files=["res://.godot/imported/circle.svg-c61e2d97d5413fed128805dc6ca3a531.ctex"]
 
 [params]
 

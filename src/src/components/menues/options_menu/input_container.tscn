@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dmbuwj1hlif3n"]
 
-[ext_resource type="Texture2D" uid="uid://de5wy4embcsab" path="res://src/components/options_menu/anticlockwise-rotation.svg" id="1_dxw8n"]
-[ext_resource type="Script" uid="uid://bvbjtf8bdjr3g" path="res://src/components/options_menu/input_container.gd" id="1_ois1q"]
+[ext_resource type="Texture2D" uid="uid://de5wy4embcsab" path="res://src/components/menues/options_menu/anticlockwise-rotation.svg" id="1_dxw8n"]
+[ext_resource type="Script" uid="uid://bvbjtf8bdjr3g" path="res://src/components/menues/options_menu/input_container.gd" id="1_ois1q"]
 [ext_resource type="Texture2D" uid="uid://pgx74b2ttota" path="res://src/components/controller_icons/resources/input_option.tres" id="3_8qki5"]
 
 [node name="InputHSplitContainer" type="HSplitContainer" unique_id=835391941]

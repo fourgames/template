@@ -1,58 +1,62 @@
 [gd_scene format=3 uid="uid://dycmqmsylxp31"]
 
-[ext_resource type="Script" uid="uid://ne1dd2s5bsw5" path="res://src/components/options_menu/options_menu.gd" id="1_lbr8e"]
-[ext_resource type="Script" uid="uid://dpkstn4maht7c" path="res://src/components/options_menu/window_mode.gd" id="2_3g2h0"]
-[ext_resource type="Script" uid="uid://d3yehf53vam6d" path="res://src/components/options_menu/fake_tabs.gd" id="2_n1icb"]
-[ext_resource type="Texture2D" uid="uid://de5wy4embcsab" path="res://src/components/options_menu/anticlockwise-rotation.svg" id="3_8tjq6"]
-[ext_resource type="Script" uid="uid://2rmuxrqsbpfi" path="res://src/components/options_menu/vsync.gd" id="4_3xo44"]
-[ext_resource type="Script" uid="uid://dr8jke8c707oy" path="res://src/components/options_menu/max_fps.gd" id="5_y7dao"]
-[ext_resource type="Script" uid="uid://bxw1wvx0fir6p" path="res://src/components/options_menu/Upscaling.gd" id="6_edglp"]
-[ext_resource type="Script" uid="uid://d24hjlmu5ksti" path="res://src/components/options_menu/audio_options.gd" id="8_ffeyj"]
-[ext_resource type="Script" uid="uid://xu3jaouaielo" path="res://src/components/options_menu/input_options.gd" id="9_6vm2e"]
-[ext_resource type="Script" uid="uid://54166grtk750" path="res://src/components/options_menu/credits_option.gd" id="9_7nwiy"]
-[ext_resource type="PackedScene" uid="uid://6ji18qns07g4" path="res://src/components/options_menu/credit_container.tscn" id="10_6vm2e"]
-[ext_resource type="PackedScene" uid="uid://dmbuwj1hlif3n" path="res://src/components/options_menu/input_container.tscn" id="10_geapt"]
+[ext_resource type="Script" uid="uid://ne1dd2s5bsw5" path="res://src/components/menues/options_menu/options_menu.gd" id="1_lbr8e"]
+[ext_resource type="Script" uid="uid://dpkstn4maht7c" path="res://src/components/menues/options_menu/window_mode.gd" id="2_3g2h0"]
+[ext_resource type="Script" uid="uid://d3yehf53vam6d" path="res://src/components/menues/options_menu/fake_tabs.gd" id="2_n1icb"]
+[ext_resource type="Texture2D" uid="uid://de5wy4embcsab" path="res://src/components/menues/options_menu/anticlockwise-rotation.svg" id="3_8tjq6"]
+[ext_resource type="Script" uid="uid://2rmuxrqsbpfi" path="res://src/components/menues/options_menu/vsync.gd" id="4_3xo44"]
+[ext_resource type="Script" uid="uid://dr8jke8c707oy" path="res://src/components/menues/options_menu/max_fps.gd" id="5_y7dao"]
+[ext_resource type="Script" uid="uid://bxw1wvx0fir6p" path="res://src/components/menues/options_menu/Upscaling.gd" id="6_edglp"]
+[ext_resource type="Script" uid="uid://d24hjlmu5ksti" path="res://src/components/menues/options_menu/audio_options.gd" id="8_ffeyj"]
+[ext_resource type="Script" uid="uid://xu3jaouaielo" path="res://src/components/menues/options_menu/input_options.gd" id="9_6vm2e"]
+[ext_resource type="Script" uid="uid://54166grtk750" path="res://src/components/menues/options_menu/credits_option.gd" id="9_7nwiy"]
+[ext_resource type="PackedScene" uid="uid://6ji18qns07g4" path="res://src/components/menues/options_menu/credit_container.tscn" id="10_6vm2e"]
+[ext_resource type="PackedScene" uid="uid://dmbuwj1hlif3n" path="res://src/components/menues/options_menu/input_container.tscn" id="10_geapt"]
 
-[sub_resource type="Gradient" id="Gradient_h5t0r"]
-offsets = PackedFloat32Array(0, 0.5, 1)
-colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1)
+[sub_resource type="Animation" id="Animation_kn7qy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CenterContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_vxhgq"]
-gradient = SubResource("Gradient_h5t0r")
+[sub_resource type="Animation" id="Animation_65xi4"]
+resource_name = "fade_animation"
+length = 0.25
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CenterContainer:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7jdhr"]
+_data = {
+&"RESET": SubResource("Animation_kn7qy"),
+&"fade_animation": SubResource("Animation_65xi4")
+}
 
 [node name="OptionsMenu" type="CanvasLayer" unique_id=2124848269]
 process_mode = 3
 script = ExtResource("1_lbr8e")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=105613821]
-process_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("GradientTexture1D_vxhgq")
-
-[node name="choose" type="RichTextLabel" parent="." unique_id=1557116846]
-unique_name_in_owner = true
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -192.0
-offset_top = -136.0
-grow_horizontal = 0
-grow_vertical = 0
-mouse_filter = 2
-bbcode_enabled = true
-text = "[img=32]uid://d1yjbd6r5wxl8[/img]CHOOSE"
-fit_content = true
-autowrap_mode = 0
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1774372836]
+modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -2916,6 +2920,10 @@ size_flags_vertical = 8
 focus_mode = 0
 theme_override_font_sizes/font_size = 25
 text = "DISCORD"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1321375930]
+reset_on_save = false
+libraries/ = SubResource("AnimationLibrary_7jdhr")
 
 [connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/CloseButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/MarginContainer/FakeTabs/VIDEO" to="PanelContainer/MarginContainer/MarginContainer/FakeTabs" method="_on_video_pressed"]

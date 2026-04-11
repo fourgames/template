@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://crsafe53nr0gk"]
 
-[ext_resource type="Script" uid="uid://k63kbjnxhs7e" path="res://src/components/fps_counter/fps_counter.gd" id="1_kfi8j"]
+[ext_resource type="Script" uid="uid://k63kbjnxhs7e" path="res://src/components/menues/fps_counter/fps_counter.gd" id="1_kfi8j"]
 [ext_resource type="AudioStream" uid="uid://nepmah02p1dv" path="res://620594__xkeril__like-an-old-zelda-melody.wav" id="2_rda00"]
 
 [node name="FpsCounter" type="CanvasLayer" unique_id=550602975]

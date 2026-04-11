@@ -52,6 +52,7 @@ folder_colors={
 "res://src/": "blue",
 "res://src/app/": "red",
 "res://src/components/": "green",
+"res://src/components/menues/": "red",
 "res://src/features/": "purple",
 "res://src/routes/": "teal"
 }
@@ -62,6 +63,7 @@ Player="Player is in this group used for fidning it efficiently"
 Target="Target group to find targets the player can target"
 Loot="if loot is in group"
 Navigation=""
+MenuAnimation=""
 
 [gui]
 

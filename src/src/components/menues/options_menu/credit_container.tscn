@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://6ji18qns07g4"]
 
-[ext_resource type="Script" uid="uid://q23w87s6a77h" path="res://src/components/options_menu/credit_container.gd" id="1_y5qrt"]
+[ext_resource type="Script" uid="uid://q23w87s6a77h" path="res://src/components/menues/options_menu/credit_container.gd" id="1_y5qrt"]
 
 [node name="CreditHSplitContainer" type="HSplitContainer" unique_id=300071268]
 split_offsets = PackedInt32Array(226)

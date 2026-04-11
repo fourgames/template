@@ -22,3 +22,11 @@ func _on_options_button_pressed() -> void:
 
 func _on_quit_button_pressed() -> void:
 	get_tree().quit()
+
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+
+func play() -> void:
+	$AnimationPlayer.play("fade_animation")
+
+func play_backwards() -> void:
+	$AnimationPlayer.play_backwards("fade_animation")
