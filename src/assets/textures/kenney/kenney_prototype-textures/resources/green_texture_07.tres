@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://dtsc878n2qytf" path="res://assets/textures/kenney/kenney_prototype-textures/PNG/Green/texture_07.png" id="1_43bcl"]
 
 [resource]
+resource_local_to_scene = true
 albedo_texture = ExtResource("1_43bcl")
+emission_enabled = true
 uv1_triplanar = true
 uv1_world_triplanar = true
