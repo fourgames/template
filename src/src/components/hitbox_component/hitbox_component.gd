@@ -23,6 +23,8 @@ func _ready() -> void:
 		for error in _get_configuration_warnings():
 			push_warning("Hitbox Error at ", get_path(), ": ", error)
 
+#func _process(delta: float) -> void:
+	#print($TickTimer.time_left)
 	
 
 func _on_area_entered(area: Area3D) -> void:

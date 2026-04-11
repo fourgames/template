@@ -42,6 +42,7 @@ func _on_VsyncOptionButton_item_selected(index: int) -> void:
 	# 3. Toggle Reset Button
 	%VsyncResetButton.visible = (selected_id != DataManager.payload.video.DefaultVSyncMode)
 	
+	print("Current VSync Mode (ID): ", DisplayServer.window_get_vsync_mode())
 
 func _on_VsyncResetButton_pressed() -> void:
 	var default_id = DataManager.payload.video.DefaultVSyncMode

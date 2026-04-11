@@ -50,10 +50,8 @@ func _on_node_manager_received(node: Node) -> void:
 		node.focus_entered.connect(_handle_ui_event.bind(node, "hover"))
 		node.focus_exited.connect(_handle_ui_event.bind(node, "unhover"))
 		
-		# text_submitted sends a String, editing_toggled sends a Bool. 
-		# We unbind(1) to discard those extra arguments.
-		node.text_submitted.connect(_handle_ui_event.bind(node, "press").unbind(1))
-		node.editing_toggled.connect(_handle_ui_event.bind(node, "hover").unbind(1))
+		node.text_submitted.connect(_handle_ui_event.bind(node, "press"))
+		node.editing_toggled.connect(_handle_ui_event.bind(node, "hover"))
 
 
 func _handle_ui_event(node: Control, type: String) -> void:

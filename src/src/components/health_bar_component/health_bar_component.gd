@@ -25,8 +25,8 @@ var heal : bool
 func apply_health_bar(amount: int, health_component: HealthComponent) -> void:
 	var max_health_value = health_component.max_health
 	%HealthProgressBar.max_value = max_health_value
-	
-	
+	#print(%HealthProgressBar.max_value)
+	#print(%HealthProgressBar.value) # this is before change is applied so yes
 	%UnderProgressBar.max_value = max_health_value
 	
 	if amount > 0: # Heal
