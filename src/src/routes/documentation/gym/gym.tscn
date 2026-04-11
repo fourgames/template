@@ -35,7 +35,7 @@ glow_enabled = true
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ostbp"]
 material = ExtResource("4_5v58r")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_5v58r"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_plcdq"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="Animation" id="Animation_8jo76"]
@@ -227,7 +227,7 @@ mesh = SubResource("CapsuleMesh_ostbp")
 
 [node name="HealthBarComponent" parent="FurnanceExample" unique_id=864028086 instance=ExtResource("6_pn1np")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 2.5, 0)
-texture = SubResource("ViewportTexture_5v58r")
+texture = SubResource("ViewportTexture_plcdq")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="FurnanceExample" unique_id=1138809295]
 root_node = NodePath("../..")

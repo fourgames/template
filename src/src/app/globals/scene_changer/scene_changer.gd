@@ -5,7 +5,7 @@ extends CanvasLayer
 
 func change_scene(target_path : String):
 	if OS.is_debug_build():
-		get_tree().change_scene_to_file(target_path)
+		get_tree().change_scene_to_file.call_deferred(target_path)
 	else:
 		animation_player.play("change_scene_animation")
 		await animation_player.animation_finished
