@@ -127,11 +127,10 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 tab_alignment = 1
-current_tab = 2
+current_tab = 0
 tabs_visible = false
 
 [node name="VIDEO" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer" unique_id=226762853]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -488,6 +487,7 @@ line_edit_sibiling = NodePath("../MasterLineEdit")
 reset_button_sibiling = NodePath("../MasterLabel/MasterResetButton")
 
 [node name="INPUT" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer" unique_id=1680389465]
+visible = false
 layout_mode = 2
 script = ExtResource("9_6vm2e")
 metadata/_tab_index = 2
