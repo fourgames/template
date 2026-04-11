@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://qwb7f3fwmtgn"
+path="res://.godot/imported/indicator-doorway.obj-9d9d4113ef1a03ec92e1e80d789a3441.mesh"
+
+[deps]
+
+files=["res://.godot/imported/indicator-doorway.obj-9d9d4113ef1a03ec92e1e80d789a3441.mesh"]
+
+source_file="res://assets/models/kenney/kenney_prototype-kit-2/Models/OBJ format/indicator-doorway.obj"
+dest_files=["res://.godot/imported/indicator-doorway.obj-9d9d4113ef1a03ec92e1e80d789a3441.mesh", "res://.godot/imported/indicator-doorway.obj-9d9d4113ef1a03ec92e1e80d789a3441.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

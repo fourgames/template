@@ -1,15 +1,17 @@
 [gd_scene format=3 uid="uid://c0w0o0laooyhw"]
 
 [ext_resource type="Script" uid="uid://bred06ld0l4mj" path="res://src/features/player/player.gd" id="1_4flbx"]
-[ext_resource type="Texture2D" uid="uid://brjow5a5u36de" path="res://src/app/favicon.svg" id="2_3v8pm"]
 [ext_resource type="PackedScene" uid="uid://dvnkbmlwfveol" path="res://src/components/interactor_component/interactor_component.tscn" id="2_onrkg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_4flbx"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4flbx"]
+load_path = "res://.godot/imported/favicon.svg-a165518550174d7996e87d364e3b1023.s3tc.ctex"
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_onrkg"]
-albedo_texture = ExtResource("2_3v8pm")
+albedo_texture = SubResource("CompressedTexture2D_4flbx")
 uv1_offset = Vector3(0.5, 0.5, 0.5)
 uv1_triplanar = true
 

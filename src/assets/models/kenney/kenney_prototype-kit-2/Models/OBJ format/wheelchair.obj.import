@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bg8hr1t3i6kb2"
+path="res://.godot/imported/wheelchair.obj-434d49aa9c252bda0c2cbd87ed1078fa.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wheelchair.obj-434d49aa9c252bda0c2cbd87ed1078fa.mesh"]
+
+source_file="res://assets/models/kenney/kenney_prototype-kit-2/Models/OBJ format/wheelchair.obj"
+dest_files=["res://.godot/imported/wheelchair.obj-434d49aa9c252bda0c2cbd87ed1078fa.mesh", "res://.godot/imported/wheelchair.obj-434d49aa9c252bda0c2cbd87ed1078fa.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
