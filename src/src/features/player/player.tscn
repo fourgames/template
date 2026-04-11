@@ -1,19 +1,12 @@
 [gd_scene format=3 uid="uid://c0w0o0laooyhw"]
 
 [ext_resource type="Script" uid="uid://bred06ld0l4mj" path="res://src/features/player/player.gd" id="1_4flbx"]
+[ext_resource type="Material" uid="uid://14n72ut6bpqi" path="res://src/app/favicon.tres" id="2_3v8pm"]
 [ext_resource type="PackedScene" uid="uid://dvnkbmlwfveol" path="res://src/components/interactor_component/interactor_component.tscn" id="2_onrkg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_4flbx"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4flbx"]
-load_path = "res://.godot/imported/favicon.svg-a165518550174d7996e87d364e3b1023.s3tc.ctex"
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_onrkg"]
-albedo_texture = SubResource("CompressedTexture2D_4flbx")
-uv1_offset = Vector3(0.5, 0.5, 0.5)
-uv1_triplanar = true
 
 [node name="Player" type="CharacterBody3D" unique_id=598808722 groups=["Loot", "Player", "Target"]]
 script = ExtResource("1_4flbx")
@@ -26,7 +19,7 @@ mesh = SubResource("CapsuleMesh_4flbx")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="MeshInstance3D" unique_id=1412767484]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-material = SubResource("StandardMaterial3D_onrkg")
+material = ExtResource("2_3v8pm")
 
 [node name="InteractorComponent" parent="MeshInstance3D" unique_id=1962311501 instance=ExtResource("2_onrkg")]
 
