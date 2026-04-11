@@ -7,14 +7,15 @@ split_offsets = PackedInt32Array(226)
 split_offset = 226
 script = ExtResource("1_y5qrt")
 
-[node name="CreditNameLabel" type="Label" parent="." unique_id=612521636]
+[node name="CreditNameLabel" type="Label" parent="." unique_id=1583440492]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Four Games"
 clip_text = true
 
-[node name="CreditRoleLabel" type="Label" parent="." unique_id=802522285]
+[node name="CreditRoleButton" type="Button" parent="." unique_id=214098639]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Template"
+alignment = 0
 clip_text = true
