@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://pgx74b2ttota" path="res://src/components/controller_icons/resources/input_option.tres" id="3_8qki5"]
 
 [node name="InputHSplitContainer" type="HSplitContainer" unique_id=835391941]
-split_offsets = PackedInt32Array(127)
-split_offset = 127
+split_offsets = PackedInt32Array(226)
+split_offset = 226
 script = ExtResource("1_ois1q")
 
 [node name="InputLabel" type="Label" parent="." unique_id=1920349516]

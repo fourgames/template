@@ -11,7 +11,6 @@
 [ext_resource type="Script" uid="uid://xu3jaouaielo" path="res://src/components/options_menu/input_options.gd" id="9_6vm2e"]
 [ext_resource type="Script" uid="uid://54166grtk750" path="res://src/components/options_menu/credits_option.gd" id="9_7nwiy"]
 [ext_resource type="PackedScene" uid="uid://6ji18qns07g4" path="res://src/components/options_menu/credit_container.tscn" id="10_6vm2e"]
-[ext_resource type="PackedScene" uid="uid://dmbuwj1hlif3n" path="res://src/components/options_menu/input_container.tscn" id="10_geapt"]
 
 [sub_resource type="Gradient" id="Gradient_h5t0r"]
 offsets = PackedFloat32Array(0, 0.5, 1)
@@ -491,9 +490,6 @@ reset_button_sibiling = NodePath("../MasterLabel/MasterResetButton")
 layout_mode = 2
 script = ExtResource("9_6vm2e")
 metadata/_tab_index = 2
-
-[node name="InputHSplitContainer" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer/INPUT" unique_id=835391941 instance=ExtResource("10_geapt")]
-layout_mode = 2
 
 [node name="CREDITS" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/TabContainer" unique_id=1750734578]
 visible = false

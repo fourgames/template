@@ -9,3 +9,4 @@ func _ready() -> void:
 		add_child(instance)
 		instance.name_label.text = credit.name
 		instance.role_label.text = credit.role
+		
