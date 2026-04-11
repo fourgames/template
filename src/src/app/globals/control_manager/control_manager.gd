@@ -43,6 +43,15 @@ func _on_node_manager_received(node: Node) -> void:
 		
 		node.drag_started.connect(_handle_ui_event.bind(node, "press"))
 		node.drag_ended.connect(_handle_ui_event.bind(node, "hover").unbind(1))
+	elif node is LineEdit:
+		node.pivot_offset_ratio = Vector2(0.5, 0.5)
+		
+		node.mouse_entered.connect(node.grab_focus)
+		node.focus_entered.connect(_handle_ui_event.bind(node, "hover"))
+		node.focus_exited.connect(_handle_ui_event.bind(node, "unhover"))
+		
+		node.text_submitted.connect(_handle_ui_event.bind(node, "press"))
+		node.editing_toggled.connect(_handle_ui_event.bind(node, "hover"))
 
 
 func _handle_ui_event(node: Control, type: String) -> void:
