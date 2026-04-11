@@ -50,8 +50,6 @@ buses/default_bus_layout="uid://ci61fr1dqsshd"
 [autoload]
 
 ControllerIcons="*uid://bbr0y7cmquuy6"
-Shaker="*uid://c4u0vo5fh7asu"
-SimpleGrass="*uid://bfq0snth8sj3h"
 PathManager="*uid://cwiwhdgjmooc7"
 SignalManager="*uid://djm5fbcusol8f"
 DataManager="*uid://big0hyuv70jxs"
@@ -68,7 +66,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/DualEditor/plugin.cfg", "res://addons/GPUTrail-main/plugin.cfg", "res://addons/Todo_Manager/plugin.cfg", "res://addons/controller_icons/plugin.cfg", "res://addons/script-ide/plugin.cfg", "res://addons/shaker/plugin.cfg", "res://addons/simplegrasstextured/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
+enabled=PackedStringArray("res://addons/DualEditor/plugin.cfg", "res://addons/Todo_Manager/plugin.cfg", "res://addons/controller_icons/plugin.cfg", "res://addons/script-ide/plugin.cfg")
 
 [file_customization]
 

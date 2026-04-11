@@ -56,6 +56,5 @@ func _on_max_fps_reset_button_pressed() -> void:
 	%MaxFPSResetButton.release_focus()
 	
 	var default_val = DataManager.payload.video.DefaultMaxFPS
-	print("Resetting to: ", default_val) # Debug check
 	_finalize_fps_change(default_val)
 	%MaxFPSLineEdit.grab_focus()

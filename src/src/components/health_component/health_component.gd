@@ -8,7 +8,6 @@ class_name HealthComponent
 
 func change_health(amount : int):
 	health = clamp(health + amount, 0, max_health)
-	#print(health)
 	
 	if health <= 0:
 		# reparent() particles/sfx

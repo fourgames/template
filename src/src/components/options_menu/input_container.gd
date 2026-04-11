@@ -24,9 +24,9 @@ func _ready():
 	primary_input_progress_bar.visible = false
 	secondary_input_progress_bar.visible = false
 
-func set_action(name: String):
-	action_name = name
-	input_name_label.text = name.capitalize()
+func set_action(p_name: String):
+	action_name = p_name
+	input_name_label.text = p_name.capitalize()
 	_sync_input_map_from_payload()
 	update_icons()
 

@@ -495,7 +495,7 @@ libraries/ = SubResource("AnimationLibrary_11d6r")
 autoplay = &"new_animation"
 
 [node name="Player" parent="." unique_id=598808722 instance=ExtResource("1_lpwyr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.49, 1)
 
 [editable path="FurnanceExample/furnaces_v1"]
 [editable path="FurnanceExample/HurtboxComponent"]
