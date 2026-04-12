@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://b3ktxjxljjwev" path="res://src/routes/documentation/gym/gym.gd" id="1_a854a"]
 [ext_resource type="PackedScene" uid="uid://c0w0o0laooyhw" path="res://src/features/player/player.tscn" id="1_lpwyr"]
-[ext_resource type="Material" uid="uid://ce5jku3brgxwj" path="res://assets/textures/kenney/kenney_prototype-textures/resources/purple_texture_07.tres" id="4_5v58r"]
+[ext_resource type="Material" uid="uid://ce5jku3brgxwj" path="res://assets/textures/kenney/resources/purple_texture_07.tres" id="4_5v58r"]
 [ext_resource type="PackedScene" uid="uid://brh1hxjs4kurc" path="res://src/components/health_bar_component/health_bar_component.tscn" id="6_pn1np"]
 [ext_resource type="PackedScene" uid="uid://8veaxrlv0egr" path="res://src/components/hurtbox_component/hurtbox_component.tscn" id="7_60eds"]
-[ext_resource type="Material" uid="uid://cj3wvsy4wenwb" path="res://assets/textures/kenney/kenney_prototype-textures/resources/green_texture_07.tres" id="7_plcdq"]
-[ext_resource type="Material" uid="uid://dqg6vocwwbc0c" path="res://assets/textures/kenney/kenney_prototype-textures/resources/red_texture_07.tres" id="8_30h57"]
+[ext_resource type="Material" uid="uid://cj3wvsy4wenwb" path="res://assets/textures/kenney/resources/green_texture_07.tres" id="7_plcdq"]
+[ext_resource type="Material" uid="uid://dqg6vocwwbc0c" path="res://assets/textures/kenney/resources/red_texture_07.tres" id="8_30h57"]
 [ext_resource type="PackedScene" uid="uid://juuvvol6wwhe" path="res://src/components/hitbox_component/hitbox_component.tscn" id="8_dd4s8"]
 [ext_resource type="PackedScene" uid="uid://d07cmkdpirmw6" path="res://src/components/health_component/health_component.tscn" id="9_jc3om"]
 [ext_resource type="PackedScene" uid="uid://bmkr84x33203k" path="res://src/components/hit_flash_component/hit_flash_component.tscn" id="10_3184x"]
@@ -15,9 +15,9 @@
 [ext_resource type="PackedScene" uid="uid://db7fq3ohpetjb" path="res://src/components/spawner_component/enemy_spawner.tscn" id="13_60eds"]
 [ext_resource type="Script" uid="uid://tl548twdjy8o" path="res://src/components/spawner_component/enemy_spawn_data.gd" id="14_dd4s8"]
 [ext_resource type="NavigationMesh" uid="uid://di8g8pxghqfr3" path="res://src/routes/documentation/gym/new_navigation_mesh.tres" id="14_ostbp"]
-[ext_resource type="Material" uid="uid://nyeksgijrirj" path="res://assets/textures/kenney/kenney_prototype-textures/resources/orange_texture_07.tres" id="15_30h57"]
+[ext_resource type="Material" uid="uid://nyeksgijrirj" path="res://assets/textures/kenney/resources/orange_texture_07.tres" id="15_30h57"]
 [ext_resource type="PackedScene" uid="uid://cl8s6shmpvcbi" path="res://src/components/interactable_component/interactable_component.tscn" id="15_dd4s8"]
-[ext_resource type="Material" uid="uid://h0vjimnu1mfy" path="res://assets/textures/kenney/kenney_prototype-textures/resources/dark_texture_07.tres" id="15_ostbp"]
+[ext_resource type="Material" uid="uid://h0vjimnu1mfy" path="res://assets/textures/kenney/resources/dark_texture_07.tres" id="15_ostbp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gpafp"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
