@@ -1,8 +1,0 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://14n72ut6bpqi"]
-
-[ext_resource type="Texture2D" uid="uid://brjow5a5u36de" path="res://src/app/favicon.svg" id="1_0lqnu"]
-
-[resource]
-albedo_texture = ExtResource("1_0lqnu")
-uv1_offset = Vector3(0.5, 0.5, 0.5)
-uv1_triplanar = true
