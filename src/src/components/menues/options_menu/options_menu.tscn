@@ -98,7 +98,9 @@ vertical_alignment = 1
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../FakeTabCredits")
 focus_neighbor_top = NodePath("../../../CloseHBoxContainer/MasterHSplitContainer/CloseButton")
+focus_neighbor_right = NodePath("../FakeTabAudio")
 focus_neighbor_bottom = NodePath("../../../ScrollContainer/MarginContainer/TabContainer/VIDEO/WindowModeHSplitContainer/WindowModeOptionButton")
 text = "Video"
 
@@ -106,7 +108,9 @@ text = "Video"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../FakeTabVideo")
 focus_neighbor_top = NodePath("../../../CloseHBoxContainer/MasterHSplitContainer/CloseButton")
+focus_neighbor_right = NodePath("../FakeTabInput")
 focus_neighbor_bottom = NodePath("../../../ScrollContainer/MarginContainer/TabContainer/AUDIO/MasterHSplitContainer/MasterHSlider")
 text = "Audio
 "
@@ -115,14 +119,18 @@ text = "Audio
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../FakeTabAudio")
 focus_neighbor_top = NodePath("../../../CloseHBoxContainer/MasterHSplitContainer/CloseButton")
+focus_neighbor_right = NodePath("../FakeTabCredits")
 text = "Input"
 
 [node name="FakeTabCredits" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer/FakeTabsHBoxContainer/MasterHSplitContainer7" unique_id=1508384501]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../FakeTabInput")
 focus_neighbor_top = NodePath("../../../CloseHBoxContainer/MasterHSplitContainer/CloseButton")
+focus_neighbor_right = NodePath("../FakeTabVideo")
 text = "Credits"
 
 [node name="NextRichTextLabel" type="RichTextLabel" parent="CenterContainer/PanelContainer/VBoxContainer/FakeTabsHBoxContainer/MasterHSplitContainer7" unique_id=770425920]
