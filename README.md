@@ -4,7 +4,7 @@
 
 # Vison
 - godot gold standard tempalte
-- Controller first
+- 100% Responsive Designed controller-first
 - run any scene
 - doing things the godot way
 - compatible with latest godot stable release
