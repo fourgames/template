@@ -11,6 +11,15 @@
 - lean skeleton thats flexible
 - instance on demand nodes should only exsist when needed
 
+100% Responsive
+Designed mobile-first
+Modern
+Flexbox + Grid + CSS Variables
+Easy
+Download. Customize. Done.
+Free
+Open Source on GitHub
+
 # Video tutorial
 intro video
 
