@@ -11,6 +11,8 @@
 - lean skeleton thats flexible
 - instance on demand nodes should only exsist when needed
 
+pilsosofi of it and a few design descitions 
+
 100% Responsive
 Designed mobile-first
 Modern
