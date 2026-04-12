@@ -94,6 +94,7 @@ _data = {
 }
 
 [node name="Backdrop" type="CanvasLayer" unique_id=1784386706]
+process_mode = 3
 script = ExtResource("1_1h735")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2103415774]
@@ -121,7 +122,7 @@ grow_horizontal = 0
 grow_vertical = 0
 mouse_filter = 2
 bbcode_enabled = true
-text = "[img=32]uid://d1yjbd6r5wxl8[/img]CHOOSE"
+text = "[img=32]uid://d1yjbd6r5wxl8[/img]Select"
 fit_content = true
 autowrap_mode = 0
 horizontal_alignment = 1

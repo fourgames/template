@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://c3xcgc53ytkha"]
 
 [ext_resource type="Script" uid="uid://b7mvv2vo22wi1" path="res://src/components/menues/main_menu/main_menu.gd" id="1_jxphr"]
-[ext_resource type="Texture2D" uid="uid://brjow5a5u36de" path="res://src/app/favicon.svg" id="2_600wh"]
+[ext_resource type="Texture2D" uid="uid://ck7xiniwr0xnu" path="res://src/components/menues/main_menu/normal-clover.svg" id="2_kimc4"]
+[ext_resource type="Texture2D" uid="uid://bbqn2fanoae85" path="res://src/components/menues/main_menu/pressed-clover.svg" id="3_ngprh"]
+[ext_resource type="Texture2D" uid="uid://dvq1h1m3tafnf" path="res://src/components/menues/main_menu/hover-clover.svg" id="4_5jqa8"]
 
 [sub_resource type="Animation" id="Animation_ov2b3"]
 length = 0.001
@@ -62,7 +64,9 @@ alignment = 1
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-texture_normal = ExtResource("2_600wh")
+texture_normal = ExtResource("2_kimc4")
+texture_pressed = ExtResource("3_ngprh")
+texture_hover = ExtResource("4_5jqa8")
 ignore_texture_size = true
 stretch_mode = 5
 

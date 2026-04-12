@@ -1,10 +1,10 @@
 [gd_resource type="Texture2D" script_class="ControllerIconTexture" format=3 uid="uid://d1yjbd6r5wxl8"]
 
-[ext_resource type="Script" uid="uid://c12g8tksd0lms" path="res://addons/controller_icons/objects/ControllerIconTexture.gd" id="1_rde62"]
+[ext_resource type="Script" uid="uid://c12g8tksd0lms" path="res://addons/controller_icons/objects/ControllerIconTexture.gd" id="1_hyg5d"]
 
 [resource]
 resource_local_to_scene = false
 resource_name = ""
-script = ExtResource("1_rde62")
-path = "choose"
+script = ExtResource("1_hyg5d")
+path = "select"
 metadata/_custom_type_script = "uid://c12g8tksd0lms"

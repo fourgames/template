@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de5wy4embcsab"
-path="res://.godot/imported/anticlockwise-rotation.svg-5899428e0eae943a8bdf65d11219cc04.ctex"
+uid="uid://b7eqyp0mkutmc"
+path="res://.godot/imported/hover-anticlockwise-rotation.svg-7f15a56adaa664792b8a26b8629a2638.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/components/menues/options_menu/anticlockwise-rotation.svg"
-dest_files=["res://.godot/imported/anticlockwise-rotation.svg-5899428e0eae943a8bdf65d11219cc04.ctex"]
+source_file="res://src/components/menues/options_menu/hover-anticlockwise-rotation.svg"
+dest_files=["res://.godot/imported/hover-anticlockwise-rotation.svg-7f15a56adaa664792b8a26b8629a2638.ctex"]
 
 [params]
 

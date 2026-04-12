@@ -24,7 +24,7 @@ func _ready() -> void:
 	_sync_ui_to_data()
 	
 	_finalize_change()
-	%Scaling3DSharpnessHSplitContainer2.visible = (%Scaling3DModeOptionButton.selected == 2 or %Scaling3DModeOptionButton.selected == 4)
+	%Scaling3DSharpnessHSplitContainer.visible = (%Scaling3DModeOptionButton.selected == 2 or %Scaling3DModeOptionButton.selected == 4)
 
 # --- POPULATION LOGIC ---
 
@@ -43,7 +43,7 @@ func _populate_upscaling_modes() -> void:
 func _on_mode_selected(index: int) -> void:
 	DataManager.payload.video.Scaling3DMode = %Scaling3DModeOptionButton.get_item_id(index)
 	_finalize_change()
-	%Scaling3DSharpnessHSplitContainer2.visible = (index == 2 or index == 4)
+	%Scaling3DSharpnessHSplitContainer.visible = (index == 2 or index == 4)
 
 func _on_scale_slider_changed(value: float) -> void:
 	DataManager.payload.video.Scaling3DScale = value / 100.0
@@ -58,6 +58,7 @@ func _on_scale_text_submitted(new_text: String) -> void:
 func _on_mode_reset() -> void:
 	DataManager.payload.video.Scaling3DMode = DataManager.payload.video.DefaultScaling3DMode
 	_finalize_change()
+	%Scaling3DSharpnessHSplitContainer.visible = (%Scaling3DModeOptionButton.selected == 2 or %Scaling3DModeOptionButton.selected == 4)
 	%Scaling3DModeOptionButton.grab_focus()
 
 func _on_scale_reset() -> void:
