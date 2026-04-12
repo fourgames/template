@@ -98,14 +98,16 @@ vertical_alignment = 1
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
-focus_neighbor_top = NodePath("../../../../CloseHBoxContainer/MasterHSplitContainer6/CloseButton")
+focus_neighbor_top = NodePath("../../../CloseHBoxContainer/MasterHSplitContainer/CloseButton")
+focus_neighbor_bottom = NodePath("../../../ScrollContainer/MarginContainer/TabContainer/VIDEO/WindowModeHSplitContainer/WindowModeOptionButton")
 text = "Video"
 
 [node name="FakeTabAudio" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer/FakeTabsHBoxContainer/MasterHSplitContainer7" unique_id=964873633]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
-focus_neighbor_top = NodePath("../../../../CloseHBoxContainer/MasterHSplitContainer6/CloseButton")
+focus_neighbor_top = NodePath("../../../CloseHBoxContainer/MasterHSplitContainer/CloseButton")
+focus_neighbor_bottom = NodePath("../../../ScrollContainer/MarginContainer/TabContainer/AUDIO/MasterHSplitContainer/MasterHSlider")
 text = "Audio
 "
 
@@ -113,14 +115,14 @@ text = "Audio
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
-focus_neighbor_top = NodePath("../../../../CloseHBoxContainer/MasterHSplitContainer6/CloseButton")
+focus_neighbor_top = NodePath("../../../CloseHBoxContainer/MasterHSplitContainer/CloseButton")
 text = "Input"
 
 [node name="FakeTabCredits" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer/FakeTabsHBoxContainer/MasterHSplitContainer7" unique_id=1508384501]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
-focus_neighbor_top = NodePath("../../../../CloseHBoxContainer/MasterHSplitContainer6/CloseButton")
+focus_neighbor_top = NodePath("../../../CloseHBoxContainer/MasterHSplitContainer/CloseButton")
 text = "Credits"
 
 [node name="NextRichTextLabel" type="RichTextLabel" parent="CenterContainer/PanelContainer/VBoxContainer/FakeTabsHBoxContainer/MasterHSplitContainer7" unique_id=770425920]
@@ -195,7 +197,7 @@ stretch_mode = 5
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
-focus_neighbor_top = NodePath("../../../../../../FakeTabsHBoxContainer/MasterHSplitContainer6/FakeTabVideo")
+focus_neighbor_top = NodePath("../../../../../../FakeTabsHBoxContainer/MasterHSplitContainer7/FakeTabVideo")
 alignment = 1
 
 [node name="VsyncHSplitContainer" type="HSplitContainer" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/MarginContainer/TabContainer/VIDEO" unique_id=464607695]
@@ -437,6 +439,7 @@ offset_top = -15.5
 offset_bottom = 15.5
 grow_horizontal = 0
 grow_vertical = 2
+focus_neighbor_top = NodePath("../../../../../../../FakeTabsHBoxContainer/MasterHSplitContainer7/FakeTabAudio")
 texture_normal = ExtResource("4_sog8x")
 texture_pressed = ExtResource("5_7jdhr")
 texture_hover = ExtResource("6_drjwf")
@@ -446,11 +449,13 @@ stretch_mode = 5
 [node name="MasterLineEdit" type="LineEdit" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/MarginContainer/TabContainer/AUDIO/MasterHSplitContainer" unique_id=1948007782]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
+focus_neighbor_top = NodePath("../../../../../../FakeTabsHBoxContainer/MasterHSplitContainer7/FakeTabAudio")
 placeholder_text = "0"
 
 [node name="MasterHSlider" type="HSlider" parent="CenterContainer/PanelContainer/VBoxContainer/ScrollContainer/MarginContainer/TabContainer/AUDIO/MasterHSplitContainer" unique_id=106456481 node_paths=PackedStringArray("line_edit_sibiling", "reset_button_sibiling")]
 layout_mode = 2
 size_flags_vertical = 1
+focus_neighbor_top = NodePath("../../../../../../FakeTabsHBoxContainer/MasterHSplitContainer7/FakeTabAudio")
 tick_count = 5
 ticks_position = 3
 script = ExtResource("8_ffeyj")
@@ -591,8 +596,6 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 size_flags_horizontal = 3
-focus_neighbor_top = NodePath("../../../FakeTabsHBoxContainer")
-focus_neighbor_bottom = NodePath("../../../FakeTabsHBoxContainer")
 text = "Close"
 
 [node name="NextRichTextLabel" type="RichTextLabel" parent="CenterContainer/PanelContainer/VBoxContainer/CloseHBoxContainer/MasterHSplitContainer" unique_id=1466128137]
