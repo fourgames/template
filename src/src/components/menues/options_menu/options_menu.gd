@@ -10,7 +10,8 @@ func _on_button_pressed() -> void:
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func play() -> void:
-	$AnimationPlayer.play("fade_animation")
+	animation_player.play("fade_animation")
 
 func play_backwards() -> void:
-	$AnimationPlayer.play_backwards("fade_animation")
+	animation_player.play_backwards("fade_animation")
+	await animation_player.animation_finished
