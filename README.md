@@ -38,3 +38,5 @@ Fetured games made with this template
 discord Community
 
 best way to support developmennt
+
+# TODO GITHUB TAGS and maybe available on godot asset store
