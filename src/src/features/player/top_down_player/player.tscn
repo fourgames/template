@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c0w0o0laooyhw"]
 
-[ext_resource type="Script" uid="uid://bred06ld0l4mj" path="res://src/features/player/player.gd" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://bred06ld0l4mj" path="res://src/features/player/top_down_player/player.gd" id="1_4flbx"]
 [ext_resource type="Texture2D" uid="uid://brjow5a5u36de" path="res://src/app/favicon.svg" id="2_3v8pm"]
 [ext_resource type="PackedScene" uid="uid://dvnkbmlwfveol" path="res://src/components/interactor_component/interactor_component.tscn" id="2_onrkg"]
 
@@ -33,3 +33,10 @@ current = true
 size = 18.135
 near = 0.3
 far = 1000.0
+
+[node name="Label3D" type="Label3D" parent="." unique_id=304246486]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+billboard = 1
+no_depth_test = true
+text = "TOP DOWN Player"
+font_size = 100

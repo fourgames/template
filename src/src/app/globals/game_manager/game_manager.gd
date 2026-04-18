@@ -72,19 +72,23 @@ func change_state(new_state):
 		GameState.MAIN_MENU:
 			get_tree().paused = true
 			active_menu = MAIN_MENU.instantiate()
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			
 		GameState.PLAYING:
 			get_tree().paused = false
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			# No menu instantiated here
 			
 		GameState.PAUSE_MENU:
 			get_tree().paused = true
 			active_menu = PAUSE_MENU.instantiate()
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			
 		GameState.OPTIONS_MENU:
 			# We don't need to change pause logic here; 
 			# it stays paused from whatever opened it
 			active_menu = OPTIONS_MENU.instantiate()
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			
 	# 4. Finalize
 	if active_menu:

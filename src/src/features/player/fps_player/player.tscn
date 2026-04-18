@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dqj8k6s7msj60"]
+
+[ext_resource type="Script" uid="uid://dah3m7i6qwwsc" path="res://src/features/player/fps_player/player.gd" id="1_q5a6t"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_2pjm7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cde1g"]
+
+[node name="Player" type="CharacterBody3D" unique_id=1417458]
+script = ExtResource("1_q5a6t")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1995772959]
+mesh = SubResource("CapsuleMesh_2pjm7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=69756882]
+shape = SubResource("CapsuleShape3D_cde1g")
+
+[node name="Head" type="Marker3D" parent="." unique_id=1284942593]
+unique_name_in_owner = true
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=1782733619]
+unique_name_in_owner = true
+current = true
+
+[node name="Label3D" type="Label3D" parent="." unique_id=1793143132]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+billboard = 1
+no_depth_test = true
+text = "FPS Player"
+font_size = 100

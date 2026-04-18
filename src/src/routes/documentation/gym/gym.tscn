@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://n4y2s8gdj1cu"]
 
 [ext_resource type="Script" uid="uid://b3ktxjxljjwev" path="res://src/routes/documentation/gym/gym.gd" id="1_a854a"]
-[ext_resource type="PackedScene" uid="uid://c0w0o0laooyhw" path="res://src/features/player/player.tscn" id="1_lpwyr"]
+[ext_resource type="PackedScene" uid="uid://c0w0o0laooyhw" path="res://src/features/player/top_down_player/player.tscn" id="1_lpwyr"]
 [ext_resource type="Material" uid="uid://ce5jku3brgxwj" path="res://assets/textures/kenney/resources/purple_texture_07.tres" id="4_5v58r"]
 [ext_resource type="PackedScene" uid="uid://brh1hxjs4kurc" path="res://src/components/health_bar_component/health_bar_component.tscn" id="6_pn1np"]
 [ext_resource type="PackedScene" uid="uid://8veaxrlv0egr" path="res://src/components/hurtbox_component/hurtbox_component.tscn" id="7_60eds"]
@@ -18,6 +18,7 @@
 [ext_resource type="Material" uid="uid://nyeksgijrirj" path="res://assets/textures/kenney/resources/orange_texture_07.tres" id="15_30h57"]
 [ext_resource type="PackedScene" uid="uid://cl8s6shmpvcbi" path="res://src/components/interactable_component/interactable_component.tscn" id="15_dd4s8"]
 [ext_resource type="Material" uid="uid://h0vjimnu1mfy" path="res://assets/textures/kenney/resources/dark_texture_07.tres" id="15_ostbp"]
+[ext_resource type="PackedScene" uid="uid://dqj8k6s7msj60" path="res://src/features/player/fps_player/player.tscn" id="19_x7phl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gpafp"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -35,7 +36,7 @@ glow_enabled = true
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ostbp"]
 material = ExtResource("4_5v58r")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_plcdq"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_x7phl"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="Animation" id="Animation_8jo76"]
@@ -227,7 +228,7 @@ mesh = SubResource("CapsuleMesh_ostbp")
 
 [node name="HealthBarComponent" parent="FurnanceExample" unique_id=864028086 instance=ExtResource("6_pn1np")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 2.5, 0)
-texture = SubResource("ViewportTexture_plcdq")
+texture = SubResource("ViewportTexture_x7phl")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="FurnanceExample" unique_id=1138809295]
 root_node = NodePath("../..")
@@ -348,6 +349,9 @@ autoplay = &"new_animation"
 
 [node name="Player" parent="." unique_id=598808722 instance=ExtResource("1_lpwyr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.49, 1)
+
+[node name="Player2" parent="." unique_id=1417458 instance=ExtResource("19_x7phl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.49, -1.2694964)
 
 [editable path="FurnanceExample/HurtboxComponent"]
 [editable path="FurnanceExample/HurtboxComponent/HitboxComponent"]
