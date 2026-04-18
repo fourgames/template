@@ -19,7 +19,15 @@ var active_menu = null
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
-	await change_state(GameState.OPTIONS_MENU) # Idk if await helps but apply most settings at start
+	
+	# The options menu applies all settings on start this is janky but aligns with instance on demand 
+	var invisible_options_instance = OPTIONS_MENU.instantiate()
+	invisible_options_instance.visible = false
+	add_child(invisible_options_instance)
+	if not invisible_options_instance.is_node_ready():
+		await invisible_options_instance.ready
+	invisible_options_instance.queue_free()
+	
 	change_state(GameState.MAIN_MENU)
 	
 
