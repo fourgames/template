@@ -236,9 +236,6 @@ shape = SubResource("CapsuleShape3D_x7phl")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.99, 0)
 mesh = SubResource("CapsuleMesh_ostbp")
 
-[node name="AimTarget" type="Marker3D" parent="FurnanceExample/CharacterBody3D" unique_id=87482132]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5499544, 0)
-
 [node name="HealthBarComponent" parent="FurnanceExample" unique_id=864028086 instance=ExtResource("6_pn1np")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 2.5, 0)
 texture = SubResource("ViewportTexture_5ll4s")
