@@ -4,7 +4,9 @@ var speed
 const WALK_SPEED = 5.0
 const SPRINT_SPEED = 8.0
 const JUMP_VELOCITY = 4.8
-const SENSITIVITY = 0.004
+var sensitivity
+var mouse_sensitivity: float
+var controller_sensitivity: float
 
 #bob variables
 const BOB_FREQ = 2.4
@@ -25,11 +27,19 @@ var gravity = 9.8
 #func _ready():
 	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
+func _ready() -> void:
+	SignalManager.sensitivity_changed.connect(sensitivity_changed_update_values)
+
+func sensitivity_changed_update_values(value):
+	print("YES")
+	sensitivity = DataManager.payload.input.sensitivity
+	mouse_sensitivity = sensitivity * 0.00005
+	controller_sensitivity = sensitivity * 0.05
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
-		head.rotate_y(-event.relative.x * SENSITIVITY)
-		camera.rotate_x(-event.relative.y * SENSITIVITY)
+		head.rotate_y(-event.relative.x * mouse_sensitivity)
+		camera.rotate_x(-event.relative.y * mouse_sensitivity)
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-40), deg_to_rad(60))
 
 
@@ -37,8 +47,8 @@ func _physics_process(delta):
 	var look_dir = Input.get_vector("look_left", "look_right", "look_up", "look_down")
 	
 	if look_dir.length() > 0:
-		var controller_sens = 500.0
 		
+		var current_sens = controller_sensitivity
 		if %ShapeCast3D.is_colliding():
 			var target = %ShapeCast3D.get_collider(0)
 			var target_center = target.global_position + Vector3(0, 1.2, 0)
@@ -65,10 +75,10 @@ func _physics_process(delta):
 			camera.rotation.z = 0
 			
 			if stick_force < 0.8:
-				controller_sens *= 0.7
+				current_sens *= 0.7
 		
-		head.rotate_y(-look_dir.x * SENSITIVITY * controller_sens * delta)
-		camera.rotate_x(-look_dir.y * SENSITIVITY * controller_sens * delta)
+		head.rotate_y(-look_dir.x * current_sens * delta)
+		camera.rotate_x(-look_dir.y * current_sens * delta)
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-40), deg_to_rad(60))
 		
 	# Add the gravity.
