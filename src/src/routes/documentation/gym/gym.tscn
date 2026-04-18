@@ -254,8 +254,8 @@ spawn_data_list = Array[ExtResource("14_dd4s8")]([SubResource("Resource_2pjm7")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.5, 0.5, -10.5)
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="FurnanceExample" unique_id=1041503854]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 4
+collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FurnanceExample/CharacterBody3D" unique_id=189150603]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.99, 0)
@@ -276,7 +276,7 @@ autoplay = &"new_animation"
 
 [node name="HurtboxComponent" parent="FurnanceExample" unique_id=1950115901 node_paths=PackedStringArray("health_component", "health_bar_component", "hit_flash_component", "numbers_component") instance=ExtResource("7_60eds")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-collision_layer = 2
+collision_layer = 4
 health_component = NodePath("../HealthComponent")
 health_bar_component = NodePath("../HealthBarComponent")
 hit_flash_component = NodePath("../HitFlashComponent")
@@ -288,7 +288,7 @@ debug_color = Color(0.4745098, 0.22352941, 0.78039217, 1)
 
 [node name="HitboxComponent" parent="FurnanceExample/HurtboxComponent" unique_id=817385232 instance=ExtResource("8_dd4s8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
-collision_mask = 2
+collision_mask = 4
 damage = -10
 
 [node name="CollisionShape3D" parent="FurnanceExample/HurtboxComponent/HitboxComponent" index="1" unique_id=1158623999]

@@ -12,7 +12,7 @@
 [ext_resource type="Script" uid="uid://cive1g6nvf6lc" path="res://addons/shaker/data/Vector3/ShakerTypeSineWave3D.gd" id="10_fwerk"]
 [ext_resource type="Script" uid="uid://cgy5g7yt88qdm" path="res://addons/shaker/data/Vector3/ShakerPreset3D.gd" id="11_vhxmu"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_31g7c"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_ed52l"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="Resource" id="Resource_s4u6i"]
@@ -38,6 +38,7 @@ material = SubResource("StandardMaterial3D_2qpwb")
 
 [node name="Enemy" type="CharacterBody3D" unique_id=2044683118 groups=["Target", "enemy"]]
 top_level = true
+collision_layer = 5
 axis_lock_linear_y = true
 axis_lock_angular_y = true
 script = ExtResource("1_ed52l")
@@ -56,7 +57,7 @@ numbers_component = NodePath("../NumbersComponent")
 
 [node name="HealthBarComponent" parent="." unique_id=864028086 instance=ExtResource("3_ed52l")]
 transform = Transform3D(0.17142516, 0, 0, 0, 0.17142516, 0, 0, 0, 0.17142516, -0.00033152103, 2.2273202, -0.00037944317)
-texture = SubResource("ViewportTexture_31g7c")
+texture = SubResource("ViewportTexture_ed52l")
 
 [node name="HitFlashComponent" type="Node" parent="." unique_id=1363198882 node_paths=PackedStringArray("root_node")]
 script = ExtResource("4_31g7c")

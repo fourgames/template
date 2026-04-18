@@ -41,7 +41,7 @@ unique_name_in_owner = true
 shape = SubResource("SphereShape3D_q5a6t")
 target_position = Vector3(0, 0, -20)
 margin = 0.05
-collision_mask = 2
+collision_mask = 4
 
 [node name="InteractorComponent" parent="Head/Camera3D" unique_id=1962311501 instance=ExtResource("3_d1kuw")]
 
