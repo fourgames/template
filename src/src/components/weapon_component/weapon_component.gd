@@ -63,9 +63,7 @@ func _physics_process(delta: float) -> void: # Use delta for smooth timing
 
 
 func _on_fire_timer_timeout() -> void:
-	print("T")
 	if get_overlapping_areas().size() > 0: #and GlobalStats.player_alive == true:
-		print("0")
 		$ActionsAnim.play("Rifle_Fire_Anim")
 		spawn_projectile(projectile_player_bullet, shots_per_fire, spread_angle)
 

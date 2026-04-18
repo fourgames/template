@@ -1,8 +1,13 @@
 [gd_scene format=3 uid="uid://dqj8k6s7msj60"]
 
 [ext_resource type="Script" uid="uid://dah3m7i6qwwsc" path="res://src/features/player/fps_player/player.gd" id="1_q5a6t"]
+[ext_resource type="Texture2D" uid="uid://brjow5a5u36de" path="res://src/app/favicon.svg" id="2_7dvl2"]
+[ext_resource type="PackedScene" uid="uid://dvnkbmlwfveol" path="res://src/components/interactor_component/interactor_component.tscn" id="3_d1kuw"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_2pjm7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d1kuw"]
+albedo_texture = ExtResource("2_7dvl2")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cde1g"]
 
@@ -12,16 +17,24 @@
 script = ExtResource("1_q5a6t")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1995772959]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_2pjm7")
 
+[node name="CSGBox3D" type="CSGBox3D" parent="MeshInstance3D" unique_id=567522283]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+material = SubResource("StandardMaterial3D_d1kuw")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=69756882]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_cde1g")
 
 [node name="Head" type="Marker3D" parent="." unique_id=1284942593]
 unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=1782733619]
 unique_name_in_owner = true
+current = true
 
 [node name="ShapeCast3D" type="ShapeCast3D" parent="Head/Camera3D" unique_id=1885324277]
 unique_name_in_owner = true
@@ -30,9 +43,16 @@ target_position = Vector3(0, 0, -20)
 margin = 0.05
 collision_mask = 2
 
+[node name="InteractorComponent" parent="Head/Camera3D" unique_id=1962311501 instance=ExtResource("3_d1kuw")]
+
+[node name="CollisionShape3D" parent="Head/Camera3D/InteractorComponent" index="0" unique_id=510175220]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
+
 [node name="Label3D" type="Label3D" parent="." unique_id=1793143132]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 billboard = 1
 no_depth_test = true
 text = "FPS Player"
 font_size = 100
+
+[editable path="Head/Camera3D/InteractorComponent"]
