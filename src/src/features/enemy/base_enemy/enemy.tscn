@@ -38,8 +38,6 @@ material = SubResource("StandardMaterial3D_2qpwb")
 
 [node name="Enemy" type="CharacterBody3D" unique_id=2044683118 groups=["Target", "enemy"]]
 top_level = true
-collision_layer = 4
-collision_mask = 7
 axis_lock_linear_y = true
 axis_lock_angular_y = true
 script = ExtResource("1_ed52l")
@@ -50,7 +48,7 @@ path_height_offset = 0.25
 
 [node name="HurtboxComponent" parent="." unique_id=1950115901 node_paths=PackedStringArray("health_component", "health_bar_component", "hit_flash_component", "numbers_component") instance=ExtResource("2_6a8qn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
-collision_mask = 4
+collision_layer = 4
 health_component = NodePath("../HealthComponent")
 health_bar_component = NodePath("../HealthBarComponent")
 hit_flash_component = NodePath("../HitFlashComponent")
