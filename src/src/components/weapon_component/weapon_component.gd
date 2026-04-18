@@ -37,9 +37,15 @@ func _physics_process(delta: float) -> void: # Use delta for smooth timing
 		
 		# 2. Interpolate the current basis (rotation) towards the target basis
 		# Change 10.0 to a lower number for slower, heavier turning
+		# 2. Interpolate the current basis (rotation) towards the target basis
 		var rotation_speed = 10.0 
-		global_transform.basis = global_transform.basis.slerp(
-			target_transform.basis, 
+
+		# ORTHONORMALIZED is the magic fix here
+		var current_basis = global_transform.basis.orthonormalized()
+		var target_basis = target_transform.basis.orthonormalized()
+
+		global_transform.basis = current_basis.slerp(
+			target_basis, 
 			delta * rotation_speed
 		)
 		
