@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b3ktxjxljjwev" path="res://src/routes/documentation/gym/gym.gd" id="1_a854a"]
 [ext_resource type="PackedScene" uid="uid://c0w0o0laooyhw" path="res://src/features/player/top_down_player/player.tscn" id="1_lpwyr"]
+[ext_resource type="PackedScene" uid="uid://yhaifffbcefc" path="res://src/features/enemy/base_enemy/enemy.tscn" id="4_5ll4s"]
 [ext_resource type="Material" uid="uid://ce5jku3brgxwj" path="res://assets/textures/kenney/resources/purple_texture_07.tres" id="4_5v58r"]
 [ext_resource type="PackedScene" uid="uid://brh1hxjs4kurc" path="res://src/components/health_bar_component/health_bar_component.tscn" id="6_pn1np"]
 [ext_resource type="PackedScene" uid="uid://8veaxrlv0egr" path="res://src/components/hurtbox_component/hurtbox_component.tscn" id="7_60eds"]
@@ -14,7 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://cfkbyu0hhuoxu" path="res://src/components/radar_component/radar_component.tscn" id="12_fxgnr"]
 [ext_resource type="PackedScene" uid="uid://db7fq3ohpetjb" path="res://src/components/spawner_component/enemy_spawner.tscn" id="13_60eds"]
 [ext_resource type="Script" uid="uid://tl548twdjy8o" path="res://src/components/spawner_component/enemy_spawn_data.gd" id="14_dd4s8"]
-[ext_resource type="NavigationMesh" uid="uid://di8g8pxghqfr3" path="res://src/routes/documentation/gym/new_navigation_mesh.tres" id="14_ostbp"]
 [ext_resource type="Material" uid="uid://nyeksgijrirj" path="res://assets/textures/kenney/resources/orange_texture_07.tres" id="15_30h57"]
 [ext_resource type="PackedScene" uid="uid://cl8s6shmpvcbi" path="res://src/components/interactable_component/interactable_component.tscn" id="15_dd4s8"]
 [ext_resource type="Material" uid="uid://h0vjimnu1mfy" path="res://assets/textures/kenney/resources/dark_texture_07.tres" id="15_ostbp"]
@@ -33,12 +33,20 @@ sky = SubResource("Sky_u8dbp")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="Resource" id="Resource_2pjm7"]
+script = ExtResource("14_dd4s8")
+time_start = 5
+time_end = 10
+enemy_scene = ExtResource("4_5ll4s")
+total_enemies = 5
+metadata/_custom_type_script = "uid://tl548twdjy8o"
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_x7phl"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ostbp"]
 material = ExtResource("4_5v58r")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_5ll4s"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_x7phl"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="Animation" id="Animation_8jo76"]
@@ -201,8 +209,23 @@ _data = {
 &"new_animation": SubResource("Animation_k8ab7")
 }
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_5ll4s"]
+vertices = PackedVector3Array(-499.25, 0.99, -499.25, -499.25, 0.99, 499.25, 499.25, 0.99, 499.25, 499.25, 0.99, -499.25)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+geometry_collision_mask = 4294966783
+agent_height = 50.0
+filter_low_hanging_obstacles = true
+filter_ledge_spans = true
+filter_walkable_low_height_spans = true
+
 [node name="Gym" type="Node3D" unique_id=1944218977]
 script = ExtResource("1_a854a")
+
+[node name="TopDownPlayer" parent="." unique_id=598808722 instance=ExtResource("1_lpwyr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.49, 1)
+
+[node name="FPSPlayer" parent="." unique_id=1417458 instance=ExtResource("19_x7phl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.49, -1.2694964)
 
 [node name="GymLabel3D" type="Label3D" parent="." unique_id=1976683462]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.074314, 5.085642, -6.9221764)
@@ -219,7 +242,8 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="EnemySpawner" parent="." unique_id=1408838197 instance=ExtResource("13_60eds")]
-spawn_data_list = Array[ExtResource("14_dd4s8")]([])
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+spawn_data_list = Array[ExtResource("14_dd4s8")]([SubResource("Resource_2pjm7")])
 
 [node name="FurnanceExample" type="Node3D" parent="." unique_id=978891158]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.5, 0.5, -10.5)
@@ -238,7 +262,7 @@ mesh = SubResource("CapsuleMesh_ostbp")
 
 [node name="HealthBarComponent" parent="FurnanceExample" unique_id=864028086 instance=ExtResource("6_pn1np")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 2.5, 0)
-texture = SubResource("ViewportTexture_5ll4s")
+texture = SubResource("ViewportTexture_x7phl")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="FurnanceExample" unique_id=1138809295]
 root_node = NodePath("../..")
@@ -277,25 +301,6 @@ root_node = NodePath("../CharacterBody3D/MeshInstance3D")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.029841, 0)
 
 [node name="RadarComponent" parent="." unique_id=1982901923 instance=ExtResource("12_fxgnr")]
-
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=369928415 groups=["Navigation"]]
-navigation_mesh = ExtResource("14_ostbp")
-
-[node name="CSGCombiner3D" type="CSGCombiner3D" parent="NavigationRegion3D" unique_id=1435336902]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.01, 0)
-use_collision = true
-
-[node name="Ground" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=1879151241]
-size = Vector3(1000, 1, 1000)
-material = ExtResource("15_ostbp")
-
-[node name="GridMap" type="GridMap" parent="NavigationRegion3D" unique_id=777452927]
-cell_size = Vector3(1, 1, 1)
-cell_scale = 2.0
-data = {
-"cells": PackedInt32Array(65535, 0, 38, 65529, 65530, 13, 65532, 65528, 13, 0, 65530, 13, 4, 65528, 13, 65527, 2, 655458, 65527, 6, 655457, 65527, 65534, 655448, 65527, 65530, 655450, 65527, 65526, 655449, 65533, 12, 655434, 2, 8, 655434, 1, 14, 655434, 65532, 18, 655434, 5, 65534, 655442, 7, 3, 655442, 8, 65535, 655439, 4, 2, 655436, 65523, 2, 655492, 65523, 0, 655492, 65523, 65534, 655492, 65523, 65532, 655492, 65523, 65530, 655492, 65523, 65528, 655492, 65523, 65526, 655492, 65523, 4, 655492, 65523, 6, 655492, 1, 8, 655402, 2, 7, 1048618, 3, 8, 42, 2, 9, 1441834, 65532, 19, 1441834, 65532, 17, 1441834, 65533, 18, 655402, 65531, 18, 655402, 2, 14, 655402, 0, 14, 655402, 1, 15, 1048618, 1, 13, 1048618, 65534, 12, 42, 65532, 12, 42, 65533, 13, 1441834, 65533, 11, 1441834, 0, 65525, 1441829, 131076, 2, 1441811, 131080, 65535, 1441811)
-}
-metadata/_editor_floor_ = Vector3(0, 1, 0)
 
 [node name="InteractableComponent" parent="." unique_id=891153314 instance=ExtResource("15_dd4s8")]
 transform = Transform3D(0.99999976, 0, 1.7484551e-07, 0, 1, 0, -1.7484551e-07, 0, 0.99999976, 0, 1, 5)
@@ -357,12 +362,19 @@ mesh = SubResource("SphereMesh_5v58r")
 libraries/ = SubResource("AnimationLibrary_11d6r")
 autoplay = &"new_animation"
 
-[node name="Player" parent="." unique_id=598808722 instance=ExtResource("1_lpwyr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.49, 1)
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=467766469 groups=["Navigation"]]
+navigation_mesh = SubResource("NavigationMesh_5ll4s")
+metadata/_edit_lock_ = true
 
-[node name="Player2" parent="." unique_id=1417458 instance=ExtResource("19_x7phl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.49, -1.2694964)
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="NavigationRegion3D" unique_id=1435336902]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.01, 0)
+use_collision = true
 
+[node name="Ground" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=1879151241]
+size = Vector3(1000, 1, 1000)
+material = ExtResource("15_ostbp")
+
+[editable path="EnemySpawner"]
 [editable path="FurnanceExample/HurtboxComponent"]
 [editable path="FurnanceExample/HurtboxComponent/HitboxComponent"]
 [editable path="FurnanceExample/HealthComponent"]

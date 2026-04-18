@@ -34,6 +34,7 @@ NodeManager="*uid://bi1cxrxhj70n3"
 ControlManager="*uid://c1bgdvrlmjwpk"
 SceneChanger="*uid://ba3qklkjfvc6o"
 GameManager="*uid://d07rtwy8ry14o"
+Shaker="*uid://camqu126o10w4"
 
 [display]
 
@@ -42,7 +43,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/DualEditor/plugin.cfg", "res://addons/Todo_Manager/plugin.cfg", "res://addons/controller_icons/plugin.cfg", "res://addons/script-ide/plugin.cfg")
+enabled=PackedStringArray("res://addons/DualEditor/plugin.cfg", "res://addons/Todo_Manager/plugin.cfg", "res://addons/controller_icons/plugin.cfg", "res://addons/script-ide/plugin.cfg", "res://addons/shaker/plugin.cfg")
 
 [file_customization]
 
@@ -60,10 +61,10 @@ folder_colors={
 [global_group]
 
 Player="Player is in this group used for fidning it efficiently"
-Target="Target group to find targets the player can target"
 Loot="if loot is in group"
 Navigation=""
 MenuAnimation=""
+Enemy="Target group to find targets the player can target"
 
 [gui]
 
@@ -175,7 +176,7 @@ look_right={
 
 3d_physics/layer_1="Static"
 3d_physics/layer_2="Player Hurtbox"
-3d_physics/layer_3="Target Hurtbox"
+3d_physics/layer_3="Enemy Hurtbox"
 3d_physics/layer_4="Loot"
 
 [physics]

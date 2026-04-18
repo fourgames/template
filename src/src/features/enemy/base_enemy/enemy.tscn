@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://yhaifffbcefc"]
+
+[ext_resource type="Script" uid="uid://se1u5l45tax0" path="res://src/features/enemy/base_enemy/enemy.gd" id="1_ed52l"]
+[ext_resource type="PackedScene" uid="uid://8veaxrlv0egr" path="res://src/components/hurtbox_component/hurtbox_component.tscn" id="2_6a8qn"]
+[ext_resource type="PackedScene" uid="uid://brh1hxjs4kurc" path="res://src/components/health_bar_component/health_bar_component.tscn" id="3_ed52l"]
+[ext_resource type="Script" uid="uid://qh30lijols1x" path="res://src/components/hit_flash_component/hit_flash_component.gd" id="4_31g7c"]
+[ext_resource type="PackedScene" uid="uid://bgaxsmyoyxbpa" path="res://src/components/numbers_component/numbers_component.tscn" id="5_6a8qn"]
+[ext_resource type="PackedScene" uid="uid://juuvvol6wwhe" path="res://src/components/hitbox_component/hitbox_component.tscn" id="5_bnho5"]
+[ext_resource type="PackedScene" uid="uid://d07cmkdpirmw6" path="res://src/components/health_component/health_component.tscn" id="6_d0drk"]
+[ext_resource type="Script" uid="uid://d4cfhy1u0cdnv" path="res://addons/shaker/src/Vector3/shaker_component3D.gd" id="8_8jxqt"]
+[ext_resource type="Script" uid="uid://b24fq3t0j3fhk" path="res://addons/shaker/data/Vector3/BaseShakerType3D.gd" id="9_voglr"]
+[ext_resource type="Script" uid="uid://cive1g6nvf6lc" path="res://addons/shaker/data/Vector3/ShakerTypeSineWave3D.gd" id="10_fwerk"]
+[ext_resource type="Script" uid="uid://cgy5g7yt88qdm" path="res://addons/shaker/data/Vector3/ShakerPreset3D.gd" id="11_vhxmu"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_31g7c"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="Resource" id="Resource_s4u6i"]
+script = ExtResource("10_fwerk")
+amplitude = Vector3(0.1, 0.1, 0.1)
+metadata/_custom_type_script = "uid://bvtloxxt0f5h2"
+
+[sub_resource type="Resource" id="Resource_0e2uf"]
+script = ExtResource("11_vhxmu")
+PositionShake = Array[ExtResource("9_voglr")]([SubResource("Resource_s4u6i")])
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_40wdo"]
+radius = 0.8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2qpwb"]
+resource_local_to_scene = true
+albedo_color = Color(1, 0, 0, 1)
+emission_enabled = true
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_35thu"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_2qpwb")
+
+[node name="Enemy" type="CharacterBody3D" unique_id=2044683118 groups=["Target", "enemy"]]
+top_level = true
+collision_layer = 4
+collision_mask = 7
+axis_lock_linear_y = true
+axis_lock_angular_y = true
+script = ExtResource("1_ed52l")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=456571139]
+unique_name_in_owner = true
+path_height_offset = 0.25
+
+[node name="HurtboxComponent" parent="." unique_id=1950115901 node_paths=PackedStringArray("health_component", "health_bar_component", "hit_flash_component", "numbers_component") instance=ExtResource("2_6a8qn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
+collision_mask = 4
+health_component = NodePath("../HealthComponent")
+health_bar_component = NodePath("../HealthBarComponent")
+hit_flash_component = NodePath("../HitFlashComponent")
+numbers_component = NodePath("../NumbersComponent")
+
+[node name="HealthBarComponent" parent="." unique_id=864028086 instance=ExtResource("3_ed52l")]
+transform = Transform3D(0.17142516, 0, 0, 0, 0.17142516, 0, 0, 0, 0.17142516, -0.00033152103, 2.2273202, -0.00037944317)
+texture = SubResource("ViewportTexture_31g7c")
+
+[node name="HitFlashComponent" type="Node" parent="." unique_id=1363198882 node_paths=PackedStringArray("root_node")]
+script = ExtResource("4_31g7c")
+root_node = NodePath("../MeshInstance3D")
+metadata/_custom_type_script = "uid://qh30lijols1x"
+
+[node name="NumbersComponent" parent="." unique_id=333203928 instance=ExtResource("5_6a8qn")]
+
+[node name="HealthComponent" parent="." unique_id=2086384134 instance=ExtResource("6_d0drk")]
+
+[node name="HitboxComponent" parent="." unique_id=817385232 instance=ExtResource("5_bnho5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
+collision_mask = 2
+
+[node name="ShakerComponent3D" type="Node3D" parent="." unique_id=1437720703]
+unique_name_in_owner = true
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -8.38774e-08, 1.4200034, 0.0112534)
+script = ExtResource("8_8jxqt")
+duration = 0.5
+fade_in = 0.0384733453393
+fade_out = 1.03526
+shakerPreset = SubResource("Resource_0e2uf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=349777763]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_40wdo")
+debug_color = Color(0.0901961, 0.517647, 0.207843, 1)
+
+[node name="AgentTimer" type="Timer" parent="." unique_id=2006177476]
+unique_name_in_owner = true
+wait_time = 0.1
+autostart = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1139491458]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_35thu")
+
+[connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]
+[connection signal="timeout" from="AgentTimer" to="." method="_on_agent_timer_timeout"]

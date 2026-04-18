@@ -11,7 +11,7 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p2vpv"]
 albedo_texture = ExtResource("2_3v8pm")
 
-[node name="Player" type="CharacterBody3D" unique_id=598808722 groups=["Loot", "Player", "Target"]]
+[node name="Player" type="CharacterBody3D" unique_id=598808722]
 script = ExtResource("1_4flbx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2082887154]
