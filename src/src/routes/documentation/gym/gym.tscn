@@ -33,10 +33,12 @@ sky = SubResource("Sky_u8dbp")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_x7phl"]
+
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ostbp"]
 material = ExtResource("4_5v58r")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_x7phl"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_5ll4s"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="Animation" id="Animation_8jo76"]
@@ -222,13 +224,24 @@ spawn_data_list = Array[ExtResource("14_dd4s8")]([])
 [node name="FurnanceExample" type="Node3D" parent="." unique_id=978891158]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.5, 0.5, -10.5)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="FurnanceExample" unique_id=1925375416]
+[node name="CharacterBody3D" type="CharacterBody3D" parent="FurnanceExample" unique_id=1041503854]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FurnanceExample/CharacterBody3D" unique_id=189150603]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.99, 0)
+shape = SubResource("CapsuleShape3D_x7phl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FurnanceExample/CharacterBody3D" unique_id=1925375416]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.99, 0)
 mesh = SubResource("CapsuleMesh_ostbp")
 
+[node name="AimTarget" type="Marker3D" parent="FurnanceExample/CharacterBody3D" unique_id=87482132]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5499544, 0)
+
 [node name="HealthBarComponent" parent="FurnanceExample" unique_id=864028086 instance=ExtResource("6_pn1np")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 2.5, 0)
-texture = SubResource("ViewportTexture_x7phl")
+texture = SubResource("ViewportTexture_5ll4s")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="FurnanceExample" unique_id=1138809295]
 root_node = NodePath("../..")
@@ -261,7 +274,7 @@ mesh = SubResource("SphereMesh_plcdq")
 [node name="HealthComponent" parent="FurnanceExample" unique_id=2086384134 instance=ExtResource("9_jc3om")]
 
 [node name="HitFlashComponent" parent="FurnanceExample" unique_id=480447811 node_paths=PackedStringArray("root_node") instance=ExtResource("10_3184x")]
-root_node = NodePath("../MeshInstance3D")
+root_node = NodePath("../CharacterBody3D/MeshInstance3D")
 
 [node name="NumbersComponent" parent="FurnanceExample" unique_id=333203928 instance=ExtResource("11_5h31n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.029841, 0)

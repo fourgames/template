@@ -34,6 +34,43 @@ func _unhandled_input(event):
 
 
 func _physics_process(delta):
+	var look_dir = Input.get_vector("look_left", "look_right", "look_up", "look_down")
+	
+	if look_dir.length() > 0:
+		var controller_sens = 500.0
+		
+		if %ShapeCast3D.is_colliding():
+			var target = %ShapeCast3D.get_collider(0)
+			var target_center = target.global_position + Vector3(0, 1.2, 0)
+			
+			# 1. Get the direction to target
+			var dir_to_target = (target_center - camera.global_position).normalized()
+			
+			# 2. Calculate the "Goal" horizontal and vertical angles
+			var yaw_goal = atan2(-dir_to_target.x, -dir_to_target.z)
+			var pitch_goal = asin(dir_to_target.y)
+			
+			# 3. Strength based on stick force (your existing logic)
+			var stick_force = look_dir.length()
+			var magnetism_strength = lerp(5.0, 2.0, stick_force)
+			var weight = magnetism_strength * delta
+			
+			# 4. Smoothly rotate the Head (Y) and Camera (X) separately
+			# This prevents the 'tilt' or 'slushiness'
+			head.global_rotation.y = lerp_angle(head.global_rotation.y, yaw_goal, weight)
+			camera.rotation.x = lerp_angle(camera.rotation.x, pitch_goal, weight)
+			
+			# Keep camera local Y at 0 because the Head node handles horizontal rotation
+			camera.rotation.y = 0
+			camera.rotation.z = 0
+			
+			if stick_force < 0.8:
+				controller_sens *= 0.7
+		
+		head.rotate_y(-look_dir.x * SENSITIVITY * controller_sens * delta)
+		camera.rotate_x(-look_dir.y * SENSITIVITY * controller_sens * delta)
+		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-40), deg_to_rad(60))
+		
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta

@@ -6,6 +6,8 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cde1g"]
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_q5a6t"]
+
 [node name="Player" type="CharacterBody3D" unique_id=1417458]
 script = ExtResource("1_q5a6t")
 
@@ -21,6 +23,13 @@ unique_name_in_owner = true
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=1782733619]
 unique_name_in_owner = true
 current = true
+
+[node name="ShapeCast3D" type="ShapeCast3D" parent="Head/Camera3D" unique_id=1885324277]
+unique_name_in_owner = true
+shape = SubResource("SphereShape3D_q5a6t")
+target_position = Vector3(0, 0, -20)
+margin = 0.05
+collision_mask = 2
 
 [node name="Label3D" type="Label3D" parent="." unique_id=1793143132]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
