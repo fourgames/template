@@ -26,6 +26,7 @@ buses/default_bus_layout="uid://ci61fr1dqsshd"
 [autoload]
 
 ControllerIcons="*uid://bbr0y7cmquuy6"
+Shaker="*uid://camqu126o10w4"
 PathManager="*uid://cwiwhdgjmooc7"
 SignalManager="*uid://djm5fbcusol8f"
 DataManager="*uid://big0hyuv70jxs"
@@ -34,7 +35,6 @@ NodeManager="*uid://bi1cxrxhj70n3"
 ControlManager="*uid://c1bgdvrlmjwpk"
 SceneChanger="*uid://ba3qklkjfvc6o"
 GameManager="*uid://d07rtwy8ry14o"
-Shaker="*uid://camqu126o10w4"
 
 [display]
 

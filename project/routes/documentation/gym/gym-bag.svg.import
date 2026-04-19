@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xrg0p8m7ymeb"
-path="res://.godot/imported/gym-bag.svg-c9aede00f1cc716e5ed28780ea36e770.ctex"
+path="res://.godot/imported/gym-bag.svg-25f5849449c93be66675c6dcea4b8bad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/routes/documentation/gym/gym-bag.svg"
-dest_files=["res://.godot/imported/gym-bag.svg-c9aede00f1cc716e5ed28780ea36e770.ctex"]
+source_file="res://routes/documentation/gym/gym-bag.svg"
+dest_files=["res://.godot/imported/gym-bag.svg-25f5849449c93be66675c6dcea4b8bad.ctex"]
 
 [params]
 

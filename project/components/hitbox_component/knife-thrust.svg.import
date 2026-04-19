@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dde1sa4xfshfr"
-path="res://.godot/imported/knife-thrust.svg-173d962cb589c9a17d6b36e8eeccc6b5.ctex"
+path="res://.godot/imported/knife-thrust.svg-f750a3c9358bf29630e03ac8e1c8d4e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/components/hitbox_component/knife-thrust.svg"
-dest_files=["res://.godot/imported/knife-thrust.svg-173d962cb589c9a17d6b36e8eeccc6b5.ctex"]
+source_file="res://components/hitbox_component/knife-thrust.svg"
+dest_files=["res://.godot/imported/knife-thrust.svg-f750a3c9358bf29630e03ac8e1c8d4e4.ctex"]
 
 [params]
 

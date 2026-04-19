@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://daim3jnqfh1ep"
-path="res://.godot/imported/poly_pizza_pixel_glasses_ipoly3d_cc0.fbx-412dcb1d4356c948a5e9664f39fccad1.scn"
+path="res://.godot/imported/poly_pizza_pixel_glasses_ipoly3d_cc0.fbx-9a5df5f21850b5ad4846ee11516625fb.scn"
 
 [deps]
 
-source_file="res://assets/models/poly_pizza_pixel_glasses_ipoly3d_cc0.fbx"
-dest_files=["res://.godot/imported/poly_pizza_pixel_glasses_ipoly3d_cc0.fbx-412dcb1d4356c948a5e9664f39fccad1.scn"]
+source_file="res://public/models/poly_pizza_pixel_glasses_ipoly3d_cc0.fbx"
+dest_files=["res://.godot/imported/poly_pizza_pixel_glasses_ipoly3d_cc0.fbx-9a5df5f21850b5ad4846ee11516625fb.scn"]
 
 [params]
 

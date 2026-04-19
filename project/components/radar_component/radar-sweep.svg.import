@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtvo8xbs6l3rq"
-path="res://.godot/imported/radar-sweep.svg-e04e807c6aa36a17c402bfdb4a9d8fe7.ctex"
+path="res://.godot/imported/radar-sweep.svg-08ab6785e9ebc98e136e3d6d38d536e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/components/radar_component/radar-sweep.svg"
-dest_files=["res://.godot/imported/radar-sweep.svg-e04e807c6aa36a17c402bfdb4a9d8fe7.ctex"]
+source_file="res://components/radar_component/radar-sweep.svg"
+dest_files=["res://.godot/imported/radar-sweep.svg-08ab6785e9ebc98e136e3d6d38d536e1.ctex"]
 
 [params]
 

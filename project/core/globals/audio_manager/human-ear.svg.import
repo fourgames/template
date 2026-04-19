@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bv085ck83vmx6"
-path="res://.godot/imported/human-ear.svg-6bdcdfe2cddc87741f01226fc1abcc58.ctex"
+path="res://.godot/imported/human-ear.svg-fa8585d7fde2d0460472afa2ee78a7ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/app/globals/audio_manager/human-ear.svg"
-dest_files=["res://.godot/imported/human-ear.svg-6bdcdfe2cddc87741f01226fc1abcc58.ctex"]
+source_file="res://core/globals/audio_manager/human-ear.svg"
+dest_files=["res://.godot/imported/human-ear.svg-fa8585d7fde2d0460472afa2ee78a7ec.ctex"]
 
 [params]
 

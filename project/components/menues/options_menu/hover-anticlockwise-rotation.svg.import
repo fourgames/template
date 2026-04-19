@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7eqyp0mkutmc"
-path="res://.godot/imported/hover-anticlockwise-rotation.svg-7f15a56adaa664792b8a26b8629a2638.ctex"
+path="res://.godot/imported/hover-anticlockwise-rotation.svg-1af8111c85407f648bc536bc4c6f63e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/components/menues/options_menu/hover-anticlockwise-rotation.svg"
-dest_files=["res://.godot/imported/hover-anticlockwise-rotation.svg-7f15a56adaa664792b8a26b8629a2638.ctex"]
+source_file="res://components/menues/options_menu/hover-anticlockwise-rotation.svg"
+dest_files=["res://.godot/imported/hover-anticlockwise-rotation.svg-1af8111c85407f648bc536bc4c6f63e0.ctex"]
 
 [params]
 

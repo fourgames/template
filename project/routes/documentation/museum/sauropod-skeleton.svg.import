@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmfkl374kkch8"
-path="res://.godot/imported/sauropod-skeleton.svg-e7554a2d7338035d46f95e536b7af14f.ctex"
+path="res://.godot/imported/sauropod-skeleton.svg-cf8b54967ff57962cc1d8da4fe2e4371.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/routes/documentation/museum/sauropod-skeleton.svg"
-dest_files=["res://.godot/imported/sauropod-skeleton.svg-e7554a2d7338035d46f95e536b7af14f.ctex"]
+source_file="res://routes/documentation/museum/sauropod-skeleton.svg"
+dest_files=["res://.godot/imported/sauropod-skeleton.svg-cf8b54967ff57962cc1d8da4fe2e4371.ctex"]
 
 [params]
 

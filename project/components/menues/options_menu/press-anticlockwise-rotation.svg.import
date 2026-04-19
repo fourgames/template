@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfllxind7thyf"
-path="res://.godot/imported/press-anticlockwise-rotation.svg-d24bee39e81144bbfd67126b54333a14.ctex"
+path="res://.godot/imported/press-anticlockwise-rotation.svg-7b75f08c52c16ba70583c39c5405ea9d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/components/menues/options_menu/press-anticlockwise-rotation.svg"
-dest_files=["res://.godot/imported/press-anticlockwise-rotation.svg-d24bee39e81144bbfd67126b54333a14.ctex"]
+source_file="res://components/menues/options_menu/press-anticlockwise-rotation.svg"
+dest_files=["res://.godot/imported/press-anticlockwise-rotation.svg-7b75f08c52c16ba70583c39c5405ea9d.ctex"]
 
 [params]
 

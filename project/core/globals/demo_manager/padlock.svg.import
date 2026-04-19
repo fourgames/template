@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://n7isbas4s1l3"
-path="res://.godot/imported/padlock.svg-bdcfe6e7d23b254fe088d498df496340.ctex"
+path="res://.godot/imported/padlock.svg-9501856c1882359e2d1d494a6c771bad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/app/globals/demo_manager/padlock.svg"
-dest_files=["res://.godot/imported/padlock.svg-bdcfe6e7d23b254fe088d498df496340.ctex"]
+source_file="res://core/globals/demo_manager/padlock.svg"
+dest_files=["res://.godot/imported/padlock.svg-9501856c1882359e2d1d494a6c771bad.ctex"]
 
 [params]
 

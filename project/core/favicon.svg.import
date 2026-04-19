@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brjow5a5u36de"
-path.s3tc="res://.godot/imported/favicon.svg-2f9dd2f8d0b1642b91a168b58fdec82a.s3tc.ctex"
+path.s3tc="res://.godot/imported/favicon.svg-4cad9df76e4bde712d15a855721f6c6a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://src/app/favicon.svg"
-dest_files=["res://.godot/imported/favicon.svg-2f9dd2f8d0b1642b91a168b58fdec82a.s3tc.ctex"]
+source_file="res://core/favicon.svg"
+dest_files=["res://.godot/imported/favicon.svg-4cad9df76e4bde712d15a855721f6c6a.s3tc.ctex"]
 
 [params]
 

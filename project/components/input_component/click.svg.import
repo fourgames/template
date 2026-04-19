@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxon5mmscpggt"
-path="res://.godot/imported/click.svg-348571594c28b64e375e62ade657afe2.ctex"
+path="res://.godot/imported/click.svg-b80238a34ab02cb0ae84422693662799.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/components/input_component/click.svg"
-dest_files=["res://.godot/imported/click.svg-348571594c28b64e375e62ade657afe2.ctex"]
+source_file="res://components/input_component/click.svg"
+dest_files=["res://.godot/imported/click.svg-b80238a34ab02cb0ae84422693662799.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1lprsqghawoo"
-path="res://.godot/imported/elephant.svg-f072b827285556905e7a3b8f5b02b4ca.ctex"
+path="res://.godot/imported/elephant.svg-e487be5a98470c36e6f3c6079d9c0e3a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/routes/documentation/zoo/elephant.svg"
-dest_files=["res://.godot/imported/elephant.svg-f072b827285556905e7a3b8f5b02b4ca.ctex"]
+source_file="res://routes/documentation/zoo/elephant.svg"
+dest_files=["res://.godot/imported/elephant.svg-e487be5a98470c36e6f3c6079d9c0e3a.ctex"]
 
 [params]
 

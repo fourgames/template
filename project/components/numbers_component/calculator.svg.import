@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://deb6kvmuw5vgc"
-path="res://.godot/imported/calculator.svg-4cd27f1447bc9a52b8e050ef8350db70.ctex"
+path="res://.godot/imported/calculator.svg-1586b5d98542b8fb7879cb032e365b40.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/components/numbers_component/calculator.svg"
-dest_files=["res://.godot/imported/calculator.svg-4cd27f1447bc9a52b8e050ef8350db70.ctex"]
+source_file="res://components/numbers_component/calculator.svg"
+dest_files=["res://.godot/imported/calculator.svg-1586b5d98542b8fb7879cb032e365b40.ctex"]
 
 [params]
 

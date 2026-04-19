@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bg13vssnv4p04"
-path="res://.godot/imported/doorway.svg-a20702695253917c5a1a40a8ab784f8f.ctex"
+path="res://.godot/imported/doorway.svg-b92caff041314f2359ff900df9d22df3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/app/globals/scene_changer/doorway.svg"
-dest_files=["res://.godot/imported/doorway.svg-a20702695253917c5a1a40a8ab784f8f.ctex"]
+source_file="res://core/globals/scene_changer/doorway.svg"
+dest_files=["res://.godot/imported/doorway.svg-b92caff041314f2359ff900df9d22df3.ctex"]
 
 [params]
 

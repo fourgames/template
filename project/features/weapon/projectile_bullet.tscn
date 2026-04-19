@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://csayarwi2f22f"]
 
-[ext_resource type="Script" uid="uid://hss5ums5qwtg" path="res://src/components/weapon_component/projectile_bullet.gd" id="1_nk66k"]
-[ext_resource type="PackedScene" uid="uid://juuvvol6wwhe" path="res://src/components/hitbox_component/hitbox_component.tscn" id="2_jffgv"]
+[ext_resource type="Script" uid="uid://hss5ums5qwtg" path="res://features/weapon/projectile_bullet.gd" id="1_nk66k"]
+[ext_resource type="PackedScene" uid="uid://juuvvol6wwhe" path="res://components/hitbox_component/hitbox_component.tscn" id="2_jffgv"]
 [ext_resource type="Shader" uid="uid://btk385825igxu" path="res://addons/GPUTrail-main/shaders/trail.gdshader" id="3_dbt42"]
 [ext_resource type="Shader" uid="uid://0uam2aluy3pd" path="res://addons/GPUTrail-main/shaders/trail_draw_pass.gdshader" id="4_qpksc"]
 [ext_resource type="Texture2D" uid="uid://crk6pkb7e5rwc" path="res://addons/GPUTrail-main/defaults/texture.tres" id="5_0ten0"]

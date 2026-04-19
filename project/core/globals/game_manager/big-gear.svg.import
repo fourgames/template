@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cdmyxwtwjrli8"
-path="res://.godot/imported/big-gear.svg-99caaeb60cb8890de94ea198941fbe8a.ctex"
+path="res://.godot/imported/big-gear.svg-eae76b05dbab15f0683b8c4324db7247.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/app/globals/game_manager/big-gear.svg"
-dest_files=["res://.godot/imported/big-gear.svg-99caaeb60cb8890de94ea198941fbe8a.ctex"]
+source_file="res://core/globals/game_manager/big-gear.svg"
+dest_files=["res://.godot/imported/big-gear.svg-eae76b05dbab15f0683b8c4324db7247.ctex"]
 
 [params]
 

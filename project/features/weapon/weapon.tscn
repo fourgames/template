@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c6b5pvl4og05j"]
 
-[ext_resource type="Script" uid="uid://ckyrjfd3fq264" path="res://src/components/weapon_component/weapon_component.gd" id="1_17k1q"]
+[ext_resource type="Script" uid="uid://ckyrjfd3fq264" path="res://features/weapon/weapon.gd" id="1_17k1q"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_wexpw"]
 radius = 5.0

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6ynqcq6i2vlo"
-path="res://.godot/imported/trigger-hurt.svg-85ae999070bd3c9f7f5b947f7feb9fd0.ctex"
+path="res://.godot/imported/trigger-hurt.svg-14b377d91e374ac1f6f6244b28b05c37.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/app/globals/control_manager/trigger-hurt.svg"
-dest_files=["res://.godot/imported/trigger-hurt.svg-85ae999070bd3c9f7f5b947f7feb9fd0.ctex"]
+source_file="res://core/globals/control_manager/trigger-hurt.svg"
+dest_files=["res://.godot/imported/trigger-hurt.svg-14b377d91e374ac1f6f6244b28b05c37.ctex"]
 
 [params]
 
