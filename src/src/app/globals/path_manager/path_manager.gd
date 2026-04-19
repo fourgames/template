@@ -4,7 +4,7 @@ extends Node
 
 const PLAYER_SCENE = "uid://c0w0o0laooyhw"
 
-var projectile_bullet := "uid://csayarwi2f22f"
+const projectile_bullet = "uid://csayarwi2f22f"
 
 const GYM_SCENE = "uid://n4y2s8gdj1cu"
 

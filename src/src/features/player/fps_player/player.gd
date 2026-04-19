@@ -31,7 +31,7 @@ func _ready() -> void:
 
 
 func sensitivity_changed_update_values():
-	# TODO THIS IS BROKEN FIXME
+	# TODO THIS IS BROKEN
 	print("YES")
 	sensitivity = DataManager.payload.input.sensitivity
 	mouse_sensitivity = sensitivity * 0.00005
