@@ -8,6 +8,7 @@ class_name HurtboxComponent
 @export var numbers_component : NumbersComponent
 var numbers_scene = preload("uid://bgaxsmyoyxbpa")
 
+# TODO The hurtbox is what connects everything so give it more love with warnigns and other stuff
 func _get_configuration_warnings() -> PackedStringArray:
 	var warnings: PackedStringArray = []
 	
@@ -35,11 +36,10 @@ func apply_health_change(amount: int):
 		if health_bar_component:
 			health_bar_component.apply_health_bar(amount, health_component)
 	
-	# Maybe warnings for this but its kinda optinal maybe more safty checks if its not added
 	if hit_flash_component:
 		hit_flash_component.hit_flash()
 		
-	#if numbers_component: # OPT Bad example since it removes after this but still
+	# TODO var numbers_component unused 
 	var numbers_instance = numbers_scene.instantiate()
 	get_parent().add_child(numbers_instance)
 	numbers_instance.global_position = get_parent().position
