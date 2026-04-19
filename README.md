@@ -1,7 +1,23 @@
-<img width="1624" height="1061" alt="Screenshot 2026-04-18 at 23 17 43" src="https://github.com/user-attachments/assets/e64eec46-2d25-4ef9-9c95-3530a4d7801b" />
 # 🍀 Template Four Games
 > [!NOTE]
 > In development idea is make it good and then make tutorials and some documentation on parts of it 
+
+## Initial setup
+```gdscript
+Project > Reload Current Project
+```
+<img width="344" height="340" alt="Screenshot 2026-04-19 at 22 54 25" src="https://github.com/user-attachments/assets/1273c748-b4f4-45ad-a734-90c356bf145b" />
+
+```gdscript
+Debug > Visible Collision Shapes
+```
+
+<img width="316" height="364" alt="Screenshot 2026-04-19 at 22 56 52" src="https://github.com/user-attachments/assets/cdca943b-17ef-42df-b64a-b83d49017692" />
+
+```gdscript
+Game > Make Game Workspace Floating on Next Play & Streach to Fit
+```
+<img width="1625" height="1062" alt="Screenshot 2026-04-19 at 22 56 21" src="https://github.com/user-attachments/assets/4f2fce7d-de43-4ba6-b02d-7690fec671a6" />
 
 # Vison
 - godot gold standard tempalte
