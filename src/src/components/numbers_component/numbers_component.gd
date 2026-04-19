@@ -18,9 +18,7 @@ func set_and_play(value):
 		%RichTextLabel.text = "[color=red]" + str(text)
 
 
-	%AnimationPlayer.play("rise_and_fade")
-
-
-
-func remove():
-	queue_free()
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	match anim_name:
+		"rise_and_fade":
+			queue_free()
