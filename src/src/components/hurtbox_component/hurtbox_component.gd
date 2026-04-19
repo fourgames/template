@@ -6,7 +6,7 @@ class_name HurtboxComponent
 @export var health_component: HealthComponent
 @export var health_bar_component: HealthBarComponent
 @export var hit_flash_component : HitFlashComponent
-var numbers_scene = preload("uid://bgaxsmyoyxbpa")
+var numbers_scene = preload(PathManager.numbers_scene)
 
 
 # TODO The hurtbox is what connects everything so give it more love with warnigns and other stuff corner bone 

@@ -7,10 +7,10 @@ enum GameState { MAIN_MENU, PLAYING, PAUSE_MENU, OPTIONS_MENU, DEMO }
 var current_state: GameState = GameState.MAIN_MENU
 var previous_state: GameState = GameState.MAIN_MENU
 
-const MAIN_MENU = preload("uid://c3xcgc53ytkha")
-const PAUSE_MENU = preload("uid://cvb3uocxvde1x")
-const OPTIONS_MENU = preload("uid://dycmqmsylxp31")
-const BACKDROP = preload("uid://y4kvhvl3hkpp")
+const MAIN_MENU = preload(PathManager.MAIN_MENU)
+const PAUSE_MENU = preload(PathManager.PAUSE_MENU)
+const OPTIONS_MENU = preload(PathManager.OPTIONS_MENU)
+const BACKDROP = preload(PathManager.BACKDROP)
 
 var backdrop = null
 var active_menu = null
