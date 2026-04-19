@@ -18,14 +18,12 @@ func _get_configuration_warnings() -> PackedStringArray:
 
 	return warnings
 
+
 func _ready() -> void:
 	if _get_configuration_warnings().size() > 0:
 		for error in _get_configuration_warnings():
 			push_warning("Hitbox Error at ", get_path(), ": ", error)
 
-#func _process(delta: float) -> void:
-	#print($TickTimer.time_left)
-	
 
 func _on_area_entered(area: Area3D) -> void:
 	if area is HurtboxComponent:
@@ -40,7 +38,7 @@ func _on_tick_timer_timeout() -> void:
 	if overlapping_areas.is_empty():
 		tick_timer.stop()
 		return
-
+	
 	for area in overlapping_areas:
 		if area is HurtboxComponent:
 			area.apply_health_change(damage)
