@@ -3,5 +3,4 @@ extends Area3D
 
 
 func interact():
-	print("You interacted with me yay")
 	queue_free()
