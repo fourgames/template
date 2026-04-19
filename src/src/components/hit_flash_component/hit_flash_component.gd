@@ -3,8 +3,6 @@
 extends Node
 class_name HitFlashComponent
 
-# NEXT Rework this fully to just get all the children of the model i select so i dont need to select all manualy
-# TODO Hook this up to the hurtbox and make it optional maybe idk but still give warning
 
 @export_tool_button("Hit Flash", "Callable") var hit_flash_button = hit_flash
 @export var duration: float = 0.2:
@@ -12,10 +10,11 @@ class_name HitFlashComponent
 		duration = max(value, 0.1)
 @export var root_node: Node3D
 
+
 func _ready() -> void:
 	hit_flash()
 
-# Dont fully comprehend but it works
+
 func hit_flash():
 	if not root_node: return
 	
