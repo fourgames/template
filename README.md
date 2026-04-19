@@ -3,25 +3,22 @@
 > In development idea is make it good and then make tutorials and some documentation on parts of it 
 
 ## Initial setup
+
 ```gdscript
-Project > Reload Current Project
+Project > Reload Current Project & Debug > Visible Collision Shapes = true
 ```
+
 <img width="344" alt="Screenshot" src="https://github.com/user-attachments/assets/1273c748-b4f4-45ad-a734-90c356bf145b" />
-
-<br>
-
-```gdscript
-Debug > Visible Collision Shapes = true
-```
-
 <img width="316" alt="Screenshot" src="https://github.com/user-attachments/assets/cdca943b-17ef-42df-b64a-b83d49017692" />
-<br>
+
 
 ```gdscript
 Game > Make Game Workspace Floating on Next Play = false & Streach to Fit = true
 ```
 
 <img width="1625" alt="Screenshot" src="https://github.com/user-attachments/assets/4f2fce7d-de43-4ba6-b02d-7690fec671a6" />
+
+
 
 # Vison
 - godot gold standard tempalte
