@@ -1,5 +1,6 @@
 extends HSplitContainer
 
+
 @onready var primary_input_progress_bar: ProgressBar = %PrimaryInputProgressBar
 @onready var secondary_input_progress_bar: ProgressBar = %SecondaryInputProgressBar
 
@@ -12,9 +13,11 @@ extends HSplitContainer
 @onready var secondary_input_button = %SecondaryInputButton
 @onready var secondary_input_texture_button = %SecondaryInputTextureButton
 
+
 var action_name: String
 var is_rebind_primary: bool = false
 var is_listening: bool = false
+
 
 func _ready():
 	primary_input_button.pressed.connect(_on_primary_pressed)
@@ -24,17 +27,21 @@ func _ready():
 	primary_input_progress_bar.visible = false
 	secondary_input_progress_bar.visible = false
 
+
 func set_action(p_name: String):
 	action_name = p_name
 	input_name_label.text = p_name.capitalize()
 	_sync_input_map_from_payload()
 	update_icons()
 
+
 func _on_primary_pressed():
 	start_listening(true)
 
+
 func _on_secondary_pressed():
 	start_listening(false)
+
 
 func _on_reset_pressed():
 	primary_input_button.grab_focus()
@@ -57,6 +64,7 @@ func _on_reset_pressed():
 	
 	update_icons()
 
+
 func start_listening(is_primary: bool):
 	is_listening = true
 	is_rebind_primary = is_primary
@@ -68,6 +76,7 @@ func start_listening(is_primary: bool):
 		secondary_input_progress_bar.visible = true
 		secondary_input_texture_button.modulate.a = 0.3
 
+
 func _input(event):
 	if not is_listening: return
 	if event is InputEventMouseMotion: return
@@ -78,6 +87,7 @@ func _input(event):
 	elif event is InputEventJoypadMotion:
 		if abs(event.axis_value) > 0.5:
 			accept_new_event(event)
+
 
 func accept_new_event(new_event: InputEvent):
 	get_viewport().set_input_as_handled()
@@ -121,6 +131,7 @@ func accept_new_event(new_event: InputEvent):
 	secondary_input_texture_button.modulate.a = 1.0
 	update_icons()
 
+
 func _sync_input_map_from_payload():
 	var custom_entry = null
 	for entry in DataManager.payload.input.inpit_list:
@@ -148,6 +159,7 @@ func _sync_input_map_from_payload():
 	if s_ev:
 		InputMap.action_add_event(action_name, s_ev)
 
+
 # NEW: Reliable string converter that handles Physical Keys (Standard in Godot 4)
 func _event_to_string(event: InputEvent) -> String:
 	if event is InputEventKey:
@@ -166,6 +178,7 @@ func _event_to_string(event: InputEvent) -> String:
 		var sign_str = "+" if event.axis_value > 0 else "-"
 		return "Joypad Axis " + str(event.axis) + " " + sign_str
 	return ""
+
 
 func _parse_string_to_event(text: String) -> InputEvent:
 	if text == "" or text == "<null>": return null
@@ -198,6 +211,7 @@ func _parse_string_to_event(text: String) -> InputEvent:
 		return joy_event
 	return null
 
+
 func update_icons():
 	primary_input_button.text = ""
 	secondary_input_button.text = ""
@@ -225,6 +239,7 @@ func update_icons():
 		secondary_input_texture_button.texture_normal = null
 		
 	_update_reset_button_visibility()
+
 
 func _update_reset_button_visibility():
 	var custom_entry = null
