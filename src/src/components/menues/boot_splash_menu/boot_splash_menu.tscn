@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bytxkqqg13lxf"]
 
-[ext_resource type="Script" uid="uid://f3af62xo8if0" path="res://src/components/menues/boot_splash/boot_splash.gd" id="1_n2hxm"]
+[ext_resource type="Script" uid="uid://f3af62xo8if0" path="res://src/components/menues/boot_splash_menu/boot_splash_menu.gd" id="1_n2hxm"]
 
 [sub_resource type="Animation" id="Animation_s2ta7"]
 length = 0.001
@@ -14,7 +14,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_ayt76"]
@@ -28,10 +28,10 @@ tracks/0/path = NodePath("Label:modulate")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.5, 1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7a8ye"]
@@ -53,7 +53,6 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="." unique_id=1298430772]
-modulate = Color(1, 1, 1, 0)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -74,4 +73,4 @@ vertical_alignment = 1
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1390909817]
 unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_7a8ye")
-autoplay = &"RESET"
+autoplay = &"boot_splash_animation"

@@ -64,7 +64,6 @@ func change_state(new_state):
 	elif !backdrop:
 		backdrop = BACKDROP.instantiate()
 		add_child(backdrop)
-		backdrop.play()
 		move_child(backdrop, 0)
 	
 	# 3. State Execution
@@ -96,4 +95,3 @@ func change_state(new_state):
 	# 4. Finalize
 	if active_menu:
 		add_child(active_menu)
-		active_menu.play()
