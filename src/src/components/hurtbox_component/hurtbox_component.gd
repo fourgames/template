@@ -2,13 +2,14 @@
 extends Area3D
 class_name HurtboxComponent
 
+
 @export var health_component: HealthComponent
 @export var health_bar_component: HealthBarComponent
 @export var hit_flash_component : HitFlashComponent
-@export var numbers_component : NumbersComponent
 var numbers_scene = preload("uid://bgaxsmyoyxbpa")
 
-# TODO The hurtbox is what connects everything so give it more love with warnigns and other stuff
+
+# TODO The hurtbox is what connects everything so give it more love with warnigns and other stuff corner bone 
 func _get_configuration_warnings() -> PackedStringArray:
 	var warnings: PackedStringArray = []
 	
@@ -26,6 +27,7 @@ func _get_configuration_warnings() -> PackedStringArray:
 
 	return warnings
 
+
 func apply_health_change(amount: int):
 	if _get_configuration_warnings().size() > 0:
 		for error in _get_configuration_warnings():
@@ -39,7 +41,6 @@ func apply_health_change(amount: int):
 	if hit_flash_component:
 		hit_flash_component.hit_flash()
 		
-	# TODO var numbers_component unused 
 	var numbers_instance = numbers_scene.instantiate()
 	get_parent().add_child(numbers_instance)
 	numbers_instance.global_position = get_parent().position
