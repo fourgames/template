@@ -10,6 +10,7 @@
 [ext_resource type="Material" uid="uid://cj3wvsy4wenwb" path="res://assets/textures/kenney/resources/green_texture_07.tres" id="7_plcdq"]
 [ext_resource type="Material" uid="uid://dqg6vocwwbc0c" path="res://assets/textures/kenney/resources/red_texture_07.tres" id="8_30h57"]
 [ext_resource type="PackedScene" uid="uid://juuvvol6wwhe" path="res://src/components/hitbox_component/hitbox_component.tscn" id="8_dd4s8"]
+[ext_resource type="PackedScene" uid="uid://daim3jnqfh1ep" path="res://assets/models/poly_pizza_pixel_glasses_ipoly3d_cc0.fbx" id="9_cde1g"]
 [ext_resource type="PackedScene" uid="uid://d07cmkdpirmw6" path="res://src/components/health_component/health_component.tscn" id="9_jc3om"]
 [ext_resource type="PackedScene" uid="uid://bmkr84x33203k" path="res://src/components/hit_flash_component/hit_flash_component.tscn" id="10_3184x"]
 [ext_resource type="PackedScene" uid="uid://bgaxsmyoyxbpa" path="res://src/components/numbers_component/numbers_component.tscn" id="11_5h31n"]
@@ -227,6 +228,7 @@ script = ExtResource("1_a854a")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.48999828, 0)
 
 [node name="WeaponComponent" parent="Player" unique_id=1926944636 instance=ExtResource("3_5ll4s")]
+collision_mask = 4
 
 [node name="Player2" parent="." unique_id=1417458 instance=ExtResource("19_x7phl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.48999953, -4)
@@ -261,8 +263,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.99, 0)
 shape = SubResource("CapsuleShape3D_x7phl")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="FurnanceExample/CharacterBody3D" unique_id=1925375416]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.99, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0.99, 0)
 mesh = SubResource("CapsuleMesh_ostbp")
+
+[node name="glasses16_001" parent="FurnanceExample/CharacterBody3D/MeshInstance3D" unique_id=838045792 instance=ExtResource("9_cde1g")]
+transform = Transform3D(0.48, 0, 0, 0, 0.48, 0, 0, 0, 0.48, 0, 0.6, 0.17)
 
 [node name="HealthBarComponent" parent="FurnanceExample" unique_id=864028086 instance=ExtResource("6_pn1np")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 2.5, 0)
@@ -301,7 +306,7 @@ mesh = SubResource("SphereMesh_plcdq")
 root_node = NodePath("../CharacterBody3D/MeshInstance3D")
 
 [node name="NumbersComponent" parent="FurnanceExample" unique_id=333203928 instance=ExtResource("11_5h31n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.029841, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.029841, -3)
 
 [node name="RadarComponent" parent="." unique_id=1982901923 instance=ExtResource("12_fxgnr")]
 
@@ -413,7 +418,7 @@ size = Vector3(2, 1, 2)
 material = ExtResource("15_30h57")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=1708345126]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 1, 6.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 1, 10.5)
 size = Vector3(2, 1, 2)
 material = ExtResource("15_30h57")
 
@@ -433,12 +438,22 @@ size = Vector3(2, 2, 2)
 material = ExtResource("15_30h57")
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=561267314]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 2.5, 2.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 4.5, 2.5)
+size = Vector3(2, 2, 2)
+material = ExtResource("15_30h57")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=460506762]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 3.4999998, 4.5)
 size = Vector3(2, 2, 2)
 material = ExtResource("15_30h57")
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=1684677355]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 1.5, 4.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 2.5, 6.5)
+size = Vector3(2, 2, 2)
+material = ExtResource("15_30h57")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=1333464653]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 1.5, 8.5)
 size = Vector3(2, 2, 2)
 material = ExtResource("15_30h57")
 

@@ -27,6 +27,7 @@ var gravity = 9.8
 #func _ready():
 	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
+# TODO add polish like jump buffer and cayote time
 func _ready() -> void:
 	SignalManager.sensitivity_changed.connect(sensitivity_changed_update_values)
 
