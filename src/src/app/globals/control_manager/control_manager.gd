@@ -1,27 +1,18 @@
 @icon("uid://b6ynqcq6i2vlo")
-## GlobalUIManager
-## 
-## Automatically applies hover/press animation and sounds to all BaseButtons and Sliders.
-## Setup: Project > Project Settings > Globals > Add this script as an Autoload.
 extends Node
 
-## Tracks active animations to prevent "tween fighting" when moving mouse quickly.
+
 var _active_tweens: Dictionary = {}
 
 
-
-	## Listens to everything being added
-	## Uncomment if it misses nodes 
 func _enter_tree() -> void:
 	SignalManager.control_node_added.connect(_on_node_manager_received)
-	
-	#for node in get_tree().root.find_children("*", "Control", true, false):
-		#_on_node_added(node)
+
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 
-## Filters added nodes and applies UI management logic to [Control] types.
+
 func _on_node_manager_received(node: Node) -> void:
 	node.process_mode = PROCESS_MODE_ALWAYS
 	
@@ -50,9 +41,7 @@ func _on_node_manager_received(node: Node) -> void:
 		node.focus_entered.connect(_handle_ui_event.bind(node, "hover"))
 		node.focus_exited.connect(_handle_ui_event.bind(node, "unhover"))
 		
-		# text_submitted passes the 'new_text' String, so we unbind 1
 		node.text_submitted.connect(_handle_ui_event.bind(node, "press").unbind(1))
-		# editing_toggled passes the 'toggled_on' bool, so we unbind 1
 		node.editing_toggled.connect(_handle_ui_event.bind(node, "hover").unbind(1))
 
 
@@ -65,26 +54,19 @@ func _handle_ui_event(node: Control, type: String) -> void:
 	_animate_button(node, type)
 
 
-
-## Handles the Tween logic. To change the "feel", uncomment the SOFT presets below.
 func _animate_button(node: Control, type: String):
 	if _active_tweens.has(node):
 		_active_tweens[node].kill()
 	
 	var tween = node.create_tween().set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
-	#var tween = create_tween().set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
 	_active_tweens[node] = tween
 	
 	match type:
 		"hover":
-			## SOFT: tween.tween_property(node, "scale", Vector2(1.1, 1.1), 0.16)
 			tween.tween_property(node, "scale", Vector2(1.05, 1.05), 0.12)
 		"unhover":
-			## SOFT: tween.tween_property(node, "scale", Vector2.ONE, 0.12)
 			tween.tween_property(node, "scale", Vector2.ONE, 0.1)
 		"press":
-			## SOFT: tween.tween_property(node, "scale", Vector2(0.95, 0.95), 0.08)
-			## SOFT: tween.chain().tween_property(node, "scale", Vector2(1.1, 1.1), 0.12)
 			tween.tween_property(node, "scale", Vector2(0.95, 0.95), 0.05)
 			tween.chain().tween_property(node, "scale", Vector2(1.05, 1.05), 0.1)
 			

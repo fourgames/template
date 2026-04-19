@@ -4,6 +4,7 @@ extends CanvasLayer
 
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
 
+
 func _ready() -> void:
 	layer = 100
 	process_mode = Node.PROCESS_MODE_ALWAYS

@@ -1,15 +1,19 @@
 @icon("uid://dsn4vba5b5gsq")
 extends Node
 
+
 const ENDPOINT = "user://SaveFile.tres"
 var payload : Data = Data.new()
+
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	load_data()
 
+
 func save_data():
 	ResourceSaver.save(payload, ENDPOINT)
+
 
 func load_data():
 	if ResourceLoader.exists(ENDPOINT):
@@ -17,6 +21,7 @@ func load_data():
 		if response is Data:
 			payload = response.duplicate(true)
 			sync_all_inputs()
+
 
 func sync_all_inputs():
 	if not payload or not payload.input: return
@@ -27,7 +32,6 @@ func sync_all_inputs():
 			
 		InputMap.action_erase_events(action)
 		
-		# Primary
 		var p_ev = _parse_string_to_event(entry["primary"])
 		if p_ev:
 			InputMap.action_add_event(action, p_ev)
@@ -37,10 +41,10 @@ func sync_all_inputs():
 			placeholder.physical_keycode = KEY_NONE
 			InputMap.action_add_event(action, placeholder)
 			
-		# Secondary
 		var s_ev = _parse_string_to_event(entry["secondary"])
 		if s_ev:
 			InputMap.action_add_event(action, s_ev)
+
 
 func _parse_string_to_event(text: String) -> InputEvent:
 	if text == "" or text == "<null>": return null

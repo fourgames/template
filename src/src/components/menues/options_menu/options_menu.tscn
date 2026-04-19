@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://dr8jke8c707oy" path="res://src/components/menues/options_menu/max_fps.gd" id="5_y7dao"]
 [ext_resource type="Texture2D" uid="uid://b7eqyp0mkutmc" path="res://src/components/menues/options_menu/hover-anticlockwise-rotation.svg" id="6_drjwf"]
 [ext_resource type="Script" uid="uid://bxw1wvx0fir6p" path="res://src/components/menues/options_menu/Upscaling.gd" id="6_edglp"]
-[ext_resource type="Script" uid="uid://d24hjlmu5ksti" path="res://src/components/menues/options_menu/audio_options.gd" id="8_ffeyj"]
+[ext_resource type="Script" uid="uid://d24hjlmu5ksti" path="res://src/components/menues/options_menu/audio_options_slider.gd" id="8_ffeyj"]
 [ext_resource type="Script" uid="uid://xu3jaouaielo" path="res://src/components/menues/options_menu/input_options.gd" id="9_6vm2e"]
 [ext_resource type="Script" uid="uid://54166grtk750" path="res://src/components/menues/options_menu/credits_option.gd" id="9_7nwiy"]
 [ext_resource type="PackedScene" uid="uid://6ji18qns07g4" path="res://src/components/menues/options_menu/credit_container.tscn" id="10_6vm2e"]

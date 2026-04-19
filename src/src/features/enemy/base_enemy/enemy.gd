@@ -8,7 +8,6 @@ var players = null
 
 
 func _ready() -> void:
-	
 	players = get_tree().get_nodes_in_group("Player")
 	_on_agent_timer_timeout()
 

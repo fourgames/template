@@ -5,7 +5,6 @@ extends HSlider
 @export var line_edit_sibiling : LineEdit
 @export var reset_button_sibiling : TextureButton
 
-
 var bus_index : int
 
 var map_bus_to_data = {
@@ -26,7 +25,6 @@ func _ready() -> void:
 		line_edit_sibiling.text_submitted.connect(_on_line_edit_text_submitted)
 	else:
 		push_warning("line_edit_sibiling not asigned")
-	
 	
 	if reset_button_sibiling:
 		reset_button_sibiling.pressed.connect(_reset_button_pressed)
@@ -49,6 +47,7 @@ func _on_h_slider_value_changed(new_value: float) -> void:
 func _on_line_edit_text_submitted(new_text: String) -> void:
 	_on_h_slider_value_changed(new_text.to_float())
 	value = new_text.to_float()
+
 
 func _reset_button_pressed():
 	line_edit_sibiling.grab_focus()

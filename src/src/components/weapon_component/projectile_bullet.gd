@@ -18,6 +18,6 @@ func _process(delta: float) -> void:
 func _on_timer_timeout() -> void:
 	queue_free()
 
-
+# TODO seams it pierces eveyrthing fix this should remove on contact
 func _on_hitbox_component_area_entered() -> void:
 	queue_free()

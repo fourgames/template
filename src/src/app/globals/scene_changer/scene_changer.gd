@@ -1,7 +1,9 @@
 @icon("uid://bg13vssnv4p04")
 extends CanvasLayer
 
+
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
+
 
 func change_scene(target_path : String):
 	if OS.is_debug_build():

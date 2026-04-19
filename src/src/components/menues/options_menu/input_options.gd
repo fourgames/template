@@ -1,11 +1,13 @@
 extends VBoxContainer
+
+
 @onready var sensitivity_reset_button: TextureButton = %SensitivityResetButton
 @onready var sensitivity_line_edit: LineEdit = %SensitivityLineEdit
 @onready var sensitivity_h_slider: HSlider = %SensitivityHSlider
 
 
-# Ensure this points to your row scene (the HSplitContainer one)
 const INPUT_CONTAINER = preload("uid://dmbuwj1hlif3n")
+
 
 func _ready() -> void:
 	create_action_list()
@@ -16,30 +18,26 @@ func _ready() -> void:
 	else:
 		push_warning("line_edit_sibiling not asigned")
 	
-	
 	if sensitivity_reset_button:
 		sensitivity_reset_button.pressed.connect(_on_sensitivity_reset_button_pressed)
 	else:
 		push_warning("reset_button_sibiling not asigned")
+	
 	sensitivity_h_slider.value = DataManager.payload.input.sensitivity
 	_update_reset_button_visibility(sensitivity_h_slider.value)
 
 
 
 func create_action_list() -> void:
-	#for child in get_children():
-		#child.queue_free()
-	
 	var actions = InputMap.get_actions()
 	for action in actions:
 		var action_name = String(action)
 		if action_name.begins_with("ui_"): 
 			continue
-			
+		
 		var instance = INPUT_CONTAINER.instantiate()
 		add_child(instance)
 		
-		# We call the function inside the row script
 		if instance.has_method("set_action"):
 			instance.set_action(action_name)
 
@@ -49,8 +47,8 @@ func _update_reset_button_visibility(val: float) -> void:
 		var default_val = DataManager.payload.input.default_sensitivity
 		sensitivity_reset_button.visible = !is_equal_approx(val, default_val)
 
+
 func _on_sensitivity_h_slider_value_changed(new_value: float) -> void:
-	print("DS")
 	DataManager.payload.input.sensitivity = new_value
 	DataManager.save_data()
 	SignalManager.sensitivity_changed.emit(new_value)

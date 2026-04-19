@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+
 var speed
 const WALK_SPEED = 5.0
 const SPRINT_SPEED = 8.0
@@ -24,18 +25,18 @@ var gravity = 9.8
 @onready var camera = %Camera3D
 
 
-#func _ready():
-	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
 # TODO add polish like jump buffer and cayote time
 func _ready() -> void:
 	SignalManager.sensitivity_changed.connect(sensitivity_changed_update_values)
 
-func sensitivity_changed_update_values(value):
+
+func sensitivity_changed_update_values():
+	# TODO THIS IS BROKEN FIXME
 	print("YES")
 	sensitivity = DataManager.payload.input.sensitivity
 	mouse_sensitivity = sensitivity * 0.00005
 	controller_sensitivity = sensitivity * 0.05
+
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
@@ -85,7 +86,7 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
+	
 	# Handle Jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -95,7 +96,7 @@ func _physics_process(delta):
 		speed = SPRINT_SPEED
 	else:
 		speed = WALK_SPEED
-
+	
 	# Get the input direction and handle the movement/deceleration.
 	var input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	#var direction = (head.transform.basis * transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()

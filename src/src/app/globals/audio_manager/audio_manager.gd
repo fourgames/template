@@ -1,14 +1,15 @@
 @icon("uid://bv085ck83vmx6")
 extends Node
 
+
 const MAX_SOUNDS = 8
-const MIN_INTERVAL_MS = 50 # Using milliseconds to match get_ticks_msec
+const MIN_INTERVAL_MS = 50
 var _history = {}
 
 
 func _ready():
-	# This ensures the node and its children keep processing during a pause
 	process_mode = Node.PROCESS_MODE_ALWAYS
+
 
 func play_sound(stream: AudioStream, bus = "SFX", pos = null):
 	if AudioServer.get_bus_index(bus) == -1:
@@ -16,7 +17,6 @@ func play_sound(stream: AudioStream, bus = "SFX", pos = null):
 		
 	var now = Time.get_ticks_msec()
 	
-	# 1. Protection: Spam & Limits
 	if not stream or get_child_count() >= MAX_SOUNDS:
 		return
 	
@@ -25,7 +25,6 @@ func play_sound(stream: AudioStream, bus = "SFX", pos = null):
 	
 	_history[stream] = now
 	
-	# 2. Creation: Smart Node Selection
 	var p 
 	if pos is Vector3:
 		p = AudioStreamPlayer3D.new() 
@@ -35,9 +34,8 @@ func play_sound(stream: AudioStream, bus = "SFX", pos = null):
 		p = AudioStreamPlayer.new()
 	add_child(p)
 	
-	# 3. Configuration
 	p.stream = stream
-	p.bus = bus # Ensure this Bus exists in your Audio Tab!
+	p.bus = bus
 	
 	if p is AudioStreamPlayer3D:
 		p.global_position = pos
@@ -45,10 +43,8 @@ func play_sound(stream: AudioStream, bus = "SFX", pos = null):
 	elif p is AudioStreamPlayer2D:
 		p.global_position = pos
 	
-	# 4. Premium Polish (Safe Defaults)
 	p.pitch_scale = randf_range(0.95, 1.05)
 	p.volume_db = randf_range(-3.0, 0.0)
 	
-	# 5. Execution & Cleanup
 	p.play()
 	p.finished.connect(p.queue_free)

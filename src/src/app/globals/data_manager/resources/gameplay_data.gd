@@ -1,4 +1,5 @@
 extends Resource
 class_name GameplayData
 
-@export var fullscreen  = true
+
+@export var gameplay : bool  = true

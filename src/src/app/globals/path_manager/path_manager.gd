@@ -1,6 +1,7 @@
 @icon("uid://cfn5y77pqysad")
 extends Node
 
+
 ## Features
 const PLAYER_SCENE = "uid://c0w0o0laooyhw"
 

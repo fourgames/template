@@ -13,7 +13,6 @@ extends HSplitContainer
 @onready var secondary_input_button = %SecondaryInputButton
 @onready var secondary_input_texture_button = %SecondaryInputTextureButton
 
-
 var action_name: String
 var is_rebind_primary: bool = false
 var is_listening: bool = false
@@ -45,7 +44,6 @@ func _on_secondary_pressed():
 
 func _on_reset_pressed():
 	primary_input_button.grab_focus()
-	# 1. Clear custom save data
 	var list = DataManager.payload.input.inpit_list
 	for i in range(list.size() - 1, -1, -1):
 		if list[i]["action"] == action_name:
@@ -54,7 +52,6 @@ func _on_reset_pressed():
 	DataManager.payload.input.inpit_list = list
 	DataManager.save_data()
 	
-	# 2. Revert engine to ProjectSettings defaults
 	var setting_path = "input/" + action_name
 	if ProjectSettings.has_setting(setting_path):
 		InputMap.action_erase_events(action_name)
@@ -101,7 +98,6 @@ func accept_new_event(new_event: InputEvent):
 			found_entry = entry
 			break
 	
-	# BOOTSTRAP: Capture existing engine state so we don't lose the "other" key
 	if found_entry == null:
 		var current_events = InputMap.action_get_events(action_name)
 		var p_str = ""
@@ -113,7 +109,6 @@ func accept_new_event(new_event: InputEvent):
 		found_entry = {"action": action_name, "primary": p_str, "secondary": s_str}
 		list.append(found_entry)
 	
-	# Update only the target slot
 	if is_rebind_primary:
 		found_entry["primary"] = new_text
 	else:
@@ -143,27 +138,22 @@ func _sync_input_map_from_payload():
 		
 	InputMap.action_erase_events(action_name)
 	
-	# Slot 0 (Primary)
 	var p_ev = _parse_string_to_event(custom_entry["primary"])
 	if p_ev:
 		InputMap.action_add_event(action_name, p_ev)
 	else:
-		# Add placeholder to keep secondary in Index 1
 		var placeholder = InputEventKey.new()
 		placeholder.keycode = KEY_NONE
 		placeholder.physical_keycode = KEY_NONE
 		InputMap.action_add_event(action_name, placeholder)
 		
-	# Slot 1 (Secondary)
 	var s_ev = _parse_string_to_event(custom_entry["secondary"])
 	if s_ev:
 		InputMap.action_add_event(action_name, s_ev)
 
 
-# NEW: Reliable string converter that handles Physical Keys (Standard in Godot 4)
 func _event_to_string(event: InputEvent) -> String:
 	if event is InputEventKey:
-		# If keycode is 0, it's a Physical key. Use physical_keycode instead.
 		var code = event.keycode if event.keycode != KEY_NONE else event.physical_keycode
 		if code == KEY_NONE: return ""
 		return OS.get_keycode_string(code)
@@ -218,10 +208,8 @@ func update_icons():
 	
 	var events = InputMap.action_get_events(action_name)
 	
-	# Icon 0 (Primary)
 	if events.size() > 0:
 		var ev = events[0]
-		# Only hide if it's our specific KEY_NONE placeholder
 		var is_placeholder = ev is InputEventKey and ev.keycode == KEY_NONE and ev.physical_keycode == KEY_NONE
 		if is_placeholder:
 			primary_input_texture_button.texture_normal = null
@@ -231,7 +219,6 @@ func update_icons():
 	else:
 		primary_input_texture_button.texture_normal = null
 	
-	# Icon 1 (Secondary)
 	if events.size() > 1:
 		var s_path = ControllerIcons._convert_event_to_path(events[1])
 		secondary_input_texture_button.texture_normal = ControllerIcons.parse_path(s_path)
@@ -257,7 +244,6 @@ func _update_reset_button_visibility():
 		var defaults = ProjectSettings.get_setting(setting_path)["events"]
 		var def_p = ""
 		var def_s = ""
-		# Use the NEW converter for checking visibility too
 		if defaults.size() > 0: def_p = _event_to_string(defaults[0])
 		if defaults.size() > 1: def_s = _event_to_string(defaults[1])
 		

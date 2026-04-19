@@ -1,7 +1,10 @@
 extends CanvasLayer
 
+
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+
+
 func _ready() -> void:
-# Connecting the signals to their respective functions
 	%PausedButton.pressed.connect(_on_paused_button_pressed)
 	%ContinueButton.pressed.connect(_on_continue_button_pressed)
 	%OptionsButton.pressed.connect(_on_options_button_pressed)
@@ -9,8 +12,10 @@ func _ready() -> void:
 	
 	%ContinueButton.grab_focus()
 
+
 func _on_paused_button_pressed() -> void:
 	GameManager.change_state(GameManager.GameState.PLAYING)
+
 
 func _on_continue_button_pressed() -> void:
 	GameManager.change_state(GameManager.GameState.PLAYING)
@@ -22,8 +27,6 @@ func _on_options_button_pressed() -> void:
 
 func _on_quit_button_pressed() -> void:
 	get_tree().quit()
-
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 
 func play_backwards() -> void:

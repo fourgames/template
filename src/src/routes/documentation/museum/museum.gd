@@ -2,11 +2,9 @@
 extends Node2D
 
 
-# Called when the node enters the scene tree for the first time.
+## Gyms, Zoos, and Museums: Your documentation should be in-game by Robin-Yann Storm
+## - https://www.youtube.com/watch?v=5PJRCz0t7yY
+
+
 func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
 	pass
