@@ -1,24 +1,33 @@
 @icon("uid://deb6kvmuw5vgc")
 extends Node3D
-
 class_name NumbersComponent
 
-func set_and_play(value):
-	var text = abs(int(value))
 
+const COLOR_HEAL = Color(0.15, 0.85, 0.15) 
+const COLOR_LOW  = Color(1, 1, 1)
+const COLOR_MID  = Color(1, 0.9, 0.2)
+const COLOR_HIGH = Color(1, 0.6, 0.1)
+const COLOR_CRIT = Color(0.9, 0.1, 0.1)
+
+
+func setup(value):
+	var amount = abs(int(value))
+	var target_color: Color
+	
 	if value > 0:
-		%RichTextLabel.text = "[color=green]" + str(text)
+		target_color = COLOR_HEAL
 	elif value >= -122:
-		%RichTextLabel.text = "[color=white]" + str(text)
+		target_color = COLOR_LOW
 	elif value >= -194:
-		%RichTextLabel.text = "[color=yellow]" + str(text)
+		target_color = COLOR_MID
 	elif value >= -266:
-		%RichTextLabel.text = "[color=orange]" + str(text)
+		target_color = COLOR_HIGH
 	else:
-		%RichTextLabel.text = "[color=red]" + str(text)
+		target_color = COLOR_CRIT
+
+	%RichTextLabel.text = "[color=#%s]%s[/color]" % [target_color.to_html(false), amount]
 
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
-	match anim_name:
-		"rise_and_fade":
-			queue_free()
+	if anim_name == "rise_and_fade":
+		queue_free()

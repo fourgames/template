@@ -43,4 +43,4 @@ func apply_health_change(amount: int):
 	var numbers_instance = numbers_scene.instantiate()
 	get_parent().add_child(numbers_instance)
 	numbers_instance.global_position = get_parent().position
-	numbers_instance.set_and_play(amount)
+	numbers_instance.setup(amount)
