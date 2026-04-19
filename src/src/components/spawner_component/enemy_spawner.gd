@@ -1,25 +1,24 @@
 @icon("uid://5qj5fd1fkas2")
 extends Node3D
 
-# TODO this works well but maybe make it more simple starting with 1 spawn point that you use this to spawn even player at start 
 
 @export var spawn_data_list: Array[EnemySpawnData] = []
 
-
-
 var total_time: float = 0
-
-#@export var areas : Array [Area3D]
-
 var current_spawn : int = 0 
-
 var spawn_points : Array [Marker3D]
 
+
+# TODO Rework to make it also work with waves instead of only time make it more modular
+# Maybe if start and end time is 0 it will be wave based idk or toggle on the resource
+# Make the custom resource EnemySpawnDate better 
+# Make it more simple start with 1 spawn point
+# Give better names to nodes and func
 func _ready() -> void:
-	# Only keep the loop for gathering spawn points
 	for i in get_children():
 		if i is Marker3D:
 			spawn_points.append(i)
+
 
 func _process(delta: float) -> void:
 	total_time += delta 
@@ -39,11 +38,13 @@ func _process(delta: float) -> void:
 				if total_time >= spawn_data.time_start + (spawn_data.spawned_enemies * interval):
 					spawn_enemy(spawn_data)
 
+
 func spawn_enemy(spawn_data):
 	var new_enemy = spawn_data.enemy_scene.instantiate()
 	add_child(new_enemy, true)
 	new_enemy.global_transform.origin = get_next_position()
 	spawn_data.spawned_enemies += 1
+
 
 func get_next_position():
 	var map_rid = get_tree().get_first_node_in_group("Navigation").get_navigation_map()
@@ -68,6 +69,7 @@ func get_next_position():
 	# Fallback: maintain height here too
 	return spawn_points[0].global_transform.origin
 
+
 func _on_area_3d_body_exited(body: Node3D) -> void:
 	if self.is_ancestor_of(body):
 		var area = spawn_points[current_spawn]
@@ -75,14 +77,3 @@ func _on_area_3d_body_exited(body: Node3D) -> void:
 		body.global_transform.origin = area.global_transform.origin + Vector3(randf_range(-0.5, 0.5), 0, randf_range(-0.5, 0.5))
 		body.physics_interpolation_mode = PHYSICS_INTERPOLATION_MODE_ON
 		current_spawn = (current_spawn + 1) % spawn_points.size() 
-#func _on_area_3d_body_exited(body: Node3D) -> void: old shit skiped half the points and stupid for loop with break
-	#if self.is_ancestor_of(body):
-		#for i in spawn_points.size():
-			#var area = spawn_points[current_spawn]
-			##if area.get_overlapping_areas().is_empty(): old shit before new system
-			#current_spawn = (current_spawn + 1) % spawn_points.size()
-			#body.physics_interpolation_mode = PHYSICS_INTERPOLATION_MODE_OFF
-			#body.global_transform.origin = area.global_transform.origin + Vector3(randf_range(-0.5, 0.5), 0, randf_range(-0.5, 0.5))
-			#body.physics_interpolation_mode = PHYSICS_INTERPOLATION_MODE_ON
-			#current_spawn = (current_spawn + 1) % spawn_points.size()
-			#break

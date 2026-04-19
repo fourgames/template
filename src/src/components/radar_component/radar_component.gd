@@ -5,7 +5,7 @@ extends Node3D
 
 var detected_list: Array = []
 
-# Called when the node enters the scene tree for the first time.
+# TODO Maybe unnessesary comp since its such a small thing to do target = get_tree().get_nodes_in_group()
 func _ready() -> void:
 	var timer = Timer.new()
 	add_child(timer)
@@ -13,17 +13,13 @@ func _ready() -> void:
 	timer.timeout.connect(_on_scan_timer_timeout)
 	timer.start()
 
+
 func _on_scan_timer_timeout():
 	var potential_targets = get_tree().get_nodes_in_group(target_group)
 	var new_list = []
 	
 	for target in potential_targets:
-		#if TODO could make this a area3d to only add when in range
 		new_list.append(target)
 	
 	detected_list = new_list
 	print("RadarComponent found: ", detected_list.size())
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-	#pass
