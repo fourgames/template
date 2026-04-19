@@ -50,6 +50,12 @@ enabled=PackedStringArray("res://addons/DualEditor/plugin.cfg", "res://addons/GP
 folder_colors={
 "res://addons/": "gray",
 "res://assets/": "yellow",
+"res://components/": "blue",
+"res://components/menues/": "red",
+"res://core/": "red",
+"res://features/": "green",
+"res://public/": "orange",
+"res://routes/": "pink",
 "res://src/": "blue",
 "res://src/app/": "red",
 "res://src/components/": "green",

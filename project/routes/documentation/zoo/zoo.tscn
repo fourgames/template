@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://1pdfsk51ub8k"]
-
-[ext_resource type="PackedScene" uid="uid://n4y2s8gdj1cu" path="res://src/routes/documentation/gym/gym.tscn" id="1_47vh0"]
-[ext_resource type="Script" uid="uid://ctwu6gu00sd7i" path="res://src/routes/documentation/zoo/zoo.gd" id="1_q45t7"]
-
-[node name="Zoo" type="Node3D" unique_id=913394028]
-script = ExtResource("1_q45t7")
-
-[node name="Gym" parent="." unique_id=1944218977 instance=ExtResource("1_47vh0")]

@@ -6,7 +6,7 @@ var shots_per_fire: int = 1
 var spread_angle : float = 5
 var radius : float = 6
 
-var projectile_bullet = preload(PathManager.projectile_bullet)
+var projectile = preload(PathManager.projectile)
 var projectile_instance
 
 
@@ -52,7 +52,7 @@ func _physics_process(delta: float) -> void:
 func _on_fire_timer_timeout() -> void:
 	if get_overlapping_areas().size() > 0:
 		$ActionsAnim.play("Rifle_Fire_Anim")
-		spawn_projectile(projectile_bullet, shots_per_fire, spread_angle)
+		spawn_projectile(projectile, shots_per_fire, spread_angle)
 
 func spawn_projectile(projectile_scene, shots, spread):
 	var angle_step = spread / max(shots - 1, 1) if shots > 1 else spread
