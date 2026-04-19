@@ -48,7 +48,7 @@ metadata/_custom_type_script = "uid://tl548twdjy8o"
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ostbp"]
 material = ExtResource("4_5v58r")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_2pjm7"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_5ll4s"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="Animation" id="Animation_8jo76"]
@@ -223,14 +223,13 @@ filter_walkable_low_height_spans = true
 [node name="Gym" type="Node3D" unique_id=1944218977]
 script = ExtResource("1_a854a")
 
-[node name="TopDownPlayer" parent="." unique_id=598808722 instance=ExtResource("1_lpwyr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.49, 1)
+[node name="Player" parent="." unique_id=598808722 groups=["Player"] instance=ExtResource("1_lpwyr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.48999828, 0)
 
-[node name="WeaponComponent2" parent="TopDownPlayer" unique_id=1926944636 instance=ExtResource("3_5ll4s")]
-collision_mask = 4
+[node name="WeaponComponent" parent="Player" unique_id=1926944636 instance=ExtResource("3_5ll4s")]
 
-[node name="FPSPlayer" parent="." unique_id=1417458 instance=ExtResource("19_x7phl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.48999953, -4.2694964)
+[node name="Player2" parent="." unique_id=1417458 instance=ExtResource("19_x7phl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.48999953, -4)
 
 [node name="GymLabel3D" type="Label3D" parent="." unique_id=1976683462]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4333043, 5.085642, -9.140066)
@@ -267,20 +266,19 @@ mesh = SubResource("CapsuleMesh_ostbp")
 
 [node name="HealthBarComponent" parent="FurnanceExample" unique_id=864028086 instance=ExtResource("6_pn1np")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 2.5, 0)
-texture = SubResource("ViewportTexture_2pjm7")
+texture = SubResource("ViewportTexture_5ll4s")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="FurnanceExample" unique_id=1138809295]
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_2d8br")
 autoplay = &"new_animation"
 
-[node name="HurtboxComponent" parent="FurnanceExample" unique_id=1950115901 node_paths=PackedStringArray("health_component", "health_bar_component", "hit_flash_component", "numbers_component") instance=ExtResource("7_60eds")]
+[node name="HurtboxComponent" parent="FurnanceExample" unique_id=1950115901 node_paths=PackedStringArray("health_component", "health_bar_component", "hit_flash_component") instance=ExtResource("7_60eds")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 collision_layer = 4
 health_component = NodePath("../HealthComponent")
 health_bar_component = NodePath("../HealthBarComponent")
 hit_flash_component = NodePath("../HitFlashComponent")
-numbers_component = NodePath("../NumbersComponent")
 
 [node name="CollisionShape3D" parent="FurnanceExample/HurtboxComponent" index="0" unique_id=1367186580]
 shape = SubResource("CapsuleShape3D_30h57")

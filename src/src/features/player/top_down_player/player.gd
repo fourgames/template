@@ -40,7 +40,11 @@ func _physics_process(_delta: float) -> void:
 		velocity.z = movement_direction.z * SPEED * speed_multiplier
 		
 		# TODO rotation stuff above some animation stuff and bellow some pausing stuff
-		$MeshInstance3D.look_at(position - movement_direction)#.rotated(Vector3.UP, deg_to_rad(45)))
+		var look_target = $MeshInstance3D.global_position - movement_direction
+		# Ensure the target is at the exact same height as the mesh
+		look_target.y = $MeshInstance3D.global_position.y 
+
+		$MeshInstance3D.look_at(look_target, Vector3.UP)
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
