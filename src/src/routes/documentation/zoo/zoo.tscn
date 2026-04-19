@@ -6,10 +6,4 @@
 [node name="Zoo" type="Node3D" unique_id=913394028]
 script = ExtResource("1_q45t7")
 
-[node name="ZooLabel3D" type="Label3D" parent="." unique_id=453625779]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14962101, 3, 2.8488145)
-billboard = 1
-text = "Zoo: A visual gallery for viewing 3D models, NPCs, and VFX in-engine to compare their scale, lighting, and appearance without searching through file names."
-autowrap_mode = 3
-
 [node name="Gym" parent="." unique_id=1944218977 instance=ExtResource("1_47vh0")]

@@ -2,10 +2,29 @@
 extends CanvasLayer
 
 
-# Called when the node enters the scene tree for the first time.
-# OPT can break it into 2 scripts and instance this scene but its only used in demo and if i did that just put autoplay on animation
+@onready var animation_player: AnimationPlayer = %AnimationPlayer
+
 func _ready() -> void:
-	await $Timer.timeout
-	get_tree().paused = true
-	$AnimationPlayer.play("new_animation")
+	layer = 100
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	
+	await get_tree().create_timer(1.0).timeout
+	
+	GameManager.change_state(GameManager.GameState.DEMO)
+	get_tree().paused = true
+	animation_player.play("new_animation")
+	%WishlistButton.grab_focus()
+
+
+func _on_wishlist_button_pressed() -> void:
+	OS.shell_open("steam://store/2807130")
+
+
+func _on_restart_button_pressed() -> void:
+	pass # TODO hold to reset save data
+	# 1. Needs new data
+	# 2. Needs progressbar fill to work
+
+
+func _on_quit_button_pressed() -> void:
+	get_tree().quit()

@@ -2,7 +2,7 @@
 extends Node
 
 
-enum GameState { MAIN_MENU, PLAYING, PAUSE_MENU, OPTIONS_MENU }
+enum GameState { MAIN_MENU, PLAYING, PAUSE_MENU, OPTIONS_MENU, DEMO }
 var current_state: GameState = GameState.MAIN_MENU
 var previous_state: GameState = GameState.MAIN_MENU
 
@@ -88,6 +88,9 @@ func change_state(new_state):
 			# We don't need to change pause logic here; 
 			# it stays paused from whatever opened it
 			active_menu = OPTIONS_MENU.instantiate()
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		GameState.DEMO:
+			active_menu = null
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			
 	# 4. Finalize

@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://yuweybb57rjy"]
 
-[ext_resource type="Theme" uid="uid://b56qgya4xh3s2" path="res://src/app/theme.tres" id="1_6sh7m"]
 [ext_resource type="Script" uid="uid://cwu0n13e0icn" path="res://src/app/globals/demo_manager/demo_manager.gd" id="1_vahwi"]
 
 [sub_resource type="Animation" id="Animation_g4dmw"]
@@ -42,11 +41,6 @@ _data = {
 [node name="DemoManager" type="CanvasLayer" unique_id=933741628]
 script = ExtResource("1_vahwi")
 
-[node name="Timer" type="Timer" parent="." unique_id=1086704024]
-wait_time = 5.0
-one_shot = true
-autostart = true
-
 [node name="Control" type="Control" parent="." unique_id=1250122977]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 3
@@ -55,15 +49,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="ColorRect" type="Panel" parent="Control" unique_id=629784376]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("1_6sh7m")
 
 [node name="CenterContainer" type="CenterContainer" parent="Control" unique_id=463879389]
 layout_mode = 1
@@ -86,13 +71,23 @@ text = "This title’s demo period has ended.
 Progress is kept for the full game unless restarting to play again."
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="Control/CenterContainer/PanelContainer/VBoxContainer" unique_id=229863700]
+[node name="WishlistButton" type="Button" parent="Control/CenterContainer/PanelContainer/VBoxContainer" unique_id=229863700]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Wishlist"
 
-[node name="Button2" type="Button" parent="Control/CenterContainer/PanelContainer/VBoxContainer" unique_id=1356191857]
+[node name="RestartButton" type="Button" parent="Control/CenterContainer/PanelContainer/VBoxContainer" unique_id=1356191857]
 layout_mode = 2
 text = "Restart"
 
+[node name="QuitButton" type="Button" parent="Control/CenterContainer/PanelContainer/VBoxContainer" unique_id=1043853003]
+layout_mode = 2
+text = "Quit"
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=222090852]
+unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_6npjj")
+
+[connection signal="pressed" from="Control/CenterContainer/PanelContainer/VBoxContainer/WishlistButton" to="." method="_on_wishlist_button_pressed"]
+[connection signal="pressed" from="Control/CenterContainer/PanelContainer/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="Control/CenterContainer/PanelContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
