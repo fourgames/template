@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bytxkqqg13lxf"]
 
-[ext_resource type="Script" uid="uid://f3af62xo8if0" path="res://src/components/menues/boot_splash_menu/boot_splash_menu.gd" id="1_n2hxm"]
+[ext_resource type="Script" uid="uid://f3af62xo8if0" path="res://components/menues/boot_splash_menu/boot_splash_menu.gd" id="1_n2hxm"]
 
 [sub_resource type="Animation" id="Animation_s2ta7"]
 length = 0.001
