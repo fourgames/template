@@ -1,6 +1,8 @@
 @icon("uid://b6ynqcq6i2vlo")
 extends Node
 
+var UI_HOVER_SOUND = preload(PathManager.UI_HOVER_SOUND)
+var UI_PRESS_SOUND = preload(PathManager.UI_PRESS_SOUND)
 
 var _active_tweens: Dictionary = {}
 
@@ -47,9 +49,9 @@ func _on_node_manager_received(node: Node) -> void:
 
 func _handle_ui_event(node: Control, type: String) -> void:
 	if type == "hover":
-		AudioManager.play_sound(PathManager.UI_HOVER_SOUND)
+		AudioManager.play_sound(UI_HOVER_SOUND)
 	elif type == "press":
-		AudioManager.play_sound(PathManager.UI_PRESS_SOUND)
+		AudioManager.play_sound(UI_PRESS_SOUND)
 	
 	_animate_button(node, type)
 

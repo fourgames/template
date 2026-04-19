@@ -28,11 +28,11 @@ var gravity = 9.8
 # TODO add polish like jump buffer and cayote time
 func _ready() -> void:
 	SignalManager.sensitivity_changed.connect(sensitivity_changed_update_values)
+	sensitivity_changed_update_values()
 
 
 func sensitivity_changed_update_values():
 	# TODO THIS IS BROKEN
-	print("YES")
 	sensitivity = DataManager.payload.input.sensitivity
 	mouse_sensitivity = sensitivity * 0.00005
 	controller_sensitivity = sensitivity * 0.05

@@ -51,7 +51,7 @@ func _update_reset_button_visibility(val: float) -> void:
 func _on_sensitivity_h_slider_value_changed(new_value: float) -> void:
 	DataManager.payload.input.sensitivity = new_value
 	DataManager.save_data()
-	SignalManager.sensitivity_changed.emit(new_value)
+	SignalManager.sensitivity_changed.emit()
 	print(new_value)
 	if sensitivity_line_edit:
 		sensitivity_line_edit.text = str(int(new_value))
