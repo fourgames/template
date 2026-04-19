@@ -2,9 +2,6 @@
 extends Sprite3D
 class_name HealthBarComponent
 
-# TODO FIND AND GET THEMES AGAIN IN THIS COMP FOLDER
-
-# TODO if negative damage then change first but if positive change oposite
 
 @onready var health_progress_bar: ProgressBar = %HealthProgressBar
 @onready var under_progress_bar: ProgressBar = %UnderProgressBar
@@ -19,14 +16,11 @@ func _ready() -> void:
 	#under_progress_bar.add_theme_stylebox_override("background", load("uid://xafwcgqcyvwy"))
 	#under_progress_bar.add_theme_stylebox_override("fill", load("uid://cxc3y1u6v10h"))
 
-
-# OPT i tried to write more optimized but idk weird results so this will do for now cant spend to much time here now
+# TODO think weird visual behavior sometimes and also implement theme variants above
 var heal : bool
 func apply_health_bar(amount: int, health_component: HealthComponent) -> void:
 	var max_health_value = health_component.max_health
 	%HealthProgressBar.max_value = max_health_value
-	#print(%HealthProgressBar.max_value)
-	#print(%HealthProgressBar.value) # this is before change is applied so yes
 	%UnderProgressBar.max_value = max_health_value
 	
 	if amount > 0: # Heal
