@@ -29,6 +29,14 @@ var gravity = 9.8
 func _ready() -> void:
 	SignalManager.sensitivity_changed.connect(sensitivity_changed_update_values)
 	sensitivity_changed_update_values()
+	# Force the physics state to be still
+	velocity = Vector3.ZERO
+	set_physics_process(false) # Disable physics entirely
+	
+	# Wait for the world to load/settle
+	await get_tree().create_timer(0.1).timeout 
+	
+	set_physics_process(true) # Re-enable physics
 
 
 func sensitivity_changed_update_values():
@@ -39,6 +47,8 @@ func sensitivity_changed_update_values():
 
 
 func _unhandled_input(event):
+	if GameManager.current_state != GameManager.GameState.PLAYING:
+		return
 	if event is InputEventMouseMotion:
 		head.rotate_y(-event.relative.x * mouse_sensitivity)
 		camera.rotate_x(-event.relative.y * mouse_sensitivity)
@@ -46,6 +56,9 @@ func _unhandled_input(event):
 
 
 func _physics_process(delta):
+	if GameManager.current_state != GameManager.GameState.PLAYING:
+		return
+	
 	var look_dir = Input.get_vector("look_left", "look_right", "look_up", "look_down")
 	
 	if look_dir.length() > 0:
@@ -113,12 +126,27 @@ func _physics_process(delta):
 		velocity.z = lerp(velocity.z, direction.z * speed, delta * 3.0)
 	
 	# Head bob
-	t_bob += delta * velocity.length() * float(is_on_floor())
-	camera.transform.origin = _headbob(t_bob)
+	#t_bob += delta * velocity.length() * float(is_on_floor())
+	#camera.transform.origin = _headbob(t_bob)
+	if is_on_floor() and velocity.length() > 0.1:
+		t_bob += delta * velocity.length()
+		camera.transform.origin = _headbob(t_bob)
+	else:
+		t_bob = lerp(t_bob, 0.0, delta * 2.0)
+		camera.transform.origin = camera.transform.origin.lerp(Vector3.ZERO, delta * 2.0)
 	
+	## FOV
+	#var velocity_clamped = clamp(velocity.length(), 0.5, SPRINT_SPEED * 2)
+	#var target_fov = BASE_FOV + FOV_CHANGE * velocity_clamped
+	#camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
+	#
+	#move_and_slide()
 	# FOV
-	var velocity_clamped = clamp(velocity.length(), 0.5, SPRINT_SPEED * 2)
+	# We use 0.0 so that standing still doesn't create a "zoom" offset
+	var velocity_clamped = clamp(velocity.length(), 0.0, SPRINT_SPEED * 2)
 	var target_fov = BASE_FOV + FOV_CHANGE * velocity_clamped
+	
+	# Only apply the lerp if the player is playing
 	camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
 	
 	move_and_slide()
