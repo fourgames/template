@@ -23,7 +23,7 @@ Feature-based structure: everything is contained in its own folder with its `.ts
 <p align="center">
   <img alt="Structure 1" src=".github/images/web-inspired-architecture/routes.png" width="49%"/>
   <img alt="Structure 2" src=".github/images/web-inspired-architecture/core.png" width="49%"/>
-  <img alt="Structure 3" src=".github/images/web-inspired-architecture/routes.png" width="49%"/>
+  <img alt="Structure 3" src=".github/images/web-inspired-architecture/addons.png" width="49%"/>
   <img alt="Structure 4" src=".github/images/web-inspired-architecture/components.png" width="49%"/>
 </p>
 
