@@ -16,6 +16,19 @@ jobs:
         with:
           lfs: true
 
+      # This step sets up the Godot executable manually so we can run the "Initial Import"
+      - name: Setup Godot for Pre-Import
+        run: |
+          wget https://github.com/godotengine/godot/releases/download/${{ env.GODOT_VERSION }}-stable/Godot_v${{ env.GODOT_VERSION }}-stable_linux.x86_64.zip
+          unzip Godot_v${{ env.GODOT_VERSION }}-stable_linux.x86_64.zip
+          mv Godot_v${{ env.GODOT_VERSION }}-stable_linux.x86_64 godot.x86_64
+          chmod +x godot.x86_64
+
+      # Pass 1: The "First Time Opening" fix. 
+      # This generates the .godot folder and resolves Terrain3D parse errors.
+      - name: Godot Initial Import (Headless)
+        run: ./godot.x86_64 --headless --editor --quit-after-1500ms || true
+
       - name: Godot Export
         id: export
         uses: firebelley/godot-export@v7.0.0
@@ -33,7 +46,7 @@ jobs:
           mkdir -p dist/macOS
           mkdir -p "dist/Windows Desktop"
 
-          # 1. Process macOS (Copying from the 'out' folder now)
+          # 1. Process macOS
           cp -r out/macOS/* ./dist/macOS/
           cd dist/macOS
           if [ -f "game.zip" ]; then
@@ -48,7 +61,7 @@ jobs:
           xattr -cr game.app || true
           cd ../..
 
-          # 2. Process Windows (Copying from the 'out' folder now)
+          # 2. Process Windows
           cp -r out/"Windows Desktop"/* "./dist/Windows Desktop/"
           
       - name: Generate Steam TOTP
