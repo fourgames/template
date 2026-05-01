@@ -16,6 +16,7 @@ jobs:
         with:
           lfs: true
 
+      # If it allways fails to build then build manualy and add git lfs to store builds on the repo and skip this step
       - name: Godot Export
         id: export
         uses: firebelley/godot-export@v7.0.0
@@ -28,6 +29,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      # Think broken but have working in reforge-front private
       - name: Move and Prepare Builds
         run: |
           mkdir -p dist/macOS
@@ -65,9 +67,9 @@ jobs:
           totp: ${{ steps.steam_totp.outputs.code }}
           appId: ${{ vars.STEAM_APP_ID }}
           rootPath: dist
+          # You are not allowed to automate it on default breanch so use beta and then manualy set live in steamworks
           releaseBranch: "beta"
           buildDescription: "Build ${{ github.run_number }}"
-          depot1Path: "." 
-          args: >-
-            +set_depot_path "${{ vars.STEAM_DEPOT_WINDOWS }}" "Windows Desktop"
-            +set_depot_path "${{ vars.STEAM_DEPOT_MACOS }}" "macOS"
+          # Needs to be sequential order (Depot 1 (2807131) = macOS, Depot 2 (2807132) = Windows Desktop)
+          depot1Path: "macOS"
+          depot2Path: "Windows Desktop"
