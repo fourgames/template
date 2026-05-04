@@ -10,7 +10,7 @@
 </p>
 
 ## 🪷 Philosophy
-**Four core pillars**: `Controller First` design automatic focus and neighbor assignment. `Instance on Demand` keeps performance high by only spawning nodes when needed. `Run-Any-Scene` allowing you to test any scene in isolation. `The Godot Way` leveraging what makes godot great Resources, Signals, and Composition.
+**Four core pillars**: [`Controller First`](https://store.steampowered.com/news/app/593110/view/4142827237888316811) design automatic focus and neighbor assignment. `Instance on Demand` keeps performance high by only spawning nodes when needed. `Run-Any-Scene` allowing you to test any scene in isolation. `The Godot Way` leveraging what makes godot great Resources, Signals, and Composition.
 
 > [!TIP]
 > Every major feature includes a `YouTube` link at the top of the script. We utilize `Playground.tscn` for in-game documentation, following the [Robin-Yann Storm](https://www.youtube.com/watch?v=5PJRCz0t7yY) philosophy.
