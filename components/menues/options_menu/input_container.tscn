@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dmbuwj1hlif3n"]
 
-[ext_resource type="Script" uid="uid://bvbjtf8bdjr3g" path="res://src/components/menues/options_menu/input_container.gd" id="1_ois1q"]
-[ext_resource type="Texture2D" uid="uid://bg15420ibjlhr" path="res://src/components/menues/options_menu/normal-anticlockwise-rotation.svg" id="2_6h4s8"]
-[ext_resource type="Texture2D" uid="uid://bfllxind7thyf" path="res://src/components/menues/options_menu/press-anticlockwise-rotation.svg" id="3_6h4s8"]
-[ext_resource type="Texture2D" uid="uid://pgx74b2ttota" path="res://src/components/controller_icons/resources/input_option.tres" id="3_8qki5"]
-[ext_resource type="Texture2D" uid="uid://b7eqyp0mkutmc" path="res://src/components/menues/options_menu/hover-anticlockwise-rotation.svg" id="4_p1tg7"]
+[ext_resource type="Script" uid="uid://bvbjtf8bdjr3g" path="res://components/menues/options_menu/input_container.gd" id="1_ois1q"]
+[ext_resource type="Texture2D" uid="uid://bg15420ibjlhr" path="res://components/menues/options_menu/normal-anticlockwise-rotation.svg" id="2_6h4s8"]
+[ext_resource type="Texture2D" uid="uid://bfllxind7thyf" path="res://components/menues/options_menu/press-anticlockwise-rotation.svg" id="3_6h4s8"]
+[ext_resource type="Texture2D" uid="uid://pgx74b2ttota" path="res://components/controller_icons/resources/input_option.tres" id="3_8qki5"]
+[ext_resource type="Texture2D" uid="uid://b7eqyp0mkutmc" path="res://components/menues/options_menu/hover-anticlockwise-rotation.svg" id="4_p1tg7"]
 
 [node name="InputHSplitContainer" type="HSplitContainer" unique_id=835391941]
 custom_minimum_size = Vector2(0, 32)

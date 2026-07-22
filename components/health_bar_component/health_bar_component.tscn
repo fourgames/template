@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://brh1hxjs4kurc"]
 
-[ext_resource type="Script" uid="uid://dthjxxocetqy6" path="res://src/components/health_bar_component/health_bar_component.gd" id="1_dkyac"]
-[ext_resource type="StyleBox" uid="uid://kuw0m6acholl" path="res://src/components/health_bar_component/resources/health_progress_bar_background.tres" id="2_75idb"]
-[ext_resource type="StyleBox" uid="uid://bujw1vv42y82y" path="res://src/components/health_bar_component/resources/health_progress_bar_fill_v1.tres" id="3_wifqr"]
-[ext_resource type="StyleBox" uid="uid://xafwcgqcyvwy" path="res://src/components/health_bar_component/resources/under_progress_bar_background.tres" id="4_sxf3n"]
-[ext_resource type="StyleBox" uid="uid://bhbsodq0fvcch" path="res://src/components/health_bar_component/resources/under_progress_bar_fill_v1.tres" id="5_liui7"]
+[ext_resource type="Script" uid="uid://dthjxxocetqy6" path="res://components/health_bar_component/health_bar_component.gd" id="1_dkyac"]
+[ext_resource type="StyleBox" uid="uid://kuw0m6acholl" path="res://components/health_bar_component/resources/health_progress_bar_background.tres" id="2_75idb"]
+[ext_resource type="StyleBox" uid="uid://bujw1vv42y82y" path="res://components/health_bar_component/resources/health_progress_bar_fill_v1.tres" id="3_wifqr"]
+[ext_resource type="StyleBox" uid="uid://xafwcgqcyvwy" path="res://components/health_bar_component/resources/under_progress_bar_background.tres" id="4_sxf3n"]
+[ext_resource type="StyleBox" uid="uid://bhbsodq0fvcch" path="res://components/health_bar_component/resources/under_progress_bar_fill_v1.tres" id="5_liui7"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_0vcal"]
 viewport_path = NodePath("SubViewport")

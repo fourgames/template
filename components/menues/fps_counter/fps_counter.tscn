@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://crsafe53nr0gk"]
 
-[ext_resource type="Script" uid="uid://k63kbjnxhs7e" path="res://src/components/menues/fps_counter/fps_counter.gd" id="1_kfi8j"]
+[ext_resource type="Script" uid="uid://k63kbjnxhs7e" path="res://components/menues/fps_counter/fps_counter.gd" id="1_kfi8j"]
 
 [node name="FpsCounter" type="CanvasLayer" unique_id=550602975]
 process_mode = 3

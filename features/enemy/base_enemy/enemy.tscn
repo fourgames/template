@@ -1,21 +1,21 @@
 [gd_scene format=3 uid="uid://yhaifffbcefc"]
 
-[ext_resource type="Script" uid="uid://se1u5l45tax0" path="res://src/features/enemy/base_enemy/enemy.gd" id="1_ed52l"]
-[ext_resource type="PackedScene" uid="uid://8veaxrlv0egr" path="res://src/components/hurtbox_component/hurtbox_component.tscn" id="2_6a8qn"]
-[ext_resource type="PackedScene" uid="uid://brh1hxjs4kurc" path="res://src/components/health_bar_component/health_bar_component.tscn" id="3_ed52l"]
-[ext_resource type="Script" uid="uid://qh30lijols1x" path="res://src/components/hit_flash_component/hit_flash_component.gd" id="4_31g7c"]
-[ext_resource type="PackedScene" uid="uid://juuvvol6wwhe" path="res://src/components/hitbox_component/hitbox_component.tscn" id="5_bnho5"]
-[ext_resource type="PackedScene" uid="uid://d07cmkdpirmw6" path="res://src/components/health_component/health_component.tscn" id="6_d0drk"]
+[ext_resource type="Script" uid="uid://se1u5l45tax0" path="res://features/enemy/base_enemy/enemy.gd" id="1_ed52l"]
+[ext_resource type="PackedScene" uid="uid://8veaxrlv0egr" path="res://components/hurtbox_component/hurtbox_component.tscn" id="2_6a8qn"]
+[ext_resource type="PackedScene" uid="uid://brh1hxjs4kurc" path="res://components/health_bar_component/health_bar_component.tscn" id="3_ed52l"]
+[ext_resource type="Script" uid="uid://qh30lijols1x" path="res://components/hit_flash_component/hit_flash_component.gd" id="4_31g7c"]
+[ext_resource type="PackedScene" uid="uid://juuvvol6wwhe" path="res://components/hitbox_component/hitbox_component.tscn" id="5_bnho5"]
+[ext_resource type="PackedScene" uid="uid://d07cmkdpirmw6" path="res://components/health_component/health_component.tscn" id="6_d0drk"]
 [ext_resource type="Script" uid="uid://d4cfhy1u0cdnv" path="res://addons/shaker/src/Vector3/shaker_component3D.gd" id="8_8jxqt"]
 [ext_resource type="Script" uid="uid://b24fq3t0j3fhk" path="res://addons/shaker/data/Vector3/BaseShakerType3D.gd" id="9_voglr"]
 [ext_resource type="Script" uid="uid://cive1g6nvf6lc" path="res://addons/shaker/data/Vector3/ShakerTypeSineWave3D.gd" id="10_fwerk"]
-[ext_resource type="PackedScene" uid="uid://daim3jnqfh1ep" path="res://assets/models/poly_pizza_pixel_glasses_ipoly3d_cc0.fbx" id="11_ed52l"]
+[ext_resource type="PackedScene" uid="uid://daim3jnqfh1ep" path="res://public/models/poly_pizza_pixel_glasses_ipoly3d_cc0.fbx" id="11_ed52l"]
 [ext_resource type="Script" uid="uid://cgy5g7yt88qdm" path="res://addons/shaker/data/Vector3/ShakerPreset3D.gd" id="11_vhxmu"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_frkef"]
 radius = 0.59277344
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_ed52l"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_talnr"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="Resource" id="Resource_s4u6i"]
@@ -33,6 +33,7 @@ PositionShake = Array[ExtResource("9_voglr")]([SubResource("Resource_s4u6i")])
 resource_local_to_scene = true
 albedo_color = Color(1, 0, 0, 1)
 emission_enabled = true
+emission = Color(0.037400067, 0.037400067, 0.037400067, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_35thu"]
 resource_local_to_scene = true
@@ -65,7 +66,7 @@ collision_mask = 2
 
 [node name="HealthBarComponent" parent="." unique_id=864028086 instance=ExtResource("3_ed52l")]
 transform = Transform3D(0.17142516, 0, 0, 0, 0.17142516, 0, 0, 0, 0.17142516, 0, 2.4, 0)
-texture = SubResource("ViewportTexture_ed52l")
+texture = SubResource("ViewportTexture_talnr")
 
 [node name="HitFlashComponent" type="Node" parent="." unique_id=1363198882 node_paths=PackedStringArray("root_node")]
 script = ExtResource("4_31g7c")

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://8veaxrlv0egr"]
 
-[ext_resource type="Script" uid="uid://bu4nj4wyjgeh5" path="res://src/components/hurtbox_component/hurtbox_component.gd" id="1_n7cp8"]
+[ext_resource type="Script" uid="uid://bu4nj4wyjgeh5" path="res://components/hurtbox_component/hurtbox_component.gd" id="1_n7cp8"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_sknp4"]
 

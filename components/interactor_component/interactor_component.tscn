@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dvnkbmlwfveol"]
 
-[ext_resource type="Script" uid="uid://hl8i36hp00ci" path="res://src/components/interactor_component/interactor_component.gd" id="1_sbq2a"]
+[ext_resource type="Script" uid="uid://hl8i36hp00ci" path="res://components/interactor_component/interactor_component.gd" id="1_sbq2a"]
 
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_sbq2a"]
 length = 2.0

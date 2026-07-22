@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bgaxsmyoyxbpa"]
 
-[ext_resource type="Script" uid="uid://388hiheoy3if" path="res://src/components/numbers_component/numbers_component.gd" id="1_r07ws"]
+[ext_resource type="Script" uid="uid://388hiheoy3if" path="res://components/numbers_component/numbers_component.gd" id="1_r07ws"]
 
 [sub_resource type="Animation" id="Animation_xp1fi"]
 length = 0.001

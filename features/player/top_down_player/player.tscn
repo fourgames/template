@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c0w0o0laooyhw"]
 
-[ext_resource type="Script" uid="uid://bred06ld0l4mj" path="res://src/features/player/top_down_player/player.gd" id="1_4flbx"]
-[ext_resource type="PackedScene" uid="uid://daim3jnqfh1ep" path="res://assets/models/poly_pizza_pixel_glasses_ipoly3d_cc0.fbx" id="2_17k0s"]
-[ext_resource type="PackedScene" uid="uid://dvnkbmlwfveol" path="res://src/components/interactor_component/interactor_component.tscn" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://bred06ld0l4mj" path="res://features/player/top_down_player/player.gd" id="1_4flbx"]
+[ext_resource type="PackedScene" uid="uid://daim3jnqfh1ep" path="res://public/models/poly_pizza_pixel_glasses_ipoly3d_cc0.fbx" id="2_17k0s"]
+[ext_resource type="PackedScene" uid="uid://dvnkbmlwfveol" path="res://components/interactor_component/interactor_component.tscn" id="2_onrkg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
 
