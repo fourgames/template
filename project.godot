@@ -25,7 +25,7 @@ buses/default_bus_layout="uid://ci61fr1dqsshd"
 
 [autoload]
 
-ControllerIcons="*uid://bbr0y7cmquuy6"
+ControllerIcons="*uid://bkoh6nc478voj"
 Shaker="*uid://camqu126o10w4"
 PathManager="*uid://cwiwhdgjmooc7"
 SignalManager="*uid://djm5fbcusol8f"
