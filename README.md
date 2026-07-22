@@ -1,8 +1,3 @@
-> [!CAUTION]
-> Quick Start: Click the green Use this template button to clone the repo. Once opened in Godot, Reload Current Project to fix initial import issues.
-> 
-> Documentation In Progress: Video guides are coming soon. The video below is a temporary placeholder.
-
 <p align="center">
   <a href="https://youtu.be/rsoUzF3RdsU?si=WE67ZP_uEQoh4Nwf&t=1140">
 	<img width="100%" alt="" src=".github/images/powered-by-four-games/jackie_codes_interview_with_ pierre_vandermaesen.png" />
