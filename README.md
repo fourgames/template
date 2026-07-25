@@ -50,10 +50,10 @@ The Game Success Formula & curated resources for game development. Tools and str
 ## 🍀 Powered by Four Games
 
 <p align="center">
-  <a href="https://youtu.be/rsoUzF3RdsU?si=WE67ZP_uEQoh4Nwf&t=1140"><img width="24%" src=".github/images/powered-by-four-games/jackie_codes_interview_with_ pierre_vandermaesen.png"/></a>
-  <a href="https://youtu.be/rsoUzF3RdsU?si=WE67ZP_uEQoh4Nwf&t=1140"><img width="24%" src=".github/images/powered-by-four-games/jackie_codes_interview_with_ pierre_vandermaesen.png"/></a>
-  <a href="https://youtu.be/rsoUzF3RdsU?si=WE67ZP_uEQoh4Nwf&t=1140"><img width="24%" src=".github/images/powered-by-four-games/jackie_codes_interview_with_ pierre_vandermaesen.png"/></a>
-  <a href="https://youtu.be/rsoUzF3RdsU?si=WE67ZP_uEQoh4Nwf&t=1140"><img width="24%" src=".github/images/powered-by-four-games/jackie_codes_interview_with_ pierre_vandermaesen.png"/></a>
+  <a href="https://store.steampowered.com/app/2807130/Reforge_Front/"><img width="24%" src=".github/images/powered-by-four-games/steam-reforge-front.png"/></a>
+  <a href="https://store.steampowered.com/app/2807130/Reforge_Front/"><img width="24%" src=".github/images/powered-by-four-games/steam-reforge-front.png"/></a>
+  <a href="https://store.steampowered.com/app/2807130/Reforge_Front/"><img width="24%" src=".github/images/powered-by-four-games/steam-reforge-front.png"/></a>
+  <a href="https://store.steampowered.com/app/2807130/Reforge_Front/"><img width="24%" src=".github/images/powered-by-four-games/steam-reforge-front.png"/></a>
 </p>
 
 > [!TIP]
