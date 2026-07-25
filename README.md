@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://youtu.be/rsoUzF3RdsU?si=WE67ZP_uEQoh4Nwf&t=1140">
-	<img width="100%" alt="" src=".github/images/powered-by-four-games/.github/images/powered-by-four-games/start-here.png" />
+  <a href="https://www.youtube.com/watch?v=AWUiCKdlq4M&list=PLfKSaQDWiCjY&index=1&t=27s">
+	<img width="100%" alt="" src=".github/images/powered-by-four-games/start-here.png" />
   </a>
 </p>
 
