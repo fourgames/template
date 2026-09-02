@@ -43,7 +43,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/DualEditor/plugin.cfg", "res://addons/controller_icons/plugin.cfg", "res://addons/shaker/plugin.cfg")
+enabled=PackedStringArray("res://addons/DualEditor/plugin.cfg", "res://addons/controller_icons/plugin.cfg", "res://addons/godotsteam/plugin.cfg", "res://addons/shaker/plugin.cfg")
 
 [file_customization]
 
@@ -593,10 +593,3 @@ common/physics_interpolation=true
 
 rendering_device/driver.windows="d3d12"
 textures/vram_compression/import_etc2_astc=true
-
-[steam]
-
-initialization/app_id=0
-initialization/initialize_on_startup=false
-initialization/embed_callbacks=false
-multiplayer_peer/max_channels=4
