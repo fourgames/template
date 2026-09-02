@@ -35,6 +35,7 @@ NodeManager="*uid://bi1cxrxhj70n3"
 ControlManager="*uid://c1bgdvrlmjwpk"
 SceneChanger="*uid://ba3qklkjfvc6o"
 GameManager="*uid://d07rtwy8ry14o"
+_mcp_game_helper="*res://addons/godot_ai/runtime/game_helper.gd"
 
 [display]
 
@@ -43,7 +44,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/DualEditor/plugin.cfg", "res://addons/controller_icons/plugin.cfg", "res://addons/godotsteam/plugin.cfg", "res://addons/shaker/plugin.cfg")
+enabled=PackedStringArray("res://addons/DualEditor/plugin.cfg", "res://addons/controller_icons/plugin.cfg", "res://addons/godot_ai/plugin.cfg", "res://addons/godotsteam/plugin.cfg", "res://addons/shaker/plugin.cfg")
 
 [file_customization]
 
