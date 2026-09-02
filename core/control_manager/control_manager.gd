@@ -1,8 +1,8 @@
 @icon("uid://b6ynqcq6i2vlo")
 extends Node
 
-var UI_HOVER_SOUND = preload(PathManager.UI_HOVER_SOUND)
-var UI_PRESS_SOUND = preload(PathManager.UI_PRESS_SOUND)
+const UI_PRESS_SOUND = preload("uid://bcb5yvaaabo3x")
+const UI_HOVER_SOUND = preload("uid://cvb1ywtd23rgw")
 
 var _active_tweens: Dictionary = {}
 

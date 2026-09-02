@@ -6,7 +6,8 @@ extends VBoxContainer
 @onready var sensitivity_h_slider: HSlider = %SensitivityHSlider
 
 
-const INPUT_CONTAINER = preload(PathManager.INPUT_CONTAINER)
+
+const INPUT_CONTAINER = preload("uid://dmbuwj1hlif3n")
 
 
 func _ready() -> void:

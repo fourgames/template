@@ -6,7 +6,7 @@ var shots_per_fire: int = 1
 var spread_angle : float = 5
 var radius : float = 6
 
-var projectile = preload(PathManager.projectile)
+const projectile = preload("uid://csayarwi2f22f")
 var projectile_instance
 
 

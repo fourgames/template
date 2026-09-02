@@ -1,7 +1,7 @@
 extends VBoxContainer
 
 
-const CREDIT_CONTAINER = preload(PathManager.CREDIT_CONTAINER)
+const CREDIT_CONTAINER = preload("uid://6ji18qns07g4")
 
 
 func _ready() -> void:

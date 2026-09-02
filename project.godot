@@ -27,7 +27,6 @@ buses/default_bus_layout="uid://ci61fr1dqsshd"
 
 ControllerIcons="*uid://bkoh6nc478voj"
 Shaker="*res://addons/shaker/src/Shaker.gd"
-PathManager="*uid://cwiwhdgjmooc7"
 SignalManager="*uid://djm5fbcusol8f"
 DataManager="*uid://big0hyuv70jxs"
 AudioManager="*uid://im0jy8db1q6"
