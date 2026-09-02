@@ -17,6 +17,7 @@ dest_files=["res://.godot/imported/tilda.png-54e1d4f4a3a498075fe0e8a403e57cbc.ct
 
 compress/mode=0
 compress/high_quality=false
+compress/high_quality_mode=0
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0

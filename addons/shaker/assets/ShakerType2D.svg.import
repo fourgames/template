@@ -17,6 +17,7 @@ dest_files=["res://.godot/imported/ShakerType2D.svg-a5c5aa77a1e3263e925140c95a5a
 
 compress/mode=0
 compress/high_quality=false
+compress/high_quality_mode=0
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0

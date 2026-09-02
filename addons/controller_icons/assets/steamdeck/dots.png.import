@@ -17,6 +17,7 @@ dest_files=["res://.godot/imported/dots.png-5aab7f77e51edbb5da9af6d242a7a1a8.cte
 
 compress/mode=0
 compress/high_quality=false
+compress/high_quality_mode=0
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0

@@ -17,6 +17,7 @@ dest_files=["res://.godot/imported/Play.svg-7dc254fbb0920cfd077cd3ee6c205a32.cte
 
 compress/mode=0
 compress/high_quality=false
+compress/high_quality_mode=0
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0

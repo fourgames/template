@@ -17,6 +17,7 @@ dest_files=["res://.godot/imported/right_grip.png-0799ccf7f9bc8a783cac8c357f3875
 
 compress/mode=0
 compress/high_quality=false
+compress/high_quality_mode=0
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0

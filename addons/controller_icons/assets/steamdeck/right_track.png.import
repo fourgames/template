@@ -17,6 +17,7 @@ dest_files=["res://.godot/imported/right_track.png-b11cdb4f73a4064c5e82947c3a833
 
 compress/mode=0
 compress/high_quality=false
+compress/high_quality_mode=0
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
