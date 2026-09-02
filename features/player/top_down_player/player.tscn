@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c0w0o0laooyhw"]
 
 [ext_resource type="Script" uid="uid://bred06ld0l4mj" path="res://features/player/top_down_player/player.gd" id="1_4flbx"]
-[ext_resource type="PackedScene" uid="uid://daim3jnqfh1ep" path="res://public/models/poly_pizza_pixel_glasses_ipoly3d_cc0.fbx" id="2_17k0s"]
 [ext_resource type="PackedScene" uid="uid://dvnkbmlwfveol" path="res://components/interactor_component/interactor_component.tscn" id="2_onrkg"]
+[ext_resource type="PackedScene" uid="uid://cjkdvhgqr2ub5" path="res://public/models/blender/dynamite.blend" id="4_x0cj3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
 
@@ -19,10 +19,10 @@ shape = SubResource("CapsuleShape3D_onrkg")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_4flbx")
 
-[node name="glasses16_001" parent="MeshInstance3D" unique_id=838045792 instance=ExtResource("2_17k0s")]
-transform = Transform3D(0.48, 0, 0, 0, 0.48, 0, 0, 0, 0.48, 0, 0.6, 0.17)
-
 [node name="InteractorComponent" parent="MeshInstance3D" unique_id=1962311501 instance=ExtResource("2_onrkg")]
+
+[node name="dynamite" parent="MeshInstance3D" unique_id=388694308 instance=ExtResource("4_x0cj3")]
+transform = Transform3D(1.9259712e-16, 4.406109e-09, 0.100800015, 0.100800015, -4.406109e-09, 0, 4.406109e-09, 0.10080002, -4.406109e-09, 0, 0.6, 0.6)
 
 [node name="OrthogonalCamera3D" type="Camera3D" parent="." unique_id=310094325]
 transform = Transform3D(0.7071068, -0.579228, 0.4055798, 0, 0.57357645, 0.81915206, -0.7071068, -0.579228, 0.4055798, 33.6, 72, 33.8)

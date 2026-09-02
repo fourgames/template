@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dqj8k6s7msj60"]
 
 [ext_resource type="Script" uid="uid://dah3m7i6qwwsc" path="res://features/player/fps_player/player.gd" id="1_q5a6t"]
-[ext_resource type="PackedScene" uid="uid://daim3jnqfh1ep" path="res://public/models/poly_pizza_pixel_glasses_ipoly3d_cc0.fbx" id="2_d1kuw"]
+[ext_resource type="PackedScene" uid="uid://cjkdvhgqr2ub5" path="res://public/models/blender/dynamite.blend" id="2_wrfyi"]
 [ext_resource type="PackedScene" uid="uid://dvnkbmlwfveol" path="res://components/interactor_component/interactor_component.tscn" id="3_d1kuw"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_2pjm7"]
@@ -18,11 +18,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 layers = 524288
 mesh = SubResource("CapsuleMesh_2pjm7")
 
-[node name="glasses16_001" parent="MeshInstance3D" unique_id=838045792 instance=ExtResource("2_d1kuw")]
-transform = Transform3D(-0.48, 0, -4.196293e-08, 0, 0.48, 0, 4.196293e-08, 0, -0.48, 0, 0.6, -0.17)
-
-[node name="glasses16_001" parent="MeshInstance3D/glasses16_001" index="0" unique_id=545196395]
-layers = 524288
+[node name="dynamite" parent="MeshInstance3D" unique_id=388694308 instance=ExtResource("2_wrfyi")]
+transform = Transform3D(-5.7779135e-16, -1.3218327e-08, -0.100800015, 0.100800015, -4.4061093e-09, 0, -4.406109e-09, -0.10080002, 1.3218326e-08, -3.7766636e-08, 0.6, -0.602)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=69756882]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -55,5 +52,4 @@ no_depth_test = true
 text = "FPS Player"
 font_size = 100
 
-[editable path="MeshInstance3D/glasses16_001"]
 [editable path="Head/Camera3D/InteractorComponent"]
