@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://dvnkbmlwfveol"]
 
-[ext_resource type="Script" uid="uid://hl8i36hp00ci" path="res://components/interactor_component/interactor_component.gd" id="1_sbq2a"]
+[ext_resource type="Script" uid="uid://hl8i36hp00ci" path="res://components/interaction_detector_component/interaction_detector_component.gd" id="1_sbq2a"]
 
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_sbq2a"]
 length = 2.0
 
-[node name="InteractorComponent" type="Area3D" unique_id=1962311501]
+[node name="InteractionDetectorComponent" type="Area3D" unique_id=1962311501]
 script = ExtResource("1_sbq2a")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=510175220]

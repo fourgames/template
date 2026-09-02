@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://db7fq3ohpetjb" path="res://components/spawner_component/enemy_spawner.tscn" id="13_60eds"]
 [ext_resource type="Script" uid="uid://tl548twdjy8o" path="res://components/spawner_component/enemy_spawn_data.gd" id="14_dd4s8"]
 [ext_resource type="Material" uid="uid://nyeksgijrirj" path="res://public/textures/kenney/resources/orange_texture_07.tres" id="15_30h57"]
-[ext_resource type="PackedScene" uid="uid://cl8s6shmpvcbi" path="res://components/interactable_component/interactable_component.tscn" id="15_dd4s8"]
+[ext_resource type="PackedScene" uid="uid://cl8s6shmpvcbi" path="res://components/interactable_object_component/interactable_object_component.tscn" id="15_dd4s8"]
 [ext_resource type="Material" uid="uid://h0vjimnu1mfy" path="res://public/textures/kenney/resources/dark_texture_07.tres" id="15_ostbp"]
 [ext_resource type="PackedScene" uid="uid://dqj8k6s7msj60" path="res://features/player/fps_player/player.tscn" id="19_x7phl"]
 [ext_resource type="Texture2D" uid="uid://bnigb67b8f7wq" path="res://components/controller_icons/resources/interact.tres" id="20_2pjm7"]

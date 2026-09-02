@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dah3m7i6qwwsc" path="res://features/player/fps_player/player.gd" id="1_q5a6t"]
 [ext_resource type="PackedScene" uid="uid://cjkdvhgqr2ub5" path="res://public/models/blender/dynamite.blend" id="2_wrfyi"]
-[ext_resource type="PackedScene" uid="uid://dvnkbmlwfveol" path="res://components/interactor_component/interactor_component.tscn" id="3_d1kuw"]
+[ext_resource type="PackedScene" uid="uid://dvnkbmlwfveol" path="res://components/interaction_detector_component/interaction_detector_component.tscn" id="3_d1kuw"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_2pjm7"]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b57gf6ut22fdu"
-path="res://.godot/imported/cubes.svg-fc35d95e64b00ee36aa8838634e72718.ctex"
+path="res://.godot/imported/cubes.svg-80bb4285a4d9f45f685c90e3c42ee2d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://components/interactable_component/cubes.svg"
-dest_files=["res://.godot/imported/cubes.svg-fc35d95e64b00ee36aa8838634e72718.ctex"]
+source_file="res://components/interactable_object_component/cubes.svg"
+dest_files=["res://.godot/imported/cubes.svg-80bb4285a4d9f45f685c90e3c42ee2d2.ctex"]
 
 [params]
 

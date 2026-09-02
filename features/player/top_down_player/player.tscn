@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c0w0o0laooyhw"]
 
 [ext_resource type="Script" uid="uid://bred06ld0l4mj" path="res://features/player/top_down_player/player.gd" id="1_4flbx"]
-[ext_resource type="PackedScene" uid="uid://dvnkbmlwfveol" path="res://components/interactor_component/interactor_component.tscn" id="2_onrkg"]
+[ext_resource type="PackedScene" uid="uid://dvnkbmlwfveol" path="res://components/interaction_detector_component/interaction_detector_component.tscn" id="2_onrkg"]
 [ext_resource type="PackedScene" uid="uid://cjkdvhgqr2ub5" path="res://public/models/blender/dynamite.blend" id="4_x0cj3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
