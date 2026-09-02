@@ -25,6 +25,7 @@ buses/default_bus_layout="uid://ci61fr1dqsshd"
 
 [autoload]
 
+_mcp_game_helper="*res://addons/godot_ai/runtime/game_helper.gd"
 ControllerIcons="*uid://bkoh6nc478voj"
 Shaker="*res://addons/shaker/src/Shaker.gd"
 SignalManager="*uid://djm5fbcusol8f"
@@ -33,7 +34,7 @@ AudioManager="*uid://im0jy8db1q6"
 ButtonManager="*uid://c1bgdvrlmjwpk"
 SceneChanger="*uid://ba3qklkjfvc6o"
 StateManager="*uid://d07rtwy8ry14o"
-_mcp_game_helper="*res://addons/godot_ai/runtime/game_helper.gd"
+GameManager="*uid://dasdu2yu2ars4"
 
 [display]
 
