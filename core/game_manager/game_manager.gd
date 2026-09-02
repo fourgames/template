@@ -1,3 +1,4 @@
+@icon("uid://duc57nk7s1ihq")
 extends Node
 
 
