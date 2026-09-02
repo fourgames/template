@@ -44,12 +44,12 @@ func _on_secondary_pressed():
 
 func _on_reset_pressed():
 	primary_input_button.grab_focus()
-	var list = DataManager.payload.input.inpit_list
+	var list = DataManager.payload.input.input_list
 	for i in range(list.size() - 1, -1, -1):
 		if list[i]["action"] == action_name:
 			list.remove_at(i)
 	
-	DataManager.payload.input.inpit_list = list
+	DataManager.payload.input.input_list = list
 	DataManager.save_data()
 	
 	var setting_path = "input/" + action_name
@@ -90,7 +90,7 @@ func accept_new_event(new_event: InputEvent):
 	get_viewport().set_input_as_handled()
 	
 	var new_text = _event_to_string(new_event)
-	var list = DataManager.payload.input.inpit_list
+	var list = DataManager.payload.input.input_list
 	var found_entry = null
 	
 	for entry in list:
@@ -114,7 +114,7 @@ func accept_new_event(new_event: InputEvent):
 	else:
 		found_entry["secondary"] = new_text
 	
-	DataManager.payload.input.inpit_list = list
+	DataManager.payload.input.input_list = list
 	
 	_sync_input_map_from_payload()
 	DataManager.save_data()
@@ -129,7 +129,7 @@ func accept_new_event(new_event: InputEvent):
 
 func _sync_input_map_from_payload():
 	var custom_entry = null
-	for entry in DataManager.payload.input.inpit_list:
+	for entry in DataManager.payload.input.input_list:
 		if entry["action"] == action_name:
 			custom_entry = entry
 			break
@@ -230,7 +230,7 @@ func update_icons():
 
 func _update_reset_button_visibility():
 	var custom_entry = null
-	for entry in DataManager.payload.input.inpit_list:
+	for entry in DataManager.payload.input.input_list:
 		if entry["action"] == action_name:
 			custom_entry = entry
 			break

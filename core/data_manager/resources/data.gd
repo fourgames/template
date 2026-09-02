@@ -10,6 +10,4 @@ class_name Data
 
 @export var input : InputData = InputData.new()
 
-@export var progress : ProgressData = ProgressData.new()
-
 @export var video : VideoData = VideoData.new()

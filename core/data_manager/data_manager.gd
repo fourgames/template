@@ -26,7 +26,7 @@ func load_data():
 func sync_all_inputs():
 	if not payload or not payload.input: return
 		
-	for entry in payload.input.inpit_list:
+	for entry in payload.input.input_list:
 		var action = entry["action"]
 		if not InputMap.has_action(action): continue
 			
