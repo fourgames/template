@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6t3bwxp8oxg1"
-path="res://.godot/imported/lighthouse.svg-556c9f8232838ac6cd51f4bd952ee9c5.ctex"
+uid="uid://b6ynqcq6i2vlo"
+path="res://.godot/imported/trigger-hurt.svg-6d772c4a0e37dec3554a50d97351d2bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://core/node_manager/lighthouse.svg"
-dest_files=["res://.godot/imported/lighthouse.svg-556c9f8232838ac6cd51f4bd952ee9c5.ctex"]
+source_file="res://core/button_manager/trigger-hurt.svg"
+dest_files=["res://.godot/imported/trigger-hurt.svg-6d772c4a0e37dec3554a50d97351d2bf.ctex"]
 
 [params]
 

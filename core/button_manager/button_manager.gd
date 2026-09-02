@@ -8,11 +8,23 @@ var _active_tweens: Dictionary = {}
 
 
 func _enter_tree() -> void:
-	SignalManager.control_node_added.connect(_on_node_manager_received)
+	get_tree().node_added.connect(_on_node_added)
 
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+
+
+func _on_node_added(node: Node) -> void:
+	if not node is Control:
+		return
+	
+	if node.has_meta(&"managed"): 
+		return
+	node.set_meta(&"managed", true)
+	
+	if node is Control:
+		_on_node_manager_received(node)
 
 
 func _on_node_manager_received(node: Node) -> void:
