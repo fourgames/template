@@ -46,7 +46,7 @@ func sensitivity_changed_update_values():
 
 
 func _unhandled_input(event):
-	if GameManager.current_state != GameManager.GameState.PLAYING:
+	if StateManager.current_state != StateManager.GameState.PLAYING:
 		return
 	if event is InputEventMouseMotion:
 		head.rotate_y(-event.relative.x * mouse_sensitivity)
@@ -55,7 +55,7 @@ func _unhandled_input(event):
 
 
 func _physics_process(delta):
-	if GameManager.current_state != GameManager.GameState.PLAYING:
+	if StateManager.current_state != StateManager.GameState.PLAYING:
 		return
 	
 	var look_dir = Input.get_vector("look_left", "look_right", "look_up", "look_down")

@@ -18,11 +18,11 @@ func _on_website_texture_button_pressed() -> void:
 
 
 func _on_play_button_pressed() -> void:
-	GameManager.change_state(GameManager.GameState.PLAYING)
+	StateManager.change_state(StateManager.GameState.PLAYING)
 
 
 func _on_settings_button_pressed() -> void:
-	GameManager.change_state(GameManager.GameState.OPTIONS_MENU)
+	StateManager.change_state(StateManager.GameState.OPTIONS_MENU)
 
 
 func _on_quit_button_pressed() -> void:

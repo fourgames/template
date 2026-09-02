@@ -6,7 +6,7 @@ func _ready() -> void:
 	%CloseButton.grab_focus()
 
 func _on_button_pressed() -> void:
-	GameManager.change_state(GameManager.previous_state)
+	StateManager.change_state(StateManager.previous_state)
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
