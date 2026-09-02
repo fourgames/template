@@ -6,5 +6,6 @@ class_name CreditsData
 	{"name": "Godot Engine", "role": "Game Engine"},
 	{"name": "Blender", "role": "3D Modeling"},
 	{"name": "Lorc, Delapouite & contributors", "role": "Icons (game-icons.net)"},
+	{"name": "Zapsplat", "role": "Audio"},
 	{"name": "You", "role": "Thanks for playing!"},
 ]
